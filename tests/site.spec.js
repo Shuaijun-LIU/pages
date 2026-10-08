@@ -8,6 +8,7 @@ test("live scene renders, pauses, resumes, and changes experiments", async ({
   await page.goto("/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
+  await expect(canvas).toHaveAttribute("data-assets", "ready");
   await expect
     .poll(async () => Number(await canvas.getAttribute("data-time")))
     .toBeGreaterThan(0.2);
@@ -24,13 +25,13 @@ test("live scene renders, pauses, resumes, and changes experiments", async ({
   await expect
     .poll(async () => Number(await canvas.getAttribute("data-time")))
     .toBeGreaterThan(Number(time));
-  await page.getByRole("button", { name: /Trace a possibility/ }).click();
-  await expect(page.locator("#experiment-count")).toHaveText("02 / 03");
+  await page.getByRole("button", { name: "Transfer", exact: true }).click();
+  await expect(page.locator("#experiment-count")).toHaveText("02 / 04");
   await expect(page.locator("#typed-text")).toHaveText(
-    "Every path begins with a question.",
+    "Two hands. One continuous conversation.",
   );
-  await page.getByRole("button", { name: /Find a balance/ }).click();
-  await expect(page.locator("#experiment-count")).toHaveText("03 / 03");
+  await page.getByRole("button", { name: "Run", exact: true }).click();
+  await expect(page.locator("#experiment-count")).toHaveText("04 / 04");
   await page.getByRole("button", { name: "POINTS", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "POINTS", exact: true }),
@@ -44,6 +45,7 @@ test("orbit and reset visibly change the scene while paused", async ({
   await page.goto("/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
+  await expect(canvas).toHaveAttribute("data-assets", "ready");
   await page
     .getByRole("button", { name: "Pause animation", exact: true })
     .click();
@@ -65,18 +67,16 @@ test("theme persists and notebook opens and closes accessibly", async ({
   await page.goto("/");
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
-  await expect(page.locator("html")).toHaveCSS("color", "rgb(219, 231, 214)");
+  await expect(page.locator("html")).toHaveCSS("color", "rgb(221, 221, 229)");
   await expect(page.locator("html")).toHaveCSS(
     "background-color",
-    "rgb(16, 25, 22)",
+    "rgb(10, 10, 12)",
   );
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.getByRole("button", { name: /Field notes/ }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(
-    page.getByRole("heading", { name: "03 / Find a balance" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "04 / Run" })).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).not.toBeVisible();
   await expect(page.getByRole("button", { name: /Field notes/ })).toBeFocused();
@@ -97,8 +97,8 @@ test("mobile and tablet stay within viewport and controls work", async ({
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
-    await page.getByRole("button", { name: /Find a balance/ }).click();
-    await expect(page.locator("#experiment-count")).toHaveText("03 / 03");
+    await page.getByRole("button", { name: "Run", exact: true }).click();
+    await expect(page.locator("#experiment-count")).toHaveText("04 / 04");
   }
 });
 
@@ -109,7 +109,7 @@ test("reduced motion starts still with complete text", async ({ page }) => {
     page.getByRole("button", { name: "Play animation", exact: true }),
   ).toBeVisible();
   await expect(page.locator("#typed-text")).toHaveText(
-    "Small actions. New possibilities.",
+    "Reach further. Bring a possibility closer.",
   );
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-time", "0.000");
@@ -143,11 +143,15 @@ test("WebGL-unavailable browsers get a working Canvas fallback", async ({
 test("subtitle is available to screen readers", async ({ page }) => {
   await page.goto("/");
   expect(await page.locator(".typed-line").ariaSnapshot()).toContain(
-    "Small actions. New possibilities.",
+    "Reach further. Bring a possibility closer.",
   );
-  await page.getByRole("button", { name: /Trace a possibility/ }).click();
+  await page.getByRole("button", { name: "Transfer", exact: true }).click();
+  await expect(page.locator("#motion-canvas")).toHaveAttribute(
+    "data-scene",
+    "transfer",
+  );
   expect(await page.locator(".typed-line").ariaSnapshot()).toContain(
-    "Every path begins with a question.",
+    "Two hands. One continuous conversation.",
   );
 });
 
@@ -165,6 +169,7 @@ test("WebGL recovers correct dimensions after context loss and resize", async ({
   await page.goto("/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
+  await expect(canvas).toHaveAttribute("data-assets", "ready");
   await page.evaluate(() => {
     window.testLoss = window.testGL.getExtension("WEBGL_lose_context");
     window.testLoss.loseContext();
@@ -174,6 +179,7 @@ test("WebGL recovers correct dimensions after context loss and resize", async ({
   await page.waitForTimeout(150);
   await page.evaluate(() => window.testLoss.restoreContext());
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
+  await expect(canvas).toHaveAttribute("data-assets", "ready");
   const ratios = await page.evaluate(() => {
     const bounds = document.querySelector("#scene").getBoundingClientRect();
     return {

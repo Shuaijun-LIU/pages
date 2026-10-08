@@ -1,12 +1,12 @@
 # FIELDWORK — A study in motion
 
-一个原创的机械运动交互网站。围绕实时 ASCII 三维动画、运动拖尾、视角交互、逐字文字和信号曲线展开。虚构研究工作室 FIELDWORK 的品牌、文案、几何模型和配色均为本项目重新创作。
+一个实时三维字符动画网站，包含人形采摘、双夹爪持杯、人形折衣和全身奔跑四个场景。页面构图、淡紫蓝色调、方块字符与切换节奏接近参考站；FIELDWORK 品牌与文案独立编写。人形几何采用 BSD 授权的 Unitree G1，其余道具与动作自行构建。
 
 **网站地址：** https://shuaijun-liu.github.io/pages/
 
 ![FIELDWORK 首页预览](docs/preview-desktop.png)
 
-[深色模式预览](docs/preview-dark.png)
+[双臂持杯](docs/preview-transfer.png) · [折衣](docs/preview-fold.png) · [奔跑](docs/preview-run.png) · [深色模式](docs/preview-dark.png) · [手机布局](docs/preview-mobile.png)
 
 ## 本地运行
 
@@ -30,8 +30,8 @@ npm run preview
 - 聚焦场景后，方向键旋转，`+` / `-` 缩放。
 - ASCII / POINTS 切换字符和粒子表现。
 - Pause / Play 暂停或恢复；回转按钮重置视角。
-- 三组实验切换不同关节运动；曲线来自当前运动公式的肘关节角速度。
-- 顶栏切换明暗主题；Field notes 与 The studio 打开说明。
+- 四个场景手动切换或约每 8 秒自动轮播，支持字符消散／聚合过渡；四条模拟运动曲线与多关节拖尾同步更新。
+- 顶栏切换明暗主题；Field notes 与 Studio 打开说明。
 - 手机采用纵向布局，保留正常滚动；系统设置“减少动态效果”时默认静止，允许主动播放。
 - 无 WebGL 时使用 Canvas 2D 机械运动备用视图。
 
@@ -45,25 +45,24 @@ npm run preview
 
 ```text
 src/main.js       文案交互、主题、曲线与弹窗
-src/motion.js     原创机械臂、关节运动、字符渲染、拖尾和视角控制
+src/motion.js     字符渲染、多关节拖尾、轮播过渡和视角控制
+src/scenes.js     四种主体、动作、道具与模型加载
 src/style.css     页面布局、配色、入场过渡和响应式样式
 index.html        页面内容与无障碍语义
-public/           原创 favicon
+public/           favicon、优化人形模型、模型来源与许可证
+scripts/          模型转换与简化工具
 tests/           浏览器行为测试
 .github/workflows/deploy.yml  GitHub Pages 自动构建、测试与部署
 ```
 
 ## 调整动画
 
-`src/motion.js` 中：
+- `src/scenes.js`：场景参数、主体几何、关节姿态、采摘逆运动学与布面折叠。
+- `src/motion.js`：字符／粒子映射、轨迹、相机、消散过渡与自动轮播。
+- `src/main.js`：主题、打字效果、运动信号与弹窗。
+- `src/style.css`：构图、配色与响应式布局。
 
-- `setup3D()`：模型尺寸、关节层级、灯光。
-- `pose()`：三种运动的关节角度，单位弧度。
-- `draw3D()`：字符集、字符密度、视角与采样。
-- `drawTrail()`：轨迹颜色、透明度和密度。
-- `palette()`：明暗两种主题的模型与拖尾颜色。
-
-颜色与页面间距集中在 `src/style.css`。正文在 `index.html`，弹窗与逐字文案在 `src/main.js`。
+人形模型可用 `scripts/build-robot-asset.mjs` 从 MuJoCo Menagerie 的 G1 源文件重建，来源、许可、输入校验和与简化参数均随仓库保存。正常运行直接使用已优化模型。
 
 ## 验证
 
@@ -85,4 +84,4 @@ npm test
 
 交互表现研究参考 [xdof.ai](https://www.xdof.ai/)，代码独立实现。本仓库不包含其源代码、文案、Logo、照片、视频、模型或字体文件；不是该公司的官方网站，也不表示关联。FIELDWORK 是此演示项目的虚构名称，不声称实际团队、融资或研究成果。
 
-第三方库和字体保留各自许可，详见 [THIRD_PARTY.md](THIRD_PARTY.md)。技术拆解见 [docs/motion-design.md](docs/motion-design.md)。
+人形模型、第三方库和字体保留各自许可，详见 [THIRD_PARTY.md](THIRD_PARTY.md)。技术拆解见 [docs/motion-design.md](docs/motion-design.md)。

@@ -3,93 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#edf0ee" />
+    <meta name="theme-color" content="#f0edf9" />
     <meta
       name="description"
-      content="FIELDWORK — an independent motion study. Explore a living sketch of machine movement, rendered in characters."
+      content="FIELDWORK — four live character-rendered studies of humanoid motion, dexterous handling, and everyday robotics."
     />
-    <title>FIELDWORK — A study in motion</title>
+    <title>FIELDWORK — Motion, made visible</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#workspace">Skip to motion study</a>
+    <a class="skip-link" href="#scene">Skip to motion studies</a>
     <div class="site-shell">
       <header class="header">
-        <a class="wordmark" href="./" aria-label="Fieldwork home"
-          ><span class="brand-icon" aria-hidden="true">✳</span>FIELDWORK<span
-            class="wordmark-suffix"
-            >®</span
-          ></a
+        <a href="./" class="wordmark" aria-label="Fieldwork home"
+          ><span class="brand-mark" aria-hidden="true">▞</span>FIELDWORK</a
         >
-        <span class="header-caption">AN INDEPENDENT MOTION STUDY</span>
         <nav aria-label="Main navigation">
-          <button class="nav-link" data-dialog="studio">The studio</button>
-          <button class="nav-link" data-dialog="notes">
-            Field notes <span class="small-count">03</span>
-          </button>
-          <button
-            class="theme-button"
-            id="theme-toggle"
-            aria-label="Switch to dark theme"
-            title="Switch theme"
+          <button class="nav-link" data-dialog="studio">Studio</button>
+          <button class="nav-link" data-dialog="notes">Field notes</button>
+          <a
+            class="nav-link source-link"
+            href="https://github.com/Shuaijun-LIU/pages"
+            target="_blank"
+            rel="noreferrer"
+            >Source</a
           >
-            <span aria-hidden="true">◐</span>
+          <button
+            id="theme-toggle"
+            class="theme-button"
+            aria-label="Switch to dark theme"
+          >
+            <span class="theme-thumb" aria-hidden="true">☼</span>
           </button>
         </nav>
       </header>
-      <main id="workspace" class="workspace">
-        <section class="stage-panel" aria-label="Interactive motion study">
-          <div class="stage-heading">
-            <div class="eyebrow">
-              <span class="live-dot"></span
-              ><span id="status-text">LIVE MOTION STUDY</span
-              ><span class="edition">NO. 001 / 003</span>
-            </div>
-            <h1>Thinking through<br /><span class="italic">movement.</span></h1>
-            <p class="typed-line">
-              <span id="typed-accessible" class="sr-only"
-                >Small actions. New possibilities.</span
-              >
-              <span id="typed-text" aria-hidden="true"></span
-              ><span class="cursor" aria-hidden="true">_</span>
-            </p>
-          </div>
-          <div class="orientation" aria-hidden="true">
-            <svg viewBox="0 0 62 62">
-              <path d="M30 32V8M30 32L51 44M30 32L10 44" />
-              <circle cx="30" cy="32" r="3" />
-              <text x="27" y="7">Y</text>
-              <text x="53" y="48">X</text>
-              <text x="3" y="49">Z</text></svg
-            ><span>ORBIT VIEW</span>
-          </div>
+      <main class="workspace" id="workspace">
+        <section class="stage-panel" aria-label="Interactive motion studies">
           <div
             id="scene"
             class="scene"
-            tabindex="0"
             role="group"
-            aria-label="Animated robot arm. Drag or use arrow keys to rotate; plus and minus to zoom."
+            tabindex="0"
+            aria-label="Animated robot motion. Drag or use arrow keys to rotate; plus and minus to zoom."
           >
             <canvas
               id="motion-canvas"
-              aria-label="Original robot arm drawn as animated ASCII characters"
+              aria-label="Live humanoid and dual-arm motion rendered as box characters"
             ></canvas>
             <div class="scene-loading" id="scene-loading">
-              INITIALIZING MOTION<span>...</span>
+              Preparing the next movement<span>...</span>
             </div>
             <p id="render-note" class="render-note" hidden>
-              Canvas motion view
+              Canvas 2D motion view
             </p>
           </div>
-          <div class="scene-caption">
-            <span class="coordinate"
-              >[ <span id="coordinate">0.000, 0.000, 0.000</span> ]</span
-            ><span class="scene-instruction"
-              >DRAG TO EXPLORE <span>·</span> SCROLL TO ZOOM</span
+          <div class="stage-heading">
+            <h1>
+              <span id="headline-accessible" class="sr-only"
+                >A little curiosity ...</span
+              ><span id="headline-text" aria-hidden="true"></span
+              ><span id="headline-cursor" class="cursor" aria-hidden="true"
+                >|</span
+              >
+            </h1>
+            <p class="typed-line">
+              <span id="typed-accessible" class="sr-only"
+                >Reach further. Bring a possibility closer.</span
+              ><span id="typed-text" aria-hidden="true"></span
+              ><span id="subline-cursor" class="cursor" aria-hidden="true"
+                >|</span
+              >
+            </p>
+          </div>
+          <div class="orientation" aria-hidden="true">
+            <svg viewBox="0 0 60 60">
+              <circle cx="30" cy="30" r="1.6" />
+              <line id="axis-x" x1="30" y1="30" x2="47" y2="30" />
+              <line id="axis-y" x1="30" y1="30" x2="30" y2="13" />
+              <line id="axis-z" x1="30" y1="30" x2="21" y2="41" />
+              <text id="axis-label-x" x="53" y="33">X</text>
+              <text id="axis-label-y" x="30" y="7">Y</text>
+              <text id="axis-label-z" x="17" y="48">Z</text>
+            </svg>
+          </div>
+          <div class="telemetry" aria-label="Simulated motion signals">
+            <canvas
+              id="signal-canvas"
+              aria-label="Eight seconds of simulated motion, velocity, acceleration, and phase"
+            ></canvas
+            ><span class="telemetry-label"
+              >MOTION SIGNALS <span>SIMULATED</span></span
             >
           </div>
-          <div class="stage-toolbar">
+          <div class="stage-controls">
             <div class="view-options" role="group" aria-label="Render style">
               <button
                 class="view-button active"
@@ -105,57 +112,53 @@
                 POINTS
               </button>
             </div>
-            <div class="motion-controls">
-              <button
-                id="reset-view"
-                class="icon-button"
-                title="Reset view"
-                aria-label="Reset view"
-              >
-                ↺</button
-              ><button
-                id="pause-toggle"
-                class="pause-button"
-                aria-label="Pause animation"
-                aria-pressed="false"
-              >
-                <span id="pause-icon" aria-hidden="true">Ⅱ</span
-                ><span id="pause-label">Pause</span>
-              </button>
-            </div>
-            <span class="render-label">PROCEDURAL / REAL-TIME</span>
+            <button
+              class="icon-button"
+              id="reset-view"
+              aria-label="Reset view"
+              title="Reset view"
+            >
+              ↺
+            </button>
+            <button
+              class="pause-button"
+              id="pause-toggle"
+              aria-label="Pause animation"
+              aria-pressed="false"
+            >
+              <span id="pause-icon" aria-hidden="true">Ⅱ</span
+              ><span id="pause-label">Pause</span>
+            </button>
           </div>
-          <span class="corner corner-tl" aria-hidden="true"></span
-          ><span class="corner corner-br" aria-hidden="true"></span>
+          <span class="scene-hint">Drag to orbit · Scroll to zoom</span>
         </section>
         <aside class="sidebar">
           <section class="intro-panel">
-            <div class="panel-kicker">
-              <span>01 — OUR CURIOSITY</span
-              ><span class="asterisk" aria-hidden="true">✳</span>
-            </div>
-            <h2>
-              The world doesn’t<br />stand still.<br /><span
-                >Neither should<br />intelligence.</span
-              >
-            </h2>
             <p>
-              A hand reaches. A joint turns. A small adjustment changes
-              everything.
+              Intelligence is easy to imagine in the abstract. It becomes
+              tangible in a hand closing around a cup, a careful reach, a folded
+              piece of fabric, or the rhythm of a running body.
             </p>
             <p>
-              FIELDWORK is an imaginary research studio exploring how machines
-              might learn through movement, contact, and a little curiosity.
+              These small moments are full of coordination. Joints move
+              together. A grip adjusts. Balance shifts. What looks effortless is
+              a conversation between a machine and the world around it.
             </p>
-            <button class="text-link" data-dialog="studio">
-              Inside the study <span aria-hidden="true">+</span>
-            </button>
+            <p>
+              FIELDWORK is a collection of motion studies exploring that
+              conversation. Four everyday gestures, made visible one character
+              at a time.
+            </p>
           </section>
-          <section class="experiment-panel">
+          <section class="explore-panel">
             <div class="panel-kicker">
-              <span>02 — EXPLORATIONS</span
-              ><span id="experiment-count">01 / 03</span>
+              <span>FOUR WAYS TO MOVE</span
+              ><span id="experiment-count">01 / 04</span>
             </div>
+            <p class="explore-copy">
+              From a single careful grasp to a whole body in motion. Choose a
+              study, or let the movements unfold.
+            </p>
             <div
               class="experiment-options"
               role="group"
@@ -163,68 +166,63 @@
             >
               <button
                 class="experiment active"
-                data-scene="reach"
+                data-scene="harvest"
                 aria-pressed="true"
               >
-                <span class="experiment-number">01</span
-                ><span>Reach & return</span
-                ><span class="experiment-mark" aria-hidden="true">↗</span>
+                <span aria-hidden="true">01</span>Harvest
               </button>
               <button
                 class="experiment"
-                data-scene="trace"
+                data-scene="transfer"
                 aria-pressed="false"
               >
-                <span class="experiment-number">02</span
-                ><span>Trace a possibility</span
-                ><span class="experiment-mark" aria-hidden="true">↗</span>
+                <span aria-hidden="true">02</span>Transfer
               </button>
+              <button class="experiment" data-scene="fold" aria-pressed="false">
+                <span aria-hidden="true">03</span>Fold
+              </button>
+              <button class="experiment" data-scene="run" aria-pressed="false">
+                <span aria-hidden="true">04</span>Run
+              </button>
+            </div>
+            <div class="playback-status">
               <button
-                class="experiment"
-                data-scene="balance"
-                aria-pressed="false"
+                id="autoplay-toggle"
+                aria-label="Disable automatic scene switching"
+                aria-pressed="true"
               >
-                <span class="experiment-number">03</span
-                ><span>Find a balance</span
-                ><span class="experiment-mark" aria-hidden="true">↗</span>
-              </button>
+                <span class="autoplay-dot" aria-hidden="true"></span>Auto cycle</button
+              ><span id="status-text">PLAYING</span>
             </div>
-          </section>
-          <section class="signal-panel">
-            <div class="panel-kicker">
-              <span>03 — MOTION SIGNAL</span
-              ><span class="signal-badge">SIMULATED</span>
+            <div class="cycle-track" aria-hidden="true">
+              <span id="cycle-progress"></span>
             </div>
-            <div class="signal-value">
-              <span id="velocity">0.00</span><span>rad / s</span
-              ><span class="signal-label">JOINT VELOCITY</span>
-            </div>
-            <canvas
-              id="signal-canvas"
-              aria-label="Simulated joint velocity over time"
-            ></canvas>
-            <div class="signal-footer"><span>−8s</span><span>NOW</span></div>
+            <button class="notebook-button" data-dialog="notes">
+              Open the motion notebook
+            </button>
           </section>
         </aside>
       </main>
       <footer class="footer">
         <span
-          >© <span id="year">2026</span> FIELDWORK
-          <span class="footer-divider">/</span> A creative motion
-          experiment</span
-        ><span class="footer-center">LESS THEORY. MORE POSSIBILITY.</span
-        ><a
-          href="https://github.com/Shuaijun-LIU/pages"
-          target="_blank"
-          rel="noreferrer"
-          >Explore the source <span aria-hidden="true">↗</span></a
+          >© <span id="year">2026</span> FIELDWORK. A study in
+          possibility.</span
         >
+        <div>
+          <button data-dialog="credits">Credits</button
+          ><a
+            href="https://github.com/Shuaijun-LIU/pages"
+            target="_blank"
+            rel="noreferrer"
+            >Code</a
+          >
+        </div>
       </footer>
     </div>
     <dialog id="info-dialog" aria-labelledby="dialog-title">
       <div class="dialog-inner">
         <div class="dialog-top">
-          <span class="eyebrow">FIELDWORK / NOTEBOOK</span
+          <span>FIELDWORK / NOTEBOOK</span
           ><button
             id="close-dialog"
             class="icon-button"
@@ -234,14 +232,12 @@
           </button>
         </div>
         <div id="dialog-content"></div>
-        <div class="dialog-bottom">KEEP EXPLORING. KEEP MOVING.</div>
       </div>
     </dialog>
     <noscript
-      ><div class="noscript">
-        Enable JavaScript to explore the interactive motion study. FIELDWORK is
-        a fictional studio and an original animation experiment.
-      </div></noscript
+      ><p class="noscript">
+        Enable JavaScript to play the interactive motion studies.
+      </p></noscript
     >
   </body>
 </html>
