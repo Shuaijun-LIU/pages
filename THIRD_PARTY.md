@@ -27,3 +27,11 @@ The collection includes website snapshots from the user's project repositories. 
 | `public/examples/mimicx/` | [NEBULIS-Lab/MimicX](https://github.com/NEBULIS-Lab/MimicX) | Apache-2.0; copied as `SOURCE-LICENSE.txt` |
 
 Each snapshot includes `snapshot.json` with source revision and original file hashes. Bundled vendor/font/icon license files and notices are retained. These project-level licenses do not replace individual media or dependency terms. Original code, paper, and resource links remain in the imported pages.
+
+## 机器人网站参考与新增 Demo
+
+Justin Yu、WARP-RM、EgoMI、Real2Render2Real、POGS、LEGS、CaP-X、SARM/SARM2 在公开集锦中通过原站 iframe 展示，作者、论文与媒体归原作者。卡片中的截图用于识别对应参考页面。网站源码、本地档案、固定提交、授权证据、第三方字体例外与可复用边界见 [来源审计](docs/reuse/justin-sources.md) 和 [目录](catalog/justin-sources.json)；公开集锦不重新托管这些作者的大型视频与录制。
+
+Robot Hero / Robot Trajectory 复用 Three.js 0.180.0 的 OrbitControls 和 GLTFLoader（MIT）。G1 沿用本仓库原有 BSD-3-Clause 资产和许可证，程序机械臂及示例关节序列为本项目生成。详见 [模块说明](docs/reuse/three-robot-demos.md)。
+
+Viser Replay 自托管官方 Viser 1.1.1 客户端，实际发行包的许可证为 Apache-2.0。客户端未做源代码修改，外层页面仅增加交互控件的无障碍名称和初始减弱动态偏好处理。原许可证、版本与依赖声明保存在 `public/examples/viser-replay/viewer/`，原创录制的生成方法见 [Viser 说明](docs/reuse/viser.md)。

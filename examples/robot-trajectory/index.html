@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive robot trajectory player with joint angles, tool-center-point trail, scrubbing, and camera presets."
+    />
+    <title>Kinetic — Trajectory Replay</title>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../../"
+        ><span class="brand-icon" aria-hidden="true"></span>kinetic / lab</a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a href="../robot-hero/">Robot study ↗</a
+        ><a class="active desktop" href="./">02 — Trajectory</a
+        ><a href="../../">All examples ↗</a>
+      </nav>
+    </header>
+    <main class="trajectory-main">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">Motion observatory / 02</div>
+          <h1>Every movement, a story.</h1>
+        </div>
+        <p>
+          Follow a six-axis arm through a recorded sample. Pause, inspect, and
+          replay the path.
+        </p>
+      </div>
+      <div class="replay-layout">
+        <div>
+          <section class="stage-wrap" aria-label="Robot trajectory viewer">
+            <div id="trajectory-stage" class="stage replay-stage">
+              <div class="scene-label">
+                <span class="status-dot"></span>ARM-06 / SWEEP
+              </div>
+              <span class="scene-index mono">FIG. 002</span>
+              <p id="load-status" class="loading-message" role="status">
+                Loading sample trajectory…
+              </p>
+              <span class="view-hint"
+                >ORBIT · DRAG &nbsp; / &nbsp; ZOOM · SCROLL</span
+              >
+              <div class="camera-bar" aria-label="Camera presets">
+                <button data-camera="perspective" aria-pressed="true">
+                  Perspective</button
+                ><button data-camera="front" aria-pressed="false">Front</button
+                ><button data-camera="top" aria-pressed="false">Top</button>
+              </div>
+            </div>
+            <div class="stage-caption">
+              <span>SEQUENCE 001 · CONTINUOUS SWEEP</span
+              ><span class="tag">SAMPLE MOTION</span>
+            </div>
+          </section>
+          <section class="transport" aria-label="Playback controls">
+            <div class="timeline-labels">
+              <span>0 s</span><span>3 s</span><span>6 s</span><span>9 s</span
+              ><span>12 s</span>
+            </div>
+            <input
+              id="timeline"
+              class="timeline"
+              type="range"
+              min="0"
+              max="12"
+              step="0.01"
+              value="0"
+              aria-label="Trajectory time"
+              aria-valuetext="0 seconds"
+            />
+            <div class="transport-bottom">
+              <div class="transport-buttons">
+                <button
+                  id="play"
+                  class="button primary"
+                  aria-label="Pause playback"
+                >
+                  Ⅱ &nbsp; Pause</button
+                ><button id="reset" class="button" aria-label="Reset playback">
+                  ↺ &nbsp; Reset
+                </button>
+              </div>
+              <output id="time-display" class="time-display"
+                >0.00 / 12.00 s</output
+              ><label class="speed-control" for="speed"
+                >Speed
+                <select id="speed">
+                  <option value="0.25">0.25×</option>
+                  <option value="0.5">0.5×</option>
+                  <option value="1" selected>1×</option>
+                  <option value="2">2×</option>
+                </select></label
+              >
+            </div>
+          </section>
+        </div>
+        <aside class="side-panel" aria-label="Live robot state">
+          <div>
+            <h2>Tool center point <span class="mono">/ m</span></h2>
+            <dl class="readout">
+              <div>
+                <dt>X</dt>
+                <dd id="tcp-x">—</dd>
+              </div>
+              <div>
+                <dt>Y</dt>
+                <dd id="tcp-y">—</dd>
+              </div>
+              <div>
+                <dt>Z</dt>
+                <dd id="tcp-z">—</dd>
+              </div>
+            </dl>
+            <p class="legend">
+              <b></b>Tool path<br />Solid green shows the replayed path.<br />Faint
+              green shows the full sequence.
+            </p>
+            <label class="toggle-trail"
+              ><input type="checkbox" id="trail-toggle" checked />Show tool
+              path</label
+            >
+          </div>
+          <div class="joint-list">
+            <h2>Joint positions <span class="mono">/ deg</span></h2>
+            <div id="joints"></div>
+            <p class="sample-note">
+              361 samples · 30 Hz<br />12 seconds · looping playback
+            </p>
+          </div>
+        </aside>
+      </div>
+      <p class="sample-note">
+        Illustrative motion from an authored joint sequence. Tool positions are
+        computed with forward kinematics. This is a visualization sample, not a
+        learned policy or experimental result.
+      </p>
+    </main>
+    <footer>
+      <span>Look closer. There’s a lot between A and B.</span
+      ><span>Three.js · local sample data · no backend required</span>
+    </footer>
+    <script type="module" src="../../src/robot-demos/trajectory.js"></script>
+  </body>
+</html>

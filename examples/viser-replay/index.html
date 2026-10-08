@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#eeede6" />
+  <title>Spatial Replay — Viser robotics demo</title>
+  <link rel="icon" href="../../favicon.svg" />
+  <style>
+    :root{font-family:Inter,Arial,sans-serif;color:#232a28;background:#eeede6;font-synthesis:none}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-underline-offset:4px}button,a{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:3px solid #006d5b;outline-offset:5px}header,main,footer{max-width:1560px;margin:auto;padding-left:5%;padding-right:5%}header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:25px;padding-bottom:25px;border-bottom:1px solid #cdd0c5;font-size:14px}header a{text-decoration:none}.wordmark{display:flex;align-items:center;gap:10px;font-weight:700}.mark{display:inline-grid;place-items:center;width:25px;height:25px;background:#263e35;color:#d6edaa;border-radius:50%;font-size:19px}header nav{display:flex;gap:24px}.intro{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end;padding-top:52px;padding-bottom:34px}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:.15em;font-weight:650;color:#657169;margin:0 0 17px}h1{font-size:clamp(42px,5.3vw,76px);font-weight:500;line-height:1.03;letter-spacing:-.065em;margin:0}h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.05em}.lede{font-size:17px;line-height:1.65;max-width:480px;margin:0;color:#5d665f}.status{display:flex;align-items:center;gap:8px;margin-top:17px;font-size:12px;color:#486047}.dot{height:7px;width:7px;background:#587b3a;border-radius:50%}.viewer-shell{border:1px solid #c0c7bc;background:#dce2d5;border-radius:14px;overflow:hidden;box-shadow:0 12px 32px #2535290a}.viewer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#21382e;color:#e6eddf;padding:15px 20px;font-size:13px}.viewer-head strong{font-weight:500}.viewer-head span{color:#bbccb8;font-size:12px}.viewer{height:min(66vw,620px);min-height:430px;position:relative;background:#e8eee6}iframe{width:100%;height:100%;border:0;display:block}.viewer-foot{padding:14px 20px;display:flex;gap:18px;justify-content:space-between;background:#f7f7f0;font-size:12px;color:#60685e}.legend{display:flex;gap:18px}.legend span{display:flex;gap:7px;align-items:center}.swatch{width:8px;height:8px;border-radius:2px;background:#ca713f}.swatch.blue{background:#6589a2}.swatch.green{background:#527c66}.details{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:33px 0 40px}.details article+article{border-left:1px solid #cbd0c3;padding-left:30px}.details h2{font-size:15px;font-weight:600;margin:0 0 12px}.details p{font-size:14px;line-height:1.65;color:#626a61;margin:0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}.actions a{font-size:12px;text-decoration:none;border:1px solid #bfc7b9;padding:10px 13px;border-radius:5px;background:#f6f6ed}.actions a:hover{background:#dce5cf}.metric{font-family:Georgia,serif;font-size:30px;color:#2d4434;margin-bottom:7px}.metric small{font-family:Arial,sans-serif;font-size:12px;color:#626a61;margin-left:7px}footer{padding-top:20px;padding-bottom:24px;border-top:1px solid #cdd0c5;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#677162}@media(max-width:760px){header,main,footer{padding-left:20px;padding-right:20px}header nav{gap:15px}.intro{grid-template-columns:1fr;gap:23px;padding-top:35px}h1{font-size:52px}.lede{font-size:15px}.viewer{height:520px;min-height:0}.viewer-head{padding:13px;font-size:12px}.viewer-head span{font-size:10px}.viewer-foot{flex-direction:column;padding:13px;font-size:11px}.details{grid-template-columns:1fr;gap:23px}.details article+article{border-left:0;border-top:1px solid #cbd0c3;padding:23px 0 0}.legend{gap:13px}footer{flex-direction:column;gap:10px}}
+  </style>
+</head>
+<body>
+<header><a class="wordmark" href="../../"><span class="mark">↗</span> Research Interfaces</a><nav aria-label="Page navigation"><a href="../../">Collection</a><a href="https://viser.studio/main/" target="_blank" rel="noreferrer">Viser ↗</a></nav></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">Interactive robotics · 03</p><h1>Motion, from<br><em>every angle.</em></h1></div><div><p class="lede">A robot transfer, made inspectable. Follow the end effector, explore the camera geometry, and revisit any moment in a shared 3D scene.</p><p class="status"><span class="dot"></span> Interactive 3D recording · runs in your browser</p></div></section>
+  <section class="viewer-shell" aria-label="Robot trajectory viewer">
+    <div class="viewer-head"><strong>SPATIAL REPLAY / Pick & place</strong><span>Original synthetic scene · Viser</span></div>
+    <div class="viewer"><iframe id="viser-viewer" title="Interactive Viser robot pick-and-place replay" allow="fullscreen" loading="eager"></iframe></div>
+    <div class="viewer-foot"><div class="legend"><span><i class="swatch"></i> Tool trajectory</span><span><i class="swatch blue"></i> Camera poses</span><span><i class="swatch green"></i> Robot links</span></div><span>Drag to orbit · scroll to zoom · timeline to scrub</span></div>
+  </section>
+  <section class="details" aria-label="About this demo">
+    <article><h2>One scene. Any viewpoint.</h2><p>Use Viser’s playback bar to pause, change speed, or scrub through the transfer. The camera stays yours to move throughout the recording.</p><div class="actions"><a id="download" href="./pick-place.viser" download>Download .viser ↓</a><a id="standalone" href="./viewer/index.html" target="_blank" rel="noreferrer">Open full viewer ↗</a></div></article>
+    <article><h2>The sequence</h2><div class="metric">12 <small>seconds / 240 frames</small></div><p>Approach → lift → transfer → release → return. A three-link arm carries a small part between two stations; three frusta mark observation cameras.</p></article>
+    <article><h2>What you are seeing</h2><p>Prerecorded kinematic motion, generated with Python and exported through Viser. Geometry and trajectories are original demo assets. This is a visualization, not a physics simulation or a measured robot experiment.</p></article>
+  </section>
+</main>
+<footer><span>Built with the official <a href="https://github.com/nerfstudio-project/viser" target="_blank" rel="noreferrer">Viser</a> client · Apache-2.0 license</span><a href="./viewer/THIRD_PARTY_NOTICES.md">Third-party notices</a></footer>
+<script type="module">
+  const viewer = new URL('./viewer/index.html', window.location.href);
+  viewer.searchParams.set('playbackPath', new URL('./pick-place.viser', window.location.href).href);
+  viewer.searchParams.set('initialCameraPosition', '3.3,-4.3,3.1');
+  viewer.searchParams.set('initialCameraLookAt', '0,0,0.6');
+  viewer.searchParams.set('initialCameraUp', '0,0,1');
+  viewer.searchParams.set('initialCameraFov', window.innerWidth < 760 ? '1.0' : '0.65');
+  const iframe = document.getElementById('viser-viewer');
+  // Preserve the upstream client; add accessible names in this same-origin embed.
+  iframe.addEventListener('load', () => {
+    const doc = iframe.contentDocument;
+    let initialPlaybackHandled = false;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const labelControls = () => {
+      const pause = doc.querySelector('button:has(.tabler-icon-player-pause-filled)');
+      const play = doc.querySelector('button:has(.tabler-icon-player-play-filled)');
+      if (pause && pause.getAttribute('aria-label') !== 'Pause playback') pause.setAttribute('aria-label', 'Pause playback');
+      if (play && play.getAttribute('aria-label') !== 'Play playback') play.setAttribute('aria-label', 'Play playback');
+      if (!initialPlaybackHandled && (pause || play)) {
+        initialPlaybackHandled = true;
+        if (reduceMotion && pause) pause.click();
+      }
+      const time = doc.querySelector('input[inputmode="decimal"]');
+      if (time && !time.getAttribute('aria-label')) time.setAttribute('aria-label', 'Playback time in seconds');
+      const speed = doc.querySelector('input[role="combobox"]');
+      if (speed && !speed.getAttribute('aria-label')) speed.setAttribute('aria-label', 'Playback speed');
+    };
+    new MutationObserver(labelControls).observe(doc.body, { childList: true, subtree: true });
+    labelControls();
+  });
+  iframe.src = viewer.href;
+  document.getElementById('standalone').href = viewer.href;
+</script>
+</body>
+</html>

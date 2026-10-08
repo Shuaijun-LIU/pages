@@ -1,0 +1,2369 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-10-09",
+  "scope": "Nine Justin Yu related frontend pages; raw sources and assets are archived locally. Website archive is not a grant of reuse rights.",
+  "sources": [
+    {
+      "slug": "justin-yu",
+      "name": "Justin Yu",
+      "liveURL": "https://uynitsuj.github.io/",
+      "source": {
+        "repository": "https://github.com/uynitsuj/uynitsuj.github.io",
+        "branch": "master",
+        "commit": "50690bf91623e744b521735f43dc62f1e7c10ead",
+        "siteSubdir": ".",
+        "archiveFolder": "personal"
+      },
+      "stack": [
+        "Jekyll/Liquid",
+        "YAML",
+        "SCSS",
+        "vanilla JavaScript",
+        "Viser",
+        "React",
+        "Three.js"
+      ],
+      "coreFiles": [
+        "_layouts/home.html",
+        "_includes/head.html",
+        "_data/index/demos.yml",
+        "_data/index/repos.yml",
+        "_data/index/projects.yml",
+        "css/main.scss",
+        "viser-idle-sway.js",
+        "viser-client/index.html",
+        "viser-client-1.0.22/index.html"
+      ],
+      "modules": [
+        "YAML-backed publication/project/demo cards",
+        "dark/light theme with CSS custom properties",
+        "four lazy iframe 3D recording cards",
+        "Viser camera idle sway + DPI pinning"
+      ],
+      "runCommands": [
+        "bundle install",
+        "bundle exec jekyll serve --host 127.0.0.1"
+      ],
+      "runNotes": "Run from site root. Jekyll source requires a build; a separately archived deployed HTML snapshot is also available.",
+      "dependencies": [
+        {
+          "url": "https://uynitsuj.github.io/recordings/bottles_episode.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/bottles_episode.viser",
+          "bytes": 14867856
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/tshirt_episode.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/tshirt_episode.viser",
+          "bytes": 14488493
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/coffee_maker_recording_20250506_191701.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/coffee_maker_recording_20250506_191701.viser",
+          "bytes": 20630242
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251022_210201.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251022_210201.viser",
+          "bytes": 8483622
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [
+          "MIT (inherited site template)"
+        ],
+        "evidence": [
+          "LICENSE.txt: Copyright (c) 2015 Renyuan Zou"
+        ],
+        "restrictions": [
+          "Preserve the MIT notice for covered template code. The inherited notice does not establish blanket reuse rights for later research recordings, portraits, figures or third-party scenes."
+        ],
+        "restrictedAssetPaths": [
+          "recordings/",
+          "images/",
+          "img/",
+          "warp-rm/media/",
+          "warp-rm/studio/"
+        ]
+      },
+      "archiveStatus": "complete"
+    },
+    {
+      "slug": "warp-rm",
+      "name": "WARP-RM",
+      "liveURL": "https://uynitsuj.github.io/warp-rm/",
+      "source": {
+        "repository": "https://github.com/uynitsuj/uynitsuj.github.io",
+        "branch": "master",
+        "commit": "50690bf91623e744b521735f43dc62f1e7c10ead",
+        "siteSubdir": "warp-rm",
+        "archiveFolder": "personal"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Viser",
+        "React",
+        "Three.js"
+      ],
+      "coreFiles": [
+        "warp-rm/index.html",
+        "warp-rm/viser/index.html",
+        "warp-rm/viser/client.js",
+        "warp-rm/viser/client.css",
+        "warp-rm/media/inspector/curves.json",
+        "warp-rm/studio/concrete-albedo.webp",
+        "recordings/tshirt_episode.viser"
+      ],
+      "modules": [
+        "same-origin iframe hero + postMessage playback/seek/explore controller",
+        "poster-to-3D reveal and retry state",
+        "paired video/reward-curve inspector",
+        "metric-switching animated bar charts",
+        "SVG stochastic warp sampler",
+        "duration-tier comparison selectors"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "Run from repository root; open /warp-rm/ so /recordings/ resolves correctly.",
+      "dependencies": [
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZg.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUsj.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUUsj.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj42Vksj.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj4PVksj.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/tshirt_episode.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/tshirt_episode.viser",
+          "bytes": 14488493
+        },
+        {
+          "kind": "runtime MathJax extension/font requests",
+          "archived": false,
+          "note": "Entry bundle archived; dynamically requested submodules are not a complete offline MathJax installation."
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [
+          "MIT (inherited site template)"
+        ],
+        "evidence": [
+          "LICENSE.txt: Copyright (c) 2015 Renyuan Zou",
+          "warp-rm/index.html:888 credits 3D scene by https://www.josephines.world/"
+        ],
+        "restrictions": [
+          "Preserve the MIT notice for covered template code. The inherited notice does not establish blanket reuse rights for later research recordings, portraits, figures or third-party scenes.",
+          "WARP hero is self-hosted patched Viser; scene credit is not a redistribution license."
+        ],
+        "restrictedAssetPaths": [
+          "recordings/",
+          "images/",
+          "img/",
+          "warp-rm/media/",
+          "warp-rm/studio/"
+        ]
+      },
+      "archiveStatus": "complete"
+    },
+    {
+      "slug": "egomi",
+      "name": "EgoMI",
+      "liveURL": "https://egocentric-manipulation-interface.github.io/",
+      "source": {
+        "repository": "https://github.com/egocentric-manipulation-interface/egocentric-manipulation-interface.github.io",
+        "branch": "main",
+        "commit": "1e320cbc87265207aca53d1a3b05338e3817b009",
+        "siteSubdir": ".",
+        "archiveFolder": "egomi"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Viser",
+        "React",
+        "Three.js"
+      ],
+      "coreFiles": [
+        "index.html",
+        "data/Rollout_Videos/"
+      ],
+      "modules": [
+        "video thumbnail carousel selects Viser recording iframe",
+        "collapsible abstract",
+        "sticky scroll-aware section navigation"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251022_210201.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251022_210201.viser",
+          "bytes": 8483622
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251024_112052.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251024_112052.viser",
+          "bytes": 31033726
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251024_112206.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251024_112206.viser",
+          "bytes": 87353948
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251024_112328.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251024_112328.viser",
+          "bytes": 85484120
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/egomi/recording_20251024_112608.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/egomi/recording_20251024_112608.viser",
+          "bytes": 28500590
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [],
+        "evidence": [
+          "No LICENSE file or explicit site license grant found at pinned commit."
+        ],
+        "restrictions": [
+          "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
+        ]
+      },
+      "archiveStatus": "complete"
+    },
+    {
+      "slug": "real2render2real",
+      "name": "Real2Render2Real",
+      "liveURL": "https://real2render2real.com/",
+      "source": {
+        "repository": "https://github.com/real2render2real/real2render2real.github.io",
+        "branch": "main",
+        "commit": "67ba7ddfb1847974b049607434b2dc866a92a4a2",
+        "siteSubdir": ".",
+        "archiveFolder": "r2r2r",
+        "liveDrift": "The deployed HTML differs from pinned main index.html; both versions preserved, with two deployed-only media files recovered separately."
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Viser",
+        "React",
+        "Three.js"
+      ],
+      "coreFiles": [
+        "index.html",
+        "data/"
+      ],
+      "modules": [
+        "real-rollout video thumbnail carousel",
+        "scan/track/render Viser recording carousel",
+        "paired embodiment viewers",
+        "copy-BibTeX control"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://real2render2real.com/data/new_s1.mp4",
+          "status": "downloaded-live-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://real2render2real.com/data/r2r2r_fig_no_bg.png",
+          "status": "downloaded-live-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/cardboard_box_recording_20250507_103622.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/cardboard_box_recording_20250507_103622.viser",
+          "bytes": 45878690
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/coffee_maker_recording_20250506_191701.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/coffee_maker_recording_20250506_191701.viser",
+          "bytes": 20630242
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/drawer_recording_20250507_104056.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/drawer_recording_20250507_104056.viser",
+          "bytes": 55382055
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/drawer_reversed_demo.viser",
+          "kind": "Viser recording",
+          "archived": false,
+          "archiveReference": "personal/recordings/drawer_reversed_demo.viser",
+          "bytes": null
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/faucet_recording_20250507_110111.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/faucet_recording_20250507_110111.viser",
+          "bytes": 74053149
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/franka_coffee_maker_recording_20250506_210619.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/franka_coffee_maker_recording_20250506_210619.viser",
+          "bytes": 50040834
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/package_recording_20250507_103622.viser",
+          "kind": "Viser recording",
+          "archived": false,
+          "archiveReference": "personal/recordings/package_recording_20250507_103622.viser",
+          "bytes": null
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/tiger_pick_r2r2r_recording_20250507_112639.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/tiger_pick_r2r2r_recording_20250507_112639.viser",
+          "bytes": 60551255
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/traj_interp.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "personal/recordings/traj_interp.viser",
+          "bytes": 4709985
+        },
+        {
+          "url": "https://real2render2real.com/data/new_s1.mp4",
+          "kind": "deployed-only asset absent from git",
+          "archived": true,
+          "bytes": 35925337
+        },
+        {
+          "url": "https://real2render2real.com/data/r2r2r_fig_no_bg.png",
+          "kind": "deployed-only asset absent from git",
+          "archived": true,
+          "bytes": 454562
+        }
+      ],
+      "missingAssets": [
+        {
+          "url": "https://uynitsuj.github.io/recordings/drawer_reversed_demo.viser",
+          "status": "HTTP 404",
+          "impact": "obsolete iframeData branch; active main-iframe thumbnail list uses available replacements"
+        },
+        {
+          "url": "https://uynitsuj.github.io/recordings/package_recording_20250507_103622.viser",
+          "status": "HTTP 404",
+          "impact": "obsolete iframeData branch; active main-iframe thumbnail list uses available replacements"
+        },
+        {
+          "url": "https://drive.google.com/file/d/1kwoy75F_KsiVilJQNh9A2s5ZdIYCKHjk/preview",
+          "status": "external video player retained; binary not archived",
+          "impact": "Full project video requires external service."
+        }
+      ],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [],
+        "evidence": [
+          "No LICENSE file or explicit site license grant found at pinned commit."
+        ],
+        "restrictions": [
+          "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
+        ]
+      },
+      "archiveStatus": "complete"
+    },
+    {
+      "slug": "pogs",
+      "name": "POGS",
+      "liveURL": "https://berkeleyautomation.github.io/POGS/",
+      "source": {
+        "repository": "https://github.com/BerkeleyAutomation/POGS",
+        "branch": "main",
+        "commit": "498e21f2b1e802e5d890f3757312e6e044284c5e",
+        "siteSubdir": ".",
+        "archiveFolder": "pogs"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Bulma",
+        "jQuery",
+        "Viser",
+        "React",
+        "Three.js"
+      ],
+      "coreFiles": [
+        "index.html",
+        "static/css/index.css",
+        "static/js/index.js",
+        "viser-client/index.html",
+        "recordings/"
+      ],
+      "modules": [
+        "16-scene Viser iframe switcher",
+        "thumbnail carousel and fullscreen toggle",
+        "Nerfies/Bulma research layout"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+          "status": "downloaded-alternative-host",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/castoro/v20/1q2GY5yMCld3-O4cLY9OyA.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/googlesans/v71/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vc.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.eot",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.woff",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.svg",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-solid-900.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-solid-900.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-solid-900.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-solid-900.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-solid-900.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-brands-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-brands-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-brands-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-brands-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-brands-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-regular-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-regular-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-regular-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-regular-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/static/webfonts/fa-regular-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/LICENSE.txt",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/drill_scene1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/drill_scene1.viser",
+          "bytes": 938608
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/drill_scene2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/drill_scene2.viser",
+          "bytes": 936975
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/drill_scene3.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/drill_scene3.viser",
+          "bytes": 936777
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/drill_scene4.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/drill_scene4.viser",
+          "bytes": 937470
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/iron_shelf_pick1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/iron_shelf_pick1.viser",
+          "bytes": 875095
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/iron_shelf_pick2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/iron_shelf_pick2.viser",
+          "bytes": 865556
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/iron_shelf_place1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/iron_shelf_place1.viser",
+          "bytes": 877128
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/iron_shelf_place2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/iron_shelf_place2.viser",
+          "bytes": 867318
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/jigsaw_shelf_pick1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/jigsaw_shelf_pick1.viser",
+          "bytes": 648690
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/jigsaw_shelf_pick2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/jigsaw_shelf_pick2.viser",
+          "bytes": 649468
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/jigsaw_shelf_place1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/jigsaw_shelf_place1.viser",
+          "bytes": 649077
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/jigsaw_shelf_place2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/jigsaw_shelf_place2.viser",
+          "bytes": 649020
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/shoe_shoebox_pick1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/shoe_shoebox_pick1.viser",
+          "bytes": 860587
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/shoe_shoebox_pick2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/shoe_shoebox_pick2.viser",
+          "bytes": 860193
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/shoe_shoebox_place1.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/shoe_shoebox_place1.viser",
+          "bytes": 864621
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/POGS/recordings/shoe_shoebox_place2.viser",
+          "kind": "Viser recording",
+          "archived": true,
+          "archiveReference": "pogs/recordings/shoe_shoebox_place2.viser",
+          "bytes": 864053
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": true,
+        "mode": "reference-embed",
+        "reason": "Website snapshot is conditionally reusable under its explicit CC-BY-SA declaration with attribution/license/change/share-alike requirements; this gallery nevertheless uses an original-site reference embed."
+      },
+      "license": {
+        "declared": [
+          "CC-BY-SA-4.0 (website README and footer)",
+          "Apache-2.0 (repository LICENSE)"
+        ],
+        "evidence": [
+          "README.md Website License",
+          "LICENSE",
+          "index.html attribution/footer"
+        ],
+        "restrictions": [
+          "Retain author/source attribution and license link; indicate modifications; share adapted website material under the applicable share-alike terms. Preserve independent bundled-software notices. Mixed repository/site declarations are recorded separately; they are not treated as interchangeable."
+        ],
+        "templateReuse": "conditional"
+      },
+      "archiveStatus": "complete",
+      "templateCandidate": {
+        "path": "templates/pogs",
+        "status": "extracted locally",
+        "files": "index.html + static/css + static/js + README + LICENSE + REUSE.md",
+        "excluded": [
+          "research media",
+          "Viser recordings",
+          "static/fontawesome/ (Pro commercial assets)"
+        ]
+      },
+      "knownSourceIssues": [
+        {
+          "file": "static/css/fontawesome.all.min.css",
+          "issue": "Font Awesome Free5.15.1 references missing static/webfonts files; original solid.woff2 URL returns404. Exact-version upstream fonts recovered to separate cache."
+        }
+      ]
+    },
+    {
+      "slug": "legs",
+      "name": "LEGS",
+      "liveURL": "https://berkeleyautomation.github.io/LEGS/",
+      "source": {
+        "repository": "https://github.com/BerkeleyAutomation/LEGS",
+        "branch": "main",
+        "commit": "aed2d1ca8ec52d35f19cc55eeb7c0678f97d1f36",
+        "siteSubdir": ".",
+        "archiveFolder": "legs"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Bulma",
+        "jQuery"
+      ],
+      "coreFiles": [
+        "index.html",
+        "static/css/index.css",
+        "static/js/index.js",
+        "static/",
+        "data/"
+      ],
+      "modules": [
+        "Nerfies/Bulma research layout",
+        "video teaser and semantic-query figures"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+          "status": "downloaded-alternative-host",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/castoro/v20/1q2GY5yMCld3-O4cLY9OyA.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/googlesans/v71/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vc.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.eot",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.woff",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.svg",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-solid-900.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-solid-900.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-solid-900.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-solid-900.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-solid-900.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-brands-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-brands-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-brands-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-brands-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-brands-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-regular-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-regular-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-regular-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-regular-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://berkeleyautomation.github.io/LEGS/static/webfonts/fa-regular-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/LICENSE.txt",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": true,
+        "mode": "reference-embed",
+        "reason": "Website snapshot is conditionally reusable under its explicit CC-BY-SA declaration with attribution/license/change/share-alike requirements; this gallery nevertheless uses an original-site reference embed."
+      },
+      "license": {
+        "declared": [
+          "CC-BY-SA-4.0 (website README and footer)",
+          "Apache-2.0 (repository LICENSE)"
+        ],
+        "evidence": [
+          "README.md Website License",
+          "LICENSE",
+          "index.html attribution/footer"
+        ],
+        "restrictions": [
+          "Retain author/source attribution and license link; indicate modifications; share adapted website material under the applicable share-alike terms. Preserve independent bundled-software notices. Mixed repository/site declarations are recorded separately; they are not treated as interchangeable."
+        ],
+        "templateReuse": "conditional"
+      },
+      "archiveStatus": "complete",
+      "templateCandidate": {
+        "path": "templates/legs",
+        "status": "extracted locally",
+        "files": "index.html + static/css + static/js + README + LICENSE + REUSE.md",
+        "excluded": [
+          "research media",
+          "Viser recordings",
+          "static/fontawesome/ (Pro commercial assets)"
+        ]
+      },
+      "knownSourceIssues": [
+        {
+          "file": "static/css/fontawesome.all.min.css",
+          "issue": "Font Awesome Free5.15.1 references missing static/webfonts files; original solid.woff2 URL returns404. Exact-version upstream fonts recovered to separate cache."
+        }
+      ]
+    },
+    {
+      "slug": "cap-x",
+      "name": "CaP-X",
+      "liveURL": "https://capgym.github.io/",
+      "source": {
+        "repository": "https://github.com/capgym/capgym.github.io",
+        "branch": "main",
+        "commit": "b2eff1073b92b5482d2146f591d78d5aa43022d9",
+        "siteSubdir": ".",
+        "archiveFolder": "cap-x"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "D3 v7",
+        "GSAP 3.12.2 + ScrollTrigger",
+        "Prism 1.29.0"
+      ],
+      "coreFiles": [
+        "index.html",
+        "css/style.css",
+        "js/config.js",
+        "js/charts.js",
+        "js/main.js",
+        "data/model_data.json",
+        "assets/"
+      ],
+      "modules": [
+        "D3 benchmark charts loaded from JSON",
+        "GSAP ScrollTrigger reveal animations",
+        "video modal + fetched agent code + Prism highlighting",
+        "config-driven authors and hero metadata",
+        "show-more task galleries"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-dark.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://d3js.org/d3.v7.min.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        }
+      ],
+      "missingAssets": [],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [],
+        "evidence": [
+          "No LICENSE file or explicit site license grant found at pinned commit."
+        ],
+        "restrictions": [
+          "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
+        ]
+      },
+      "archiveStatus": "complete"
+    },
+    {
+      "slug": "sarm",
+      "name": "SARM",
+      "liveURL": "https://qianzhong-chen.github.io/sarm.github.io/",
+      "source": {
+        "repository": "https://github.com/qianzhong-chen/sarm.github.io",
+        "branch": "main",
+        "commit": "0022018b7ed01c48fe6d8558fe0cfb50b38c34ee",
+        "siteSubdir": ".",
+        "archiveFolder": "sarm"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Bulma",
+        "jQuery"
+      ],
+      "coreFiles": [
+        "index.html",
+        "static/css/index.css",
+        "static/js/index.js",
+        "media/"
+      ],
+      "modules": [
+        "Bulma research layout",
+        "reward-estimation video/figure panels",
+        "citation block"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+          "status": "downloaded-alternative-host",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/castoro/v20/1q2GY5yMCld3-O4cLY9OyA.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/googlesans/v71/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vc.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.eot",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.woff",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.svg",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-solid-900.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-solid-900.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-solid-900.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-solid-900.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-solid-900.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-brands-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-brands-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-brands-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-brands-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-brands-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-regular-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-regular-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-regular-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-regular-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/webfonts/fa-regular-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/LICENSE.txt",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        }
+      ],
+      "missingAssets": [
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/source_serif_4.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/source_sans_3.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm.github.io/static/academicons.min.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        }
+      ],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [
+          "CC-BY-SA-4.0 (website README)",
+          "GPL-3.0 (repository LICENSE)"
+        ],
+        "evidence": [
+          "README.md Website License",
+          "LICENSE",
+          "index.html attribution/footer"
+        ],
+        "restrictions": [
+          "Retain author/source attribution and license link; indicate modifications; share adapted website material under the applicable share-alike terms. Preserve independent bundled-software notices. Mixed repository/site declarations are recorded separately; they are not treated as interchangeable.",
+          "Bundled static/fontawesome CSS headers state Font Awesome Pro 6.5.1 Commercial License; omit/replace this directory for reusable public templates unless separately licensed."
+        ],
+        "templateReuse": "conditional",
+        "restrictedAssetPaths": [
+          "static/fontawesome/"
+        ]
+      },
+      "archiveStatus": "complete",
+      "templateCandidate": {
+        "path": "templates/sarm",
+        "status": "extracted locally",
+        "files": "index.html + static/css + static/js + README + LICENSE + REUSE.md",
+        "excluded": [
+          "research media",
+          "Viser recordings",
+          "static/fontawesome/ (Pro commercial assets)"
+        ]
+      },
+      "knownSourceIssues": [
+        {
+          "file": "static/js/index.js",
+          "lines": [
+            71,
+            72
+          ],
+          "issue": "Unguarded playbackRate assignments to absent single-task-result-video and multi-task-result-video IDs throw a null-element error. This is present in the source archive; raw files are preserved unchanged.",
+          "adaptation": "Remove unused handlers or guard both elements in a derived template."
+        },
+        {
+          "file": "index.html",
+          "lines": [
+            31,
+            100
+          ],
+          "function": "updateInTheWild",
+          "issue": "body onload invokes updateInTheWild(), which reads .value from missing inthewild-video-menu; browser reports TypeError Cannot read properties of null (reading value). updateBimanual has the same inherited missing-menu pattern.",
+          "adaptation": "Derived templates guard menu and media elements in updateInTheWild, updateBimanual and updateClothes; raw sources unchanged."
+        }
+      ]
+    },
+    {
+      "slug": "sarm2",
+      "name": "SARM2",
+      "liveURL": "https://qianzhong-chen.github.io/sarm2.github.io/",
+      "source": {
+        "repository": "https://github.com/qianzhong-chen/sarm2.github.io",
+        "branch": "main",
+        "commit": "39f829c91a329ce8e6dfa9f8038e79927f675100",
+        "siteSubdir": ".",
+        "archiveFolder": "sarm2"
+      },
+      "stack": [
+        "static HTML/CSS",
+        "vanilla JavaScript",
+        "Bulma",
+        "jQuery"
+      ],
+      "coreFiles": [
+        "index.html",
+        "static/css/index.css",
+        "static/js/index.js",
+        "media/"
+      ],
+      "modules": [
+        "Bulma research layout",
+        "multi-task reward video/figure sections",
+        "citation block"
+      ],
+      "runCommands": [
+        "python3 -m http.server 8000 --bind 127.0.0.1"
+      ],
+      "runNotes": "No build required. Original absolute iframe/CDN URLs remain remote unless using local archive preview helper.",
+      "dependencies": [
+        {
+          "url": "https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+          "status": "downloaded-alternative-host",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/castoro/v20/1q2GY5yMCld3-O4cLY9OyA.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/googlesans/v71/4Ua_rENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RFD48TE63OOYKtrwEIJllpyw.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://fonts.gstatic.com/s/notosans/v42/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vc.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.eot",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.woff",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/fonts/academicons.svg",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-brands-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.woff2",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-v4compatibility.ttf",
+          "status": "downloaded",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-solid-900.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-solid-900.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-solid-900.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-solid-900.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-solid-900.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-solid-900.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-brands-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-brands-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-brands-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-brands-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-brands-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-brands-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff2",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-regular-400.woff2",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.woff",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-regular-400.woff",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.ttf",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-regular-400.ttf",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.eot",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-regular-400.eot",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/webfonts/fa-regular-400.svg",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/webfonts/fa-regular-400.svg",
+          "status": "recovered-from-versioned-upstream",
+          "kind": "CDN asset",
+          "archived": true
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/LICENSE.txt",
+          "status": "downloaded-runtime-supplement",
+          "kind": "CDN asset",
+          "archived": true
+        }
+      ],
+      "missingAssets": [
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/source_serif_4.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/source_sans_3.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        },
+        {
+          "url": "https://qianzhong-chen.github.io/sarm2.github.io/static/academicons.min.css",
+          "status": "HTTP Error 404: Not Found",
+          "impact": "unused/fallback font or icon stylesheet; live site has same missing URL"
+        }
+      ],
+      "snapshot": {
+        "permitted": false,
+        "mode": "reference-embed",
+        "reason": "Gallery entry embeds the original with an open-original fallback; raw source archive is for local study."
+      },
+      "license": {
+        "declared": [
+          "CC-BY-SA-4.0 (website README)",
+          "GPL-3.0 (repository LICENSE)"
+        ],
+        "evidence": [
+          "README.md Website License",
+          "LICENSE",
+          "index.html attribution/footer"
+        ],
+        "restrictions": [
+          "Retain author/source attribution and license link; indicate modifications; share adapted website material under the applicable share-alike terms. Preserve independent bundled-software notices. Mixed repository/site declarations are recorded separately; they are not treated as interchangeable.",
+          "Bundled static/fontawesome CSS headers state Font Awesome Pro 6.5.1 Commercial License; omit/replace this directory for reusable public templates unless separately licensed."
+        ],
+        "templateReuse": "conditional",
+        "restrictedAssetPaths": [
+          "static/fontawesome/"
+        ]
+      },
+      "archiveStatus": "complete",
+      "templateCandidate": {
+        "path": "templates/sarm2",
+        "status": "extracted locally",
+        "files": "index.html + static/css + static/js + README + LICENSE + REUSE.md",
+        "excluded": [
+          "research media",
+          "Viser recordings",
+          "static/fontawesome/ (Pro commercial assets)"
+        ]
+      },
+      "knownSourceIssues": [
+        {
+          "file": "static/js/index.js",
+          "lines": [
+            71,
+            72
+          ],
+          "issue": "Unguarded playbackRate assignments to absent single-task-result-video and multi-task-result-video IDs throw a null-element error. This is present in the source archive; raw files are preserved unchanged.",
+          "adaptation": "Remove unused handlers or guard both elements in a derived template."
+        },
+        {
+          "file": "index.html",
+          "lines": [
+            31,
+            112
+          ],
+          "function": "updateInTheWild",
+          "issue": "body onload invokes updateInTheWild(), which reads .value from missing inthewild-video-menu; browser reports TypeError Cannot read properties of null (reading value). updateBimanual has the same inherited missing-menu pattern.",
+          "adaptation": "Derived templates guard menu and media elements in updateInTheWild, updateBimanual and updateClothes; raw sources unchanged."
+        }
+      ]
+    }
+  ],
+  "viewerSource": {
+    "repository": "https://github.com/viser-project/viser",
+    "ref": "v1.0.22",
+    "commit": "83fb7a7625be545fe2e59e06f297a87705fc7f03",
+    "siteSubdir": "src/viser/client",
+    "license": "Apache-2.0",
+    "coreFiles": [
+      "src/viser/client/src/App.tsx",
+      "src/viser/client/src/FilePlayback.tsx",
+      "src/viser/client/src/MessageHandler.tsx",
+      "src/viser/client/src/SceneTree.tsx",
+      "src/viser/client/src/Splatting/GaussianSplats.tsx",
+      "src/viser/client/src/Splatting/SplatSortWorker.ts",
+      "src/viser/client/package.json"
+    ],
+    "runCommands": [
+      "cd src/viser/client",
+      "npm ci",
+      "npm run dev"
+    ],
+    "runNotes": "Node >=24.0.0 per package.json. Source pinned as study/build reference for named viewer version; no claim of byte-identical reproduction of site-specific patched builds."
+  }
+}

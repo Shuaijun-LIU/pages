@@ -1,0 +1,3 @@
+
+# Preserve exact upstream client and license distributions.
+public/examples/viser-replay/viewer/** -whitespace

@@ -1,0 +1,11 @@
+{
+  "viser_version": "1.1.1",
+  "frames": 240,
+  "fps": 20,
+  "duration_seconds": 12.0,
+  "asset": "pick-place.viser",
+  "sha256": "8c2bd730ce9791156e2f27bf3810389782195638006319a62d0465c031b7b00e",
+  "client_sha256": "8c05b8bfea1ed54773a7616d1d868ebf0b45055ff8da8fc1603ccb2a7858f079",
+  "motion": "Original procedural kinematics; not physical simulation",
+  "upstream": "https://github.com/nerfstudio-project/viser"
+}

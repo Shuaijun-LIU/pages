@@ -1,5 +1,6 @@
 import "@fontsource-variable/dm-sans";
 import "./collection.css";
+import { extraExamples } from "./extra-examples.js";
 import fieldworkPreview from "../docs/preview-run.png";
 import bracePreview from "../docs/preview-brace.png";
 import djepaPreview from "../docs/preview-d-jepa.png";
@@ -73,6 +74,7 @@ const examples = [
       zh: ["全屏主视觉", "动作画廊", "视频对比", "图片浏览器"],
     },
   },
+  ...extraExamples,
 ];
 
 const copy = {

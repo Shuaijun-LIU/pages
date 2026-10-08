@@ -13,6 +13,18 @@
 | 003 · D-JEPA | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/d-jepa/) | 紫色主题、交互式模型讲解、步骤演示与实验视频 |
 | 004 · MimicX | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/mimicx/) | 全屏动作主视觉、画廊、图片浏览器与同步视频对比 |
 
+另收录 9 个参考入口：[Justin Yu](https://shuaijun-liu.github.io/pages/examples/justin-yu/)、[WARP-RM](https://shuaijun-liu.github.io/pages/examples/warp-rm/)、[EgoMI](https://shuaijun-liu.github.io/pages/examples/egomi/)、[Real2Render2Real](https://shuaijun-liu.github.io/pages/examples/real2render2real/)、[POGS](https://shuaijun-liu.github.io/pages/examples/pogs/)、[LEGS](https://shuaijun-liu.github.io/pages/examples/legs/)、[CaP-X](https://shuaijun-liu.github.io/pages/examples/cap-x/)、[SARM](https://shuaijun-liu.github.io/pages/examples/sarm/)、[SARM2](https://shuaijun-liu.github.io/pages/examples/sarm2/)。在线入口嵌入作者原站并提供直接访问按钮，完整源码和大型媒体另存于本地档案。
+
+三个自托管机器人交互 Demo：
+
+| 示例 | 在线体验 | 可复用能力 |
+| --- | --- | --- |
+| Robot Hero | [打开](https://shuaijun-liu.github.io/pages/examples/robot-hero/) | G1、拖拽旋转、镜头预设、巡航、暂停 |
+| Robot Trajectory | [打开](https://shuaijun-liu.github.io/pages/examples/robot-trajectory/) | 六轴机械臂、时间轴、速度控制、TCP 轨迹 |
+| Viser Replay | [打开](https://shuaijun-liu.github.io/pages/examples/viser-replay/) | Python 场景导出、官方静态 Viewer、拖拽与录制回放 |
+
+共 16 个入口。来源、技术栈、核心文件、启动方法、许可证、模板提取和已知缺失集中在 [机器人网站复用库](docs/reuse/README.md) 与 [来源目录 JSON](catalog/justin-sources.json)。
+
 首页默认英文，页头提供 EN / 中文切换并记住选择。正文、标签与导航统一字号，配合项目名和首页大标题，共三个字号层级。语言切换仅作用于集锦首页，各示例保留原有内容。
 
 ![集锦首页](docs/preview-collection.png)
@@ -40,9 +52,10 @@ npm run preview
 ```sh
 npx playwright install chromium
 npm test
+python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-测试覆盖英文默认、中英文切换与偏好保存、存储不可用时的切换、首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
+测试同时覆盖三个新 3D Demo 的真实渲染、视角、时间轴、下载和减弱动态偏好，参考入口的原站地址与返回导航，以及英文默认、中英文切换与偏好保存、存储不可用时的切换、首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
 
 ## 已有项目网站的收录
 
@@ -56,6 +69,7 @@ BRACE、D-JEPA、MimicX 使用对应代码仓库 `docs/` 网站的静态快照�
 python3 scripts/import-project-sites.py /path/to/BRACE-code /path/to/D-JEPA-code-repo /path/to/MimicX-code-repo
 npm run build
 npm test
+python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
 导入工具只替换这三个已登记的快照目录；预览截图与目录卡片在网站检查后另行更新。
@@ -63,7 +77,7 @@ npm test
 ## 新增一个例子
 
 1. 新建 `examples/<slug>/index.html`，为该例子添加独立的脚本与样式入口。
-2. 在 `src/collection.js` 的 `examples` 数组中添加 `name`、`slug`、`preview`、`background`，以及中英文描述 `description.en/zh` 和标签 `tags.en/zh`。入口由 `slug` 生成 `./examples/<slug>/` 地址。预览图通过 ES module 导入，让构建自动处理资源路径。
+2. 在 `src/collection.js` 的 `examples` 数组（或 `src/extra-examples.js`）中添加 `name`、`slug`、`preview`、`background`，以及中英文描述 `description.en/zh` 和标签 `tags.en/zh`。入口由 `slug` 生成 `./examples/<slug>/` 地址。预览图通过 ES module 导入，让构建自动处理资源路径。
 3. 示例页面添加 `href="../../"` 的“返回集锦”入口。示例的自托管公共资源应相对站点根目录解析，避免误指向当前子目录。
 4. 构建会自动发现 `examples/` 下一层目录中的 `index.html`，无需手动新增 Vite 入口。补充示例测试后推送部署。
 
@@ -75,6 +89,14 @@ npm test
 index.html                    集锦首页、介绍与目录容器
 src/collection.js             示例登记、语言切换、预览与入口
 src/collection.css            集锦首页样式
+src/extra-examples.js          新 Demo 与参考卡片
+src/reference-sites.js         九个原站地址及中英文文案
+src/reference-viewer.js        原站嵌入、打开原站与返回入口
+src/robot-demos/               Three.js 渲染、相机、模型与时间轴
+catalog/                      固定版本来源目录
+docs/reuse/                   模板与模块复用说明
+scripts/viser/                Viser 原创场景导出与服务
+scripts/serve-reference-library.py  本地源码档案预览
 examples/fieldwork/index.html 第一个独立示例
 src/main.js                   FIELDWORK 文案、主题、曲线与弹窗
 src/scenes.js                 四种主体、关节动作、道具与模型加载

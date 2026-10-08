@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive Unitree G1 robot study. Orbit, inspect, and explore a reusable Three.js research hero."
+    />
+    <title>Kinetic — Robot Hero</title>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../../"
+        ><span class="brand-icon" aria-hidden="true"></span>kinetic / lab</a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active desktop" href="./">01 — Robot study</a
+        ><a href="../robot-trajectory/">Trajectory ↗</a
+        ><a href="../../">All examples ↗</a>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-layout">
+        <section class="hero-copy">
+          <div class="eyebrow">Embodied intelligence / 01</div>
+          <h1>A new<br />perspective<br />on <em>motion.</em></h1>
+          <p class="lead">
+            Meet the geometry behind the movement. An interactive study of the
+            Unitree G1, built for curiosity.
+          </p>
+          <div class="button-row">
+            <button class="button primary" id="play" aria-label="Pause motion">
+              Ⅱ &nbsp; Pause motion</button
+            ><button class="button" id="reset">↺ &nbsp; Reset view</button>
+          </div>
+          <p class="small-note">
+            Drag to explore. Scroll to get closer.<br />Or choose a view to see
+            a different side.
+          </p>
+        </section>
+        <section class="stage-wrap" aria-label="Robot model viewer">
+          <div class="stage" id="hero-stage">
+            <div class="scene-label">
+              <span class="status-dot"></span>G1 / HUMANOID
+            </div>
+            <span class="scene-index mono">FIG. 001</span>
+            <p id="load-status" class="loading-message" role="status">
+              Loading robot model…
+            </p>
+            <span class="view-hint"
+              >ORBIT · DRAG &nbsp; / &nbsp; ZOOM · SCROLL</span
+            >
+            <div class="camera-bar" aria-label="Camera presets">
+              <button data-camera="perspective" aria-pressed="true">
+                Perspective</button
+              ><button data-camera="front" aria-pressed="false">Front</button
+              ><button data-camera="side" aria-pressed="false">Side</button
+              ><button id="tour" aria-pressed="false">Tour ↻</button>
+            </div>
+          </div>
+          <div class="stage-caption">
+            <span>UNITREE G1 · 29 ARTICULATED JOINTS</span
+            ><span class="tag">INTERACTIVE 3D</span>
+          </div>
+        </section>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>29</strong><span>Degrees of freedom in the source model</span>
+        </div>
+        <div class="stat">
+          <strong>1.32 m</strong
+          ><span>Model height · original proportions</span>
+        </div>
+        <div class="stat">
+          <strong>360°</strong><span>A closer look, from every angle</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>A study in form & movement. Illustrative motion.</span
+      ><span
+        >Model:
+        <a
+          href="https://github.com/google-deepmind/mujoco_menagerie/tree/b846dd12bc459d776cccb3dee0b1d02acbf7a9c7/unitree_g1"
+          target="_blank"
+          rel="noopener"
+          >Unitree / MuJoCo Menagerie</a
+        >
+        · <a href="../../licenses/Unitree-G1-BSD.txt">BSD-3-Clause</a></span
+      >
+    </footer>
+    <script type="module" src="../../src/robot-demos/hero.js"></script>
+  </body>
+</html>

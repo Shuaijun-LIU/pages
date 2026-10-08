@@ -4,3 +4,8 @@ playwright-report/
 test-results/
 .env*
 .DS_Store
+
+# Machine-local source archives
+local-library/
+__pycache__/
+*.pyc
