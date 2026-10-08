@@ -52,6 +52,8 @@ for (slug, name, includes), argument in zip(SITES, sys.argv[1:]):
             target.write_text(html)
         files.append({'path': str(relative), 'sha256': digest, 'bytes': file.stat().st_size})
     shutil.copy2(source / 'LICENSE', destination / 'SOURCE-LICENSE.txt')
+    if (source / 'NOTICE').is_file():
+        shutil.copy2(source / 'NOTICE', destination / 'SOURCE-NOTICE.txt')
     metadata = {
         'name': name,
         'repository': f'https://github.com/NEBULIS-Lab/{name}',
