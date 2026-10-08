@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("four distinct animated subjects are selectable", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(
     page.getByRole("button", { name: "Harvest", exact: true }),
@@ -26,7 +26,7 @@ test("four distinct animated subjects are selectable", async ({ page }) => {
 });
 
 test("autoplay advances subjects and can be disabled", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-assets", "ready");
   await expect(canvas).toHaveAttribute("data-scene", "harvest");
@@ -46,7 +46,7 @@ test("autoplay advances subjects and can be disabled", async ({ page }) => {
 test("new reduced-motion preference survives closing a dialog", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   await expect(page.locator("#motion-canvas")).toHaveAttribute(
     "data-assets",
     "ready",
@@ -72,7 +72,7 @@ test("missing model preserves scene selection and 2D view controls", async ({
   page,
 }) => {
   await page.route("**/models/humanoid.glb", (route) => route.abort());
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-assets", "fallback");
   await page

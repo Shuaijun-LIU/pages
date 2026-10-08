@@ -442,7 +442,7 @@ function running(template) {
 
 export async function loadScenes() {
   const gltf = await new GLTFLoader().loadAsync(
-    `${import.meta.env.BASE_URL}models/humanoid.glb`,
+    new URL("../../models/humanoid.glb", document.baseURI).href,
   );
   gltf.scene.traverse((node) => {
     if (node.isMesh) {

@@ -1,14 +1,20 @@
-# FIELDWORK — A study in motion
+# 项目网站参考集锦
 
-一个实时三维字符动画网站，包含人形采摘、双夹爪持杯、人形折衣和全身奔跑四个场景。页面构图、淡紫蓝色调、方块字符与切换节奏接近参考站；FIELDWORK 品牌与文案独立编写。人形几何采用 BSD 授权的 Unitree G1，其余道具与动作自行构建。
+为自己的项目网站建立一个可持续扩展的设计参考库。首页提供实际预览、特点说明、参考来源和独立示例入口；每个例子保留自己的视觉与交互，并可返回集锦。
 
-**网站地址：** https://shuaijun-liu.github.io/pages/
+**集锦首页：** https://shuaijun-liu.github.io/pages/
 
-![FIELDWORK 首页预览](docs/preview-desktop.png)
+## 已收录的例子
 
-[双臂持杯](docs/preview-transfer.png) · [折衣](docs/preview-fold.png) · [奔跑](docs/preview-run.png) · [深色模式](docs/preview-dark.png) · [手机布局](docs/preview-mobile.png)
+| 示例 | 在线体验 | 参考与特点 |
+| --- | --- | --- |
+| 001 · FIELDWORK | [进入动画示例](https://shuaijun-liu.github.io/pages/examples/fieldwork/) | 参考 xdof.ai 的动效表现，包含人形采摘、双夹爪持杯、折衣、奔跑四场景，以及方块字符、关节拖尾、视角交互、渐隐轮播和明暗主题 |
 
-## 本地运行
+![集锦首页](docs/preview-collection.png)
+
+[动画桌面预览](docs/preview-desktop.png) · [双臂持杯](docs/preview-transfer.png) · [折衣](docs/preview-fold.png) · [奔跑](docs/preview-run.png) · [深色模式](docs/preview-dark.png)
+
+## 本地运行与验证
 
 推荐 Node.js 22。
 
@@ -17,71 +23,57 @@ npm ci
 npm run dev
 ```
 
-生产构建和预览：
-
 ```sh
 npm run build
 npm run preview
 ```
 
-## 交互
+浏览器测试：
 
-- 拖动主场景旋转视角；桌面滚轮缩放。
-- 聚焦场景后，方向键旋转，`+` / `-` 缩放。
-- ASCII / POINTS 切换字符和粒子表现。
-- Pause / Play 暂停或恢复；回转按钮重置视角。
-- 四个场景手动切换或约每 8 秒自动轮播，支持字符消散／聚合过渡；四条模拟运动曲线与多关节拖尾同步更新。
-- 顶栏切换明暗主题；Field notes 与 Studio 打开说明。
-- 手机采用纵向布局，保留正常滚动；系统设置“减少动态效果”时默认静止，允许主动播放。
-- 无 WebGL 时使用 Canvas 2D 机械运动备用视图。
+```sh
+npx playwright install chromium
+npm test
+```
 
-## 后续项目网站的核心功能
+测试覆盖首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
 
-已确认将**机器人／机械臂主体的 ASCII、粒子和运动拖尾动画**作为后续自有项目网站的主要功能之一。下一阶段优先支持用户视频：提取主体、保留真实动作、转换视觉表现，并接入首页主场景。
+## 新增一个例子
 
-当前三维演示已实现；视频转换流程尚待开发。构建方法、输入要求、两条实现路线与验收标准见 [主体动画复用说明](project/notes.md)，确认记录见 [项目决策](project/decision_log.md)，实施顺序见 [阶段计划](project/task_plan.md)。
+1. 新建 `examples/<slug>/index.html`，为该例子添加独立的脚本与样式入口。
+2. 在 `src/collection.js` 的 `examples` 数组中添加名称、描述、标签、预览图、参考来源与 `./examples/<slug>/` 地址。预览图通过 ES module 导入，让构建自动处理资源路径。
+3. 示例页面添加 `href="../../"` 的“返回集锦”入口。示例的自托管公共资源应相对站点根目录解析，避免误指向当前子目录。
+4. 构建会自动发现 `examples/` 下一层目录中的 `index.html`，无需手动新增 Vite 入口。补充示例测试后推送部署。
+
+首页计数由示例数组自动更新。目前只展示实际完成的例子。首页加载静态预览，进入 FIELDWORK 后才加载 Three.js 与人形模型。
 
 ## 文件结构
 
 ```text
-src/main.js       文案交互、主题、曲线与弹窗
-src/motion.js     字符渲染、多关节拖尾、轮播过渡和视角控制
-src/scenes.js     四种主体、动作、道具与模型加载
-src/style.css     页面布局、配色、入场过渡和响应式样式
-index.html        页面内容与无障碍语义
-public/           favicon、优化人形模型、模型来源与许可证
-scripts/          模型转换与简化工具
-tests/           浏览器行为测试
-.github/workflows/deploy.yml  GitHub Pages 自动构建、测试与部署
+index.html                    集锦首页、介绍与目录容器
+src/collection.js             示例登记、预览与入口
+src/collection.css            集锦首页样式
+examples/fieldwork/index.html 第一个独立示例
+src/main.js                   FIELDWORK 文案、主题、曲线与弹窗
+src/scenes.js                 四种主体、关节动作、道具与模型加载
+src/motion.js                 字符渲染、轨迹、轮播与视角控制
+src/style.css                 FIELDWORK 样式
+public/models/                优化人形模型及来源记录
+public/licenses/              字体与模型许可证
+scripts/                      模型转换与简化工具
+tests/                        集锦导航及示例行为测试
+.github/workflows/deploy.yml   GitHub Pages 构建、测试与部署
 ```
 
-## 调整动画
+## 部署
 
-- `src/scenes.js`：场景参数、主体几何、关节姿态、采摘逆运动学与布面折叠。
-- `src/motion.js`：字符／粒子映射、轨迹、相机、消散过渡与自动轮播。
-- `src/main.js`：主题、打字效果、运动信号与弹窗。
-- `src/style.css`：构图、配色与响应式布局。
+GitHub Pages 的 Source 使用 **GitHub Actions**。推送 `main` 后自动构建、测试并发布。采用静态多页结构，每个示例都能直接访问和刷新，支持 `/pages/` 子路径，不依赖客户端路由回退。
 
-人形模型可用 `scripts/build-robot-asset.mjs` 从 MuJoCo Menagerie 的 G1 源文件重建，来源、许可、输入校验和与简化参数均随仓库保存。正常运行直接使用已优化模型。
+## 主体动画的后续复用
 
-## 验证
+机器人／机械臂的 ASCII、粒子和运动拖尾已列为后续自有项目网站的主要功能之一。现有三维路线可复用；用户视频 → 主体分离 → 字符动画路线尚待素材与开发。
 
-```sh
-npx playwright install chromium
-npm run build
-npm test
-```
+构建方法见 [动效实现](docs/motion-design.md) 与 [复用说明](project/notes.md)，计划见 [阶段计划](project/task_plan.md)。
 
-测试包含实时动画、暂停恢复、场景切换、轨道视角重置、主题持久化、弹窗键盘操作、手机/平板布局、减少动态效果和无 WebGL 的备用渲染。测试浏览器使用软件渲染。
+## 来源与许可
 
-## GitHub Pages
-
-在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。随后对 `main` 的推送会先构建和测试，通过后自动发布。也可以在 Actions 页面手动运行 **Build, test, and deploy Pages**。
-
-构建采用相对资源路径，可部署到 `/pages/` 或其他子目录。字体随构建打包；运行时不需要字体 CDN、远程模型、API 密钥或后端。
-
-## 创作与依赖
-
-交互表现研究参考 [xdof.ai](https://www.xdof.ai/)，代码独立实现。本仓库不包含其源代码、文案、Logo、照片、视频、模型或字体文件；不是该公司的官方网站，也不表示关联。FIELDWORK 是此演示项目的虚构名称，不声称实际团队、融资或研究成果。
-
-人形模型、第三方库和字体保留各自许可，详见 [THIRD_PARTY.md](THIRD_PARTY.md)。技术拆解见 [docs/motion-design.md](docs/motion-design.md)。
+FIELDWORK 的交互表现参考 [xdof.ai](https://www.xdof.ai/)，代码独立实现，品牌与文案替换。人形采用 BSD-3-Clause 授权的 Unitree G1，双臂道具和动作自行构建；本仓库不包含参考站的脚本或模型，不代表与该公司有关联。详细来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。

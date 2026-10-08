@@ -1,5 +1,7 @@
 # 动效设计与实现
 
+此例现为[参考集锦](https://shuaijun-liu.github.io/pages/)中的第 001 个例子：[独立演示入口](https://shuaijun-liu.github.io/pages/examples/fieldwork/)。
+
 ## 参考与构图
 
 参考 https://www.xdof.ai/ 公开首页的四类主体动画：双夹爪持杯、人形采摘、桌前折衣、全身奔跑。本版让场景数量、主视觉比例、淡紫蓝渐变、右侧双信息卡、方块字符、关节轨迹、打字文案和渐隐轮播接近参考。品牌与文案已替换为虚构的 FIELDWORK。

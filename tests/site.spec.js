@@ -5,7 +5,7 @@ test("live scene renders, pauses, resumes, and changes experiments", async ({
 }) => {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
   await expect(canvas).toHaveAttribute("data-assets", "ready");
@@ -42,7 +42,7 @@ test("live scene renders, pauses, resumes, and changes experiments", async ({
 test("orbit and reset visibly change the scene while paused", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
   await expect(canvas).toHaveAttribute("data-assets", "ready");
@@ -64,7 +64,7 @@ test("orbit and reset visibly change the scene while paused", async ({
 test("theme persists and notebook opens and closes accessibly", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   await page.getByRole("button", { name: "Switch to dark theme" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await expect(page.locator("html")).toHaveCSS("color", "rgb(221, 221, 229)");
@@ -87,7 +87,7 @@ test("mobile and tablet stay within viewport and controls work", async ({
 }) => {
   for (const width of [360, 390, 768]) {
     await page.setViewportSize({ width, height: 844 });
-    await page.goto("/");
+    await page.goto("/examples/fieldwork/");
     await expect(page.locator("#motion-canvas")).toHaveAttribute(
       "data-renderer",
       "webgl",
@@ -104,7 +104,7 @@ test("mobile and tablet stay within viewport and controls work", async ({
 
 test("reduced motion starts still with complete text", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   await expect(
     page.getByRole("button", { name: "Play animation", exact: true }),
   ).toBeVisible();
@@ -128,7 +128,7 @@ test("WebGL-unavailable browsers get a working Canvas fallback", async ({
         : original.call(this, type, ...args);
     };
   });
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   await expect(page.locator("#motion-canvas")).toHaveAttribute(
     "data-renderer",
     "canvas",
@@ -141,7 +141,7 @@ test("WebGL-unavailable browsers get a working Canvas fallback", async ({
 });
 
 test("subtitle is available to screen readers", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   expect(await page.locator(".typed-line").ariaSnapshot()).toContain(
     "Reach further. Bring a possibility closer.",
   );
@@ -166,7 +166,7 @@ test("WebGL recovers correct dimensions after context loss and resize", async ({
       return context;
     };
   });
-  await page.goto("/");
+  await page.goto("/examples/fieldwork/");
   const canvas = page.locator("#motion-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "webgl");
   await expect(canvas).toHaveAttribute("data-assets", "ready");

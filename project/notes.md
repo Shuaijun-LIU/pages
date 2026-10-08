@@ -6,7 +6,7 @@
 
 ## 1. 已完成的构建方法：实时三维 → 字符／粒子
 
-当前演示：https://shuaijun-liu.github.io/pages/
+当前演示：https://shuaijun-liu.github.io/pages/examples/fieldwork/
 
 首版历史基线：`5bd441a`；成功部署触发提交：`67c85f1`。该版本完成了生产构建、8 项浏览器测试，以及正式网址的动画、暂停恢复、主题、场景切换、手机布局检查。
 
@@ -32,7 +32,7 @@
 | 字符／粒子表现 | `src/motion.js` / `draw3D()` | 离屏采样、透明像素过滤、亮度映射、强调色 |
 | 轨迹 | `src/motion.js` / `drawTrails()` | 多关节世界坐标历史、按当前相机投影、渐隐拖尾 |
 | 主题、控制、曲线、文案 | `src/main.js` | 暂停、恢复、场景切换、明暗主题、逐字文字 |
-| 响应式页面 | `src/style.css`、`index.html` | 首屏主场景、移动端布局、键盘操作与内容组织 |
+| 响应式页面 | `src/style.css`、`examples/fieldwork/index.html` | 首屏主场景、移动端布局、键盘操作与内容组织 |
 | 发布与验证 | `.github/workflows/deploy.yml`、`tests/site.spec.js` | 静态构建、行为测试、GitHub Pages 发布 |
 
 当前实现参数：约 30 帧/秒的渲染上限、设备像素比上限 2；字符采样单元按画面宽度取 8 或 13 CSS 像素；每条关节轨迹最多保留 58 个点。具体值以源码为准。它们是现有演示参数，不是未来所有视频的固定标准。
