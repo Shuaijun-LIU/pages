@@ -45,3 +45,7 @@
 按用户指定收录 Justin Yu 与 WARP-RM、EgoMI、Real2Render2Real、POGS、LEGS、CaP-X、SARM/SARM2，共九个参考入口。完整保留八个网站仓库、30 份 Viser 录制、对应版本客户端及可读 Viser 源码；大型档案留在本地共享资源，公开仓库记录来源、核心文件、启动方法、固定提交和许可边界。原站模板许可、研究素材与第三方字体许可分别记录，在线入口使用原站嵌入。
 
 新增三个可自托管交互例子：Three.js G1 Hero、机械臂关节/工具轨迹回放、官方 Viser 静态录制回放。优先复用成熟 OrbitControls、GLTFLoader、Viser serializer 与官方 Viewer；将渲染、相机与时间轴整理为共享模块。保留既有卡片设计、中英切换和标签。方法与复用入口见 `docs/reuse/README.md`。
+
+## 2026-10-09 · 精简集锦与真实机器人模型
+
+按用户要求移除 SARM2、SARM、LEGS、Justin Yu、POGS 的公开入口；源码历史档案保留。Robot Hero、Robot Trajectory、Viser Replay 合并为 Robot Studio，默认 G1。后两者必须采用真实 Franka Panda 网格、完整关节链和一致的运动数据，弃用原来的几何体占位机械臂。EgoMI 与 Real2Render2Real 合并为一个可切换入口。主页共 8 张卡片，继续保留既有卡片样式、标签及英文默认。

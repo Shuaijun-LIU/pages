@@ -34,7 +34,7 @@ for (const site of referenceSites) {
       ),
     ).toBe(true);
     await page.getByRole("link", { name: "← Collection" }).click();
-    await expect(page.locator("#example-list article")).toHaveCount(16);
+    await expect(page.locator("#example-list article")).toHaveCount(8);
   });
 }
 
@@ -43,7 +43,7 @@ test("all new collection previews load and language switch retains routes", asyn
 }) => {
   await page.goto("/");
   const cards = page.locator(".example-card");
-  await expect(cards).toHaveCount(16);
+  await expect(cards).toHaveCount(8);
   for (const card of await cards.all()) {
     await card.scrollIntoViewIfNeeded();
     await expect
@@ -63,5 +63,5 @@ test("all new collection previews load and language switch retains routes", asyn
       .locator(".enter-link")
       .evaluateAll((links) => links.map((a) => a.getAttribute("href"))),
   ).toEqual(routes);
-  await expect(page.locator(".tags").last()).toContainText("媒体控制");
+  await expect(page.locator(".tags").last()).toContainText("代码切换");
 });

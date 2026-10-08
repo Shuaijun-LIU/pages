@@ -9,6 +9,11 @@ test("Viser recording loads locally, pauses, scrubs, and orbits", async ({ page 
   });
   await page.goto("examples/viser-replay/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Motion, fromevery angle.");
+  await expect(page.getByText("SPATIAL REPLAY / Franka Panda")).toBeVisible();
+  const metadata = await (await page.request.get("examples/viser-replay/metadata.json")).json();
+  expect(metadata.arm_dof).toBe(7);
+  expect(metadata.visual_meshes).toBe(11);
+  expect(metadata.frames).toBe(360);
   const viewer = page.frameLocator("#viser-viewer");
   const time = viewer.getByRole("textbox", { name: "Playback time in seconds" });
   await expect(time).toBeVisible();
@@ -41,6 +46,11 @@ test("Viser recording loads locally, pauses, scrubs, and orbits", async ({ page 
   await expect.poll(() => time.inputValue()).not.toBe("5.0");
   await viewer.getByRole("button", { name: "Show scene tree" }).click();
   await expect(viewer.locator("[data-playback-scene-tree]")).toBeVisible();
+  await expect(viewer.getByText("/panda", { exact: true })).toBeVisible();
+  const speed = viewer.getByRole("combobox", { name: "Playback speed" });
+  await speed.click();
+  await viewer.getByRole("option", { name: "0.5x", exact: true }).click();
+  await expect(speed).toHaveValue("0.5x");
   expect(errors).toEqual([]);
   expect(externalRequests).toEqual([]);
 });
@@ -53,7 +63,7 @@ test("Viser source recording is downloadable and the page fits a phone", async (
   const downloadEvent = page.waitForEvent("download");
   await page.getByRole("link", { name: "Download .viser" }).click();
   const download = await downloadEvent;
-  expect(download.suggestedFilename()).toBe("pick-place.viser");
+  expect(download.suggestedFilename()).toBe("panda-motion.viser");
   expect(await download.failure()).toBeNull();
   await expect(page.getByText("Prerecorded kinematic motion", { exact: false })).toBeVisible();
   await expect(page.getByRole("link", { name: "Collection", exact: true })).toHaveAttribute("href", "../../");
@@ -65,6 +75,8 @@ test("Viser respects reduced motion initially and still allows deliberate playba
   const viewer = page.frameLocator("#viser-viewer");
   const time = viewer.getByRole("textbox", { name: "Playback time in seconds" });
   await expect(viewer.getByRole("button", { name: "Play playback" })).toBeVisible();
+  await viewer.getByRole("button", { name: "Show scene tree" }).click();
+  await expect(viewer.getByText("/panda", { exact: true })).toBeVisible();
   const paused = await time.inputValue();
   await page.waitForTimeout(250);
   await expect(time).toHaveValue(paused);

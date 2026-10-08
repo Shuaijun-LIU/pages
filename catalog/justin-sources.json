@@ -99,7 +99,9 @@
           "warp-rm/studio/"
         ]
       },
-      "archiveStatus": "complete"
+      "archiveStatus": "complete",
+      "collectionStatus": "removed",
+      "collectionPath": null
     },
     {
       "slug": "warp-rm",
@@ -306,7 +308,9 @@
           "warp-rm/studio/"
         ]
       },
-      "archiveStatus": "complete"
+      "archiveStatus": "complete",
+      "collectionStatus": "active",
+      "collectionPath": "/examples/warp-rm/"
     },
     {
       "slug": "egomi",
@@ -451,7 +455,9 @@
           "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
         ]
       },
-      "archiveStatus": "complete"
+      "archiveStatus": "complete",
+      "collectionStatus": "merged",
+      "collectionPath": "/examples/egomi-r2r/#egomi"
     },
     {
       "slug": "real2render2real",
@@ -666,7 +672,9 @@
           "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
         ]
       },
-      "archiveStatus": "complete"
+      "archiveStatus": "complete",
+      "collectionStatus": "merged",
+      "collectionPath": "/examples/egomi-r2r/#r2r"
     },
     {
       "slug": "pogs",
@@ -1101,7 +1109,9 @@
           "file": "static/css/fontawesome.all.min.css",
           "issue": "Font Awesome Free5.15.1 references missing static/webfonts files; original solid.woff2 URL returns404. Exact-version upstream fonts recovered to separate cache."
         }
-      ]
+      ],
+      "collectionStatus": "removed",
+      "collectionPath": null
     },
     {
       "slug": "legs",
@@ -1420,7 +1430,9 @@
           "file": "static/css/fontawesome.all.min.css",
           "issue": "Font Awesome Free5.15.1 references missing static/webfonts files; original solid.woff2 URL returns404. Exact-version upstream fonts recovered to separate cache."
         }
-      ]
+      ],
+      "collectionStatus": "removed",
+      "collectionPath": null
     },
     {
       "slug": "cap-x",
@@ -1525,7 +1537,9 @@
           "Local study archive only; no automatic publication or adaptation permission inferred from public GitHub availability."
         ]
       },
-      "archiveStatus": "complete"
+      "archiveStatus": "complete",
+      "collectionStatus": "active",
+      "collectionPath": "/examples/cap-x/"
     },
     {
       "slug": "sarm",
@@ -1933,7 +1947,9 @@
           "issue": "body onload invokes updateInTheWild(), which reads .value from missing inthewild-video-menu; browser reports TypeError Cannot read properties of null (reading value). updateBimanual has the same inherited missing-menu pattern.",
           "adaptation": "Derived templates guard menu and media elements in updateInTheWild, updateBimanual and updateClothes; raw sources unchanged."
         }
-      ]
+      ],
+      "collectionStatus": "removed",
+      "collectionPath": null
     },
     {
       "slug": "sarm2",
@@ -2341,7 +2357,9 @@
           "issue": "body onload invokes updateInTheWild(), which reads .value from missing inthewild-video-menu; browser reports TypeError Cannot read properties of null (reading value). updateBimanual has the same inherited missing-menu pattern.",
           "adaptation": "Derived templates guard menu and media elements in updateInTheWild, updateBimanual and updateClothes; raw sources unchanged."
         }
-      ]
+      ],
+      "collectionStatus": "removed",
+      "collectionPath": null
     }
   ],
   "viewerSource": {

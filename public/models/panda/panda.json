@@ -1,0 +1,327 @@
+{
+  "name": "Franka Emika Panda",
+  "units": "metres",
+  "upAxis": "Z",
+  "links": [
+    {
+      "name": "link0",
+      "parent": null,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link0.glb",
+      "joint": null
+    },
+    {
+      "name": "link1",
+      "parent": "link0",
+      "position": [
+        0.0,
+        0.0,
+        0.333
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link1.glb",
+      "joint": {
+        "name": "joint1",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -2.8973,
+          2.8973
+        ],
+        "index": 0
+      }
+    },
+    {
+      "name": "link2",
+      "parent": "link1",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link2.glb",
+      "joint": {
+        "name": "joint2",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -1.7628,
+          1.7628
+        ],
+        "index": 1
+      }
+    },
+    {
+      "name": "link3",
+      "parent": "link2",
+      "position": [
+        0.0,
+        -0.316,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link3.glb",
+      "joint": {
+        "name": "joint3",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -2.8973,
+          2.8973
+        ],
+        "index": 2
+      }
+    },
+    {
+      "name": "link4",
+      "parent": "link3",
+      "position": [
+        0.0825,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link4.glb",
+      "joint": {
+        "name": "joint4",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -3.0718,
+          -0.0698
+        ],
+        "index": 3
+      }
+    },
+    {
+      "name": "link5",
+      "parent": "link4",
+      "position": [
+        -0.0825,
+        0.384,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link5.glb",
+      "joint": {
+        "name": "joint5",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -2.8973,
+          2.8973
+        ],
+        "index": 4
+      }
+    },
+    {
+      "name": "link6",
+      "parent": "link5",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link6.glb",
+      "joint": {
+        "name": "joint6",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -0.0175,
+          3.7525
+        ],
+        "index": 5
+      }
+    },
+    {
+      "name": "link7",
+      "parent": "link6",
+      "position": [
+        0.088,
+        0.0,
+        0.0
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/link7.glb",
+      "joint": {
+        "name": "joint7",
+        "type": "revolute",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "limits": [
+          -2.8973,
+          2.8973
+        ],
+        "index": 6
+      }
+    },
+    {
+      "name": "hand",
+      "parent": "link7",
+      "position": [
+        0.0,
+        0.0,
+        0.107
+      ],
+      "quaternion": [
+        0.9238795391929064,
+        0.0,
+        0.0,
+        -0.38268341623423263
+      ],
+      "mesh": "links/hand.glb",
+      "joint": null
+    },
+    {
+      "name": "left_finger",
+      "parent": "hand",
+      "position": [
+        0.0,
+        0.0,
+        0.0584
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mesh": "links/left_finger.glb",
+      "joint": {
+        "name": "finger_joint1",
+        "type": "prismatic",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": [
+          0.0,
+          0.04
+        ]
+      }
+    },
+    {
+      "name": "right_finger",
+      "parent": "hand",
+      "position": [
+        0.0,
+        0.0,
+        0.0584
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mesh": "links/right_finger.glb",
+      "joint": {
+        "name": "finger_joint2",
+        "type": "prismatic",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "limits": [
+          0.0,
+          0.04
+        ]
+      }
+    }
+  ],
+  "tcp": {
+    "parent": "hand",
+    "position": [
+      0,
+      0,
+      0.1034
+    ]
+  },
+  "home": [
+    0,
+    -0.4,
+    0,
+    -2,
+    0,
+    1.6,
+    0.7853981634
+  ],
+  "fingerPosition": 0.025
+}

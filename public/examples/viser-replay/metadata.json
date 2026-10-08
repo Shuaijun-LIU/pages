@@ -1,11 +1,17 @@
 {
   "viser_version": "1.1.1",
-  "frames": 240,
-  "fps": 20,
-  "duration_seconds": 12.0,
-  "asset": "pick-place.viser",
-  "sha256": "8c2bd730ce9791156e2f27bf3810389782195638006319a62d0465c031b7b00e",
+  "frames": 360,
+  "fps": 30,
+  "duration_seconds": 12,
+  "asset": "panda-motion.viser",
+  "sha256": "e6ba7f8520882c72ab0151be3ba7774a47ace98cc8d1b4530eba7682bbdb806e",
   "client_sha256": "8c05b8bfea1ed54773a7616d1d868ebf0b45055ff8da8fc1603ccb2a7858f079",
-  "motion": "Original procedural kinematics; not physical simulation",
+  "robot": "Franka Emika Panda",
+  "arm_dof": 7,
+  "visual_meshes": 11,
+  "model_manifest": "../../models/panda/panda.json",
+  "trajectory": "../../robot-demos/sample-trajectory.json",
+  "trajectory_sha256": "e580f823e35bf888198f0a28e3e12fbe9ef1eeb1cad2c10608dbbf981cb3eaa7",
+  "motion": "Authored joint-space sample with model forward kinematics",
   "upstream": "https://github.com/nerfstudio-project/viser"
 }

@@ -10,4 +10,4 @@ The adjacent `index.html` is the unmodified, self-contained production client di
 
 The browser client builds on React, React DOM, Three.js, React Three Fiber, Drei, Mantine, Tabler Icons, msgpack, meshoptimizer, uPlot, zstddec, and other dependencies listed in the lockfile. Each retains its respective upstream copyright and license. The lockfile records dependency license identifiers and source package locations; the companion license-text collection retains the original available LICENSE / NOTICE / COPYING files.
 
-The surrounding page, procedural robot, station geometry, camera layouts, and motion recording were created for this collection. No robot manufacturer meshes, paper datasets, captured demonstrations, or third-party scene assets are included.
+The surrounding page, illustrative camera layout, and authored joint motion were created for this collection. The recording embeds Franka Panda meshes derived from MuJoCo Menagerie; model provenance, upstream revision, and licenses are preserved in [the shared Panda model credits](../../../models/panda/NOTICE.md). The motion is a sample trajectory rather than captured robot data.

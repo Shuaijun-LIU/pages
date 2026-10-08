@@ -10,7 +10,13 @@ export const publicAsset = (path) =>
 /** Shared Y-up stage. onFrame receives elapsed seconds, clamped frame delta. */
 export function createViewer(
   container,
-  { target = [0, 0.7, 0], position = [2.2, 1.7, 3.3], onFrame = () => {} } = {},
+  {
+    target = [0, 0.7, 0],
+    position = [2.2, 1.7, 3.3],
+    exposure = 1.25,
+    lightIntensity = 1,
+    onFrame = () => {},
+  } = {},
 ) {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color("#e9eeeb");
@@ -34,7 +40,7 @@ export function createViewer(
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.25;
+  renderer.toneMappingExposure = exposure;
   renderer.domElement.setAttribute(
     "aria-label",
     "Interactive robot scene. Drag to orbit; scroll to zoom.",
@@ -104,8 +110,8 @@ export function createViewer(
       .add(new THREE.Vector3().setFromSpherical(sphere));
     controls.update();
   });
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x7b8f82, 2.5));
-  const key = new THREE.DirectionalLight(0xfff8e8, 4);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x7b8f82, 2.5 * lightIntensity));
+  const key = new THREE.DirectionalLight(0xfff8e8, 4 * lightIntensity);
   key.position.set(3, 5, 4);
   key.castShadow = true;
   key.shadow.mapSize.set(1024, 1024);
@@ -115,7 +121,7 @@ export function createViewer(
   key.shadow.camera.bottom = -3;
   key.shadow.normalBias = 0.025;
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0xc7e4ff, 2);
+  const rim = new THREE.DirectionalLight(0xc7e4ff, 2 * lightIntensity);
   rim.position.set(-3, 2, -2);
   scene.add(rim);
   const ground = new THREE.Mesh(

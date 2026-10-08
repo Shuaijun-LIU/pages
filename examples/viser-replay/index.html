@@ -13,24 +13,24 @@
 <body>
 <header><a class="wordmark" href="../../"><span class="mark">↗</span> Research Interfaces</a><nav aria-label="Page navigation"><a href="../../">Collection</a><a href="https://viser.studio/main/" target="_blank" rel="noreferrer">Viser ↗</a></nav></header>
 <main>
-  <section class="intro"><div><p class="eyebrow">Interactive robotics · 03</p><h1>Motion, from<br><em>every angle.</em></h1></div><div><p class="lede">A robot transfer, made inspectable. Follow the end effector, explore the camera geometry, and revisit any moment in a shared 3D scene.</p><p class="status"><span class="dot"></span> Interactive 3D recording · runs in your browser</p></div></section>
+  <section class="intro"><div><p class="eyebrow">Interactive robotics · 03</p><h1>Motion, from<br><em>every angle.</em></h1></div><div><p class="lede">A Franka Panda, made inspectable. Follow its seven articulated joints, orbit the original robot meshes, and revisit any moment in the shared trajectory.</p><p class="status"><span class="dot"></span> Interactive 3D recording · runs in your browser</p></div></section>
   <section class="viewer-shell" aria-label="Robot trajectory viewer">
-    <div class="viewer-head"><strong>SPATIAL REPLAY / Pick & place</strong><span>Original synthetic scene · Viser</span></div>
-    <div class="viewer"><iframe id="viser-viewer" title="Interactive Viser robot pick-and-place replay" allow="fullscreen" loading="eager"></iframe></div>
-    <div class="viewer-foot"><div class="legend"><span><i class="swatch"></i> Tool trajectory</span><span><i class="swatch blue"></i> Camera poses</span><span><i class="swatch green"></i> Robot links</span></div><span>Drag to orbit · scroll to zoom · timeline to scrub</span></div>
+    <div class="viewer-head"><strong>SPATIAL REPLAY / Franka Panda</strong><span>7 DOF · mesh model · Viser</span></div>
+    <div class="viewer"><iframe id="viser-viewer" title="Interactive Viser Franka Panda seven-joint replay" allow="fullscreen" loading="eager"></iframe></div>
+    <div class="viewer-foot"><div class="legend"><span><i class="swatch"></i> Tool trajectory</span><span><i class="swatch blue"></i> Camera poses</span><span><i class="swatch green"></i> Panda meshes</span></div><span>Drag to orbit · scroll to zoom · timeline to scrub</span></div>
   </section>
   <section class="details" aria-label="About this demo">
-    <article><h2>One scene. Any viewpoint.</h2><p>Use Viser’s playback bar to pause, change speed, or scrub through the transfer. The camera stays yours to move throughout the recording.</p><div class="actions"><a id="download" href="./pick-place.viser" download>Download .viser ↓</a><a id="standalone" href="./viewer/index.html" target="_blank" rel="noreferrer">Open full viewer ↗</a></div></article>
-    <article><h2>The sequence</h2><div class="metric">12 <small>seconds / 240 frames</small></div><p>Approach → lift → transfer → release → return. A three-link arm carries a small part between two stations; three frusta mark observation cameras.</p></article>
-    <article><h2>What you are seeing</h2><p>Prerecorded kinematic motion, generated with Python and exported through Viser. Geometry and trajectories are original demo assets. This is a visualization, not a physics simulation or a measured robot experiment.</p></article>
+    <article><h2>One scene. Any viewpoint.</h2><p>Use Viser’s playback bar to pause, change speed, or scrub through the joint motion. The camera stays yours to move throughout the recording.</p><div class="actions"><a id="download" href="./panda-motion.viser" download>Download .viser ↓</a><a id="standalone" href="./viewer/index.html" target="_blank" rel="noreferrer">Open full viewer ↗</a></div></article>
+    <article><h2>The sequence</h2><div class="metric">12 <small>seconds / 360 frames</small></div><p>Seven revolute joints move a Franka Panda through a smooth joint-space sweep. The tool path is computed from the model; three frusta mark illustrative cameras.</p></article>
+    <article><h2>What you are seeing</h2><p>Prerecorded kinematic motion using the shared Panda model and sample joint trajectory. Original link meshes and materials come from MuJoCo Menagerie. The authored motion is a visualization sample, not measured robot data.</p></article>
   </section>
 </main>
-<footer><span>Built with the official <a href="https://github.com/nerfstudio-project/viser" target="_blank" rel="noreferrer">Viser</a> client · Apache-2.0 license</span><a href="./viewer/THIRD_PARTY_NOTICES.md">Third-party notices</a></footer>
+<footer><span>Built with the official <a href="https://github.com/nerfstudio-project/viser" target="_blank" rel="noreferrer">Viser</a> client · Apache-2.0 license</span><span><a href="../../models/panda/NOTICE.md">Panda model credits</a> · <a href="./viewer/THIRD_PARTY_NOTICES.md">Client notices</a></span></footer>
 <script type="module">
   const viewer = new URL('./viewer/index.html', window.location.href);
-  viewer.searchParams.set('playbackPath', new URL('./pick-place.viser', window.location.href).href);
-  viewer.searchParams.set('initialCameraPosition', '3.3,-4.3,3.1');
-  viewer.searchParams.set('initialCameraLookAt', '0,0,0.6');
+  viewer.searchParams.set('playbackPath', new URL('./panda-motion.viser', window.location.href).href);
+  viewer.searchParams.set('initialCameraPosition', '1.9,-2.2,1.6');
+  viewer.searchParams.set('initialCameraLookAt', '0.2,0,0.48');
   viewer.searchParams.set('initialCameraUp', '0,0,1');
   viewer.searchParams.set('initialCameraFov', window.innerWidth < 760 ? '1.0' : '0.65');
   const iframe = document.getElementById('viser-viewer');
@@ -46,7 +46,18 @@
       if (play && play.getAttribute('aria-label') !== 'Play playback') play.setAttribute('aria-label', 'Play playback');
       if (!initialPlaybackHandled && (pause || play)) {
         initialPlaybackHandled = true;
-        if (reduceMotion && pause) pause.click();
+        if (reduceMotion && pause) {
+          // Let the native client apply its initial scene before freezing time.
+          const pauseAfterInitialScene = () => {
+            const currentTime = doc.querySelector('input[inputmode="decimal"]');
+            if (Number(currentTime?.value) > 0) {
+              doc.querySelector('button:has(.tabler-icon-player-pause-filled)')?.click();
+            } else {
+              requestAnimationFrame(pauseAfterInitialScene);
+            }
+          };
+          requestAnimationFrame(pauseAfterInitialScene);
+        }
       }
       const time = doc.querySelector('input[inputmode="decimal"]');
       if (time && !time.getAttribute('aria-label')) time.setAttribute('aria-label', 'Playback time in seconds');

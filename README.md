@@ -13,17 +13,13 @@
 | 003 · D-JEPA | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/d-jepa/) | 紫色主题、交互式模型讲解、步骤演示与实验视频 |
 | 004 · MimicX | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/mimicx/) | 全屏动作主视觉、画廊、图片浏览器与同步视频对比 |
 
-另收录 9 个参考入口：[Justin Yu](https://shuaijun-liu.github.io/pages/examples/justin-yu/)、[WARP-RM](https://shuaijun-liu.github.io/pages/examples/warp-rm/)、[EgoMI](https://shuaijun-liu.github.io/pages/examples/egomi/)、[Real2Render2Real](https://shuaijun-liu.github.io/pages/examples/real2render2real/)、[POGS](https://shuaijun-liu.github.io/pages/examples/pogs/)、[LEGS](https://shuaijun-liu.github.io/pages/examples/legs/)、[CaP-X](https://shuaijun-liu.github.io/pages/examples/cap-x/)、[SARM](https://shuaijun-liu.github.io/pages/examples/sarm/)、[SARM2](https://shuaijun-liu.github.io/pages/examples/sarm2/)。在线入口嵌入作者原站并提供直接访问按钮，完整源码和大型媒体另存于本地档案。
+另有 [Robot Studio](https://shuaijun-liu.github.io/pages/examples/robot-studio/)、[WARP-RM](https://shuaijun-liu.github.io/pages/examples/warp-rm/)、[EgoMI / Real2Render2Real](https://shuaijun-liu.github.io/pages/examples/egomi-r2r/) 和 [CaP-X](https://shuaijun-liu.github.io/pages/examples/cap-x/)，合计 **8 个入口**。
 
-三个自托管机器人交互 Demo：
+Robot Studio 将 G1 Hero、Franka Panda 关节轨迹、Panda Viser 回放合并到同一页，通过页头标签切换。G1 与 Panda 均加载真实机器人网格；Panda 的两种渲染方式共享模型关节定义和演示轨迹。只加载当前视图，切换后停止上一场景。EgoMI 与 Real2Render2Real 也通过一个入口切换原站视图。
 
-| 示例 | 在线体验 | 可复用能力 |
-| --- | --- | --- |
-| Robot Hero | [打开](https://shuaijun-liu.github.io/pages/examples/robot-hero/) | G1、拖拽旋转、镜头预设、巡航、暂停 |
-| Robot Trajectory | [打开](https://shuaijun-liu.github.io/pages/examples/robot-trajectory/) | 六轴机械臂、时间轴、速度控制、TCP 轨迹 |
-| Viser Replay | [打开](https://shuaijun-liu.github.io/pages/examples/viser-replay/) | Python 场景导出、官方静态 Viewer、拖拽与录制回放 |
+SARM2、SARM、LEGS、Justin Yu、POGS 已从公开集锦移除，对应入口及预览不再发布。先前取得的本地源码档案和来源审计作为历史记录保留，不属于当前展示清单。
 
-共 16 个入口。来源、技术栈、核心文件、启动方法、许可证、模板提取和已知缺失集中在 [机器人网站复用库](docs/reuse/README.md) 与 [来源目录 JSON](catalog/justin-sources.json)。
+来源、技术栈、核心文件、启动方法、许可证与复用方法见 [机器人网站复用库](docs/reuse/README.md) 与 [历史来源目录 JSON](catalog/justin-sources.json)。
 
 首页默认英文，页头提供 EN / 中文切换并记住选择。正文、标签与导航统一字号，配合项目名和首页大标题，共三个字号层级。语言切换仅作用于集锦首页，各示例保留原有内容。
 
@@ -90,7 +86,9 @@ index.html                    集锦首页、介绍与目录容器
 src/collection.js             示例登记、语言切换、预览与入口
 src/collection.css            集锦首页样式
 src/extra-examples.js          新 Demo 与参考卡片
-src/reference-sites.js         九个原站地址及中英文文案
+src/reference-sites.js         独立参考入口
+src/example-groups.js          Robot Studio 与合并参考入口
+src/example-group.js           标签切换、独立链接与按需场景加载
 src/reference-viewer.js        原站嵌入、打开原站与返回入口
 src/robot-demos/               Three.js 渲染、相机、模型与时间轴
 catalog/                      固定版本来源目录
@@ -104,7 +102,7 @@ src/motion.js                 字符渲染、轨迹、轮播与视角控制
 src/style.css                 FIELDWORK 样式
 public/examples/              三个已有项目网站的静态快照
 public/collection-navigation.css  导入页面的返回集锦导航
-public/models/                优化人形模型及来源记录
+public/models/                真实机器人模型及来源记录
 public/licenses/              字体与模型许可证
 scripts/                      模型转换和项目网站导入工具
 tests/                        集锦导航及示例行为测试

@@ -1,6 +1,8 @@
 # 机器人项目网站复用库
 
-集锦现有 16 个入口：原有 4 个项目、3 个自有机器人 3D Demo、Justin Yu 及相关工作的 9 个参考页面。参考页面保留作者原站；完整源码与大体积媒体归档在本地，在线集锦通过原站嵌入展示，并提供直接打开原站的入口。三个新 Demo 的模型、代码、轨迹和 Viewer 自托管，不依赖参考站或在线 Python 后端。
+集锦现有 8 个入口：原有 4 个项目、Robot Studio、WARP-RM、EgoMI / Real2Render2Real、CaP-X。Robot Studio 内切换 G1、Franka Panda 轨迹与 Panda Viser，后两者采用同一套真实机器人网格和关节定义。EgoMI 与 Real2Render2Real 在同一入口切换原站。SARM2、SARM、LEGS、Justin Yu、POGS 已撤下；既有源码档案和审计记录仅供历史查阅。
+
+机器人模型、轨迹和 Viewer 自托管，不依赖参考站或在线 Python 后端。切换视图卸载上一场景，URL hash 可直接定位到目标标签。
 
 ## 从哪里开始
 

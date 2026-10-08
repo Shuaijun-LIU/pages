@@ -3,7 +3,7 @@
 两个可独立打开的 Vite 入口，使用同一组渲染、相机和时间轴组件：
 
 - `examples/robot-hero/index.html`：G1 模型、拖动/缩放、视角预设、相机巡航、关节展示动画、暂停和重置。
-- `examples/robot-trajectory/index.html`：六轴机械臂、预录关节序列、TCP 轨迹、拖动时间轴、播放速度和关节读数。
+- `examples/robot-trajectory/index.html`：真实 Franka Panda 七轴网格、样本关节序列、TCP 轨迹、拖动时间轴、播放速度和关节读数。
 
 不依赖后端、CDN 或运行时模型推理。Three.js、字体均沿用仓库已安装依赖。示例在小屏幕下纵向排列，支持键盘和减少动态效果设置。
 
@@ -14,10 +14,11 @@
 | `src/robot-demos/viewer.js`                 | Three.js stage、灯光、地面、OrbitControls、相机过渡、尺寸同步与资源释放 |
 | `src/robot-demos/timeline.js`               | 可独立使用的播放时钟                                                    |
 | `src/robot-demos/hero.js`                   | GLTFLoader 加载 G1、关节动画与 UI 绑定                                  |
-| `src/robot-demos/arm.js`                    | 简单六轴层级模型、前向运动学与样本插值                                  |
+| `src/robot-demos/arm.js`                    | Panda GLB 网格与 MJCF 七关节层级、前向运动学与样本插值                                  |
 | `src/robot-demos/trajectory.js`             | 样本加载、TCP 轨迹与回放 UI                                             |
 | `src/robot-demos/style.css`                 | 两个示例独立使用的界面样式                                              |
 | `public/robot-demos/sample-trajectory.json` | 361 帧、30 Hz、12 秒的示例关节序列                                      |
+| `public/models/panda/` | Panda 11 个连杆 GLB、共享关节清单、来源与 Apache-2.0 许可证 |
 | `public/models/humanoid.glb`                | 已有的 G1 模型，约 1.6 MB，两个页面不复制权重或模型                     |
 
 ## 快速运行
@@ -52,6 +53,8 @@ if (viewer) {
   // 卸载组件时调用 viewer.dispose()
 }
 ```
+
+`createViewer()` 可通过 `exposure` 和 `lightIntensity` 调整展示光照，默认保持 G1 既有灯光；Panda 使用 0.95 / 0.6，以保留白色外壳与深色接头的细节。
 
 `createViewer()` 返回 `scene, camera, renderer, controls, preset, reset, dispose`。若浏览器不能创建 WebGL 2 上下文，会在 stage 中显示清楚的提示并返回 `null`。`bindCameraButtons(viewer, presets, onChange)` 自动连接 HTML 的 `button[data-camera]`，同步 `aria-pressed`。
 
@@ -95,17 +98,19 @@ Hero 中的摆臂是轻量展示动画，不是动力学仿真。通过 `play` �
   "duration": 12,
   "sampleRate": 30,
   "frames": [
-    { "t": 0, "q": [0, -0.5, -0.7, -0.4, 0, 0] },
-    { "t": 12, "q": [0, -0.5, -0.7, -0.4, 0, 0] }
+    { "t": 0, "q": [0, -0.4, 0, -2, 0, 1.6, 0.7854] },
+    { "t": 12, "q": [0, -0.4, 0, -2, 0, 1.6, 0.7854] }
   ]
 }
 ```
 
-时间戳必须严格递增、从 0 开始，末帧时间等于 `duration`；至少两帧。`q` 有六个弧度值，当前模型依次绕局部 `Y, Z, Z, Z, Y, Y` 轴旋转。`sampleTrajectory()` 在相邻关节样本之间做线性插值；如果真实关节角跨 ±π，请先展开角度。
+时间戳必须严格递增、从 0 开始，末帧时间等于 `duration`；至少两帧。`q` 有七个弧度值，顺序为 Panda joint1–joint7。每个关节先应用 MJCF 固定原点变换，再绕局部 Z 轴转动。角度必须在 `public/models/panda/panda.json` 记录的真实关节限位内。`sampleTrajectory()` 在相邻关节样本之间做线性插值；如果真实关节角跨 ±π，请先展开角度。
 
-样本是离线生成的确定性正弦关节序列，便于复现展示。上臂/前臂长度为 0.66/0.57 米，TCP 从实际场景层级计算，不是另造一条与机器人不一致的曲线。浅色轨迹展示全部样本，深色轨迹展示已播放区间。TCP/角度读数随拖动实时更新。
+样本是离线生成的确定性七关节正弦序列，便于复现展示；运行 `python3 scripts/build-panda-trajectory.py` 可重新生成。使用原始 Panda 连杆坐标和长度。两指保持 0.025 m 开度，TCP 为 hand 坐标系的 `[0, 0, 0.1034]` m；它从实际场景层级计算。浅色轨迹展示全部样本，深色轨迹展示已播放区间。TCP/角度读数随拖动实时更新。
 
-接入真实机器人时，替换 `createArm()`：保留 `{ root, setPose(q), getTCP() }` 接口即可。把关节位置写入 URDF/glTF 模型的正确节点，并返回工具坐标原点的世界坐标。当前过程模型仅服务交互示例，不宣称对应某一实际机器人的动力学或关节极限。
+`await createArm(manifestURL)` 加载真实 Panda visual meshes，返回 `{ root, setPose(q), getTCP(), limits, model, meshCount }`。原始资产是米制 Z-up，外层 root 绕 X 转 −π/2 适配 Three.js 的 Y-up 地面；页面 TCP 读数沿 Three.js 展示世界坐标。模型关节、网格和样本与 Viser 录制共享，Viser 保持原始 Z-up。
+
+`public/models/panda/panda.json` 按父节点先于子节点排列，记录每个 link 的 parent、position、wxyz quaternion、mesh 路径和 joint axis/limits/index。GLB 网格保留原始顶点、面和颜色，不使用基础几何近似机械臂。`scripts/build-panda-assets.py --cache /tmp/panda-source` 可用 numpy/trimesh 重建资产；源文件校验值和提交固定在 `source.json`。
 
 ## 操作与无障碍
 
@@ -121,11 +126,11 @@ Hero 中的摆臂是轻量展示动画，不是动力学仿真。通过 `play` �
 - Three.js 0.180.0 及其 `OrbitControls` / `GLTFLoader`：MIT；见依赖 `three/LICENSE`。渲染循环遵循官方 [WebGLRenderer](https://threejs.org/docs/pages/WebGLRenderer.html) 的 `setAnimationLoop` API。
 - G1：复用仓库 `public/models/humanoid.glb`；完整来源、提交、转换方法和网格统计见 `public/models/humanoid-source.json`。上游为 [MuJoCo Menagerie / Unitree G1](https://github.com/google-deepmind/mujoco_menagerie/tree/b846dd12bc459d776cccb3dee0b1d02acbf7a9c7/unitree_g1)，BSD-3-Clause；保留 `public/licenses/Unitree-G1-BSD.txt`。版权归 Unitree Robotics。
 - DM Sans / IBM Plex Mono：SIL Open Font License；保留 `public/licenses/DM-Sans-OFL.txt` 与 `public/licenses/IBM-Plex-Mono-OFL.txt`。
-- 机械臂过程几何与示例关节数据为本示例编写，未复制第三方机器人网格。
+- Panda：Google DeepMind [MuJoCo Menagerie / Franka Emika Panda](https://github.com/google-deepmind/mujoco_menagerie/tree/0059d4335f8156206f63a35662313385f7ad6d74/franka_emika_panda)，源自 Franka Emika `franka_ros` 视觉网格；Apache-2.0。保留 `public/models/panda/LICENSE`、原始 `panda.xml` 和逐文件哈希 `source.json`。原始 OBJ 按连杆无简化转换成 GLB。七关节样本序列为本示例编写。
 
 ## 验证
 
-`tests/robot-demos.spec.js` 检查两个入口的模型加载、相机预设、键盘与鼠标交互、手机/平板宽度、减少动态效果、暂停/恢复、巡航/重置、时间轴/FK 坐标变化、速度选择和轨迹显隐。
+`tests/robot-demos.spec.js` 检查两个入口的模型加载、相机预设、键盘与鼠标交互、手机/平板宽度、减少动态效果、暂停/恢复、巡航/重置、时间轴/FK 坐标变化、速度选择和轨迹显隐，并检查 Panda 七关节、真实网格加载与所有样本关节限位。
 
 ```bash
 # 先启动 dev 或 preview；按实际端口设置

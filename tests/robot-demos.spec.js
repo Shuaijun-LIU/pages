@@ -73,6 +73,9 @@ test("trajectory: scrub changes FK, speed, playback and trail visibility", async
   await page.goto("/examples/robot-trajectory/");
   const stage = page.locator("#trajectory-stage");
   await expect(stage).toHaveAttribute("data-ready", "true");
+  await expect(stage).toHaveAttribute("data-robot", "franka-panda");
+  expect(Number(await stage.getAttribute("data-mesh-count"))).toBeGreaterThan(50);
+  await expect(page.locator(".joint-row")).toHaveCount(7);
   const initialTCP = await stage.getAttribute("data-tcp");
   await page.locator("#timeline").fill("6");
   await expect(stage).toHaveAttribute("data-time", "6.000");
@@ -96,4 +99,25 @@ test("trajectory: scrub changes FK, speed, playback and trail visibility", async
   await page.getByRole("button", { name: "Reset playback" }).click();
   await expect(stage).toHaveAttribute("data-time", "0.000");
   await expect(stage).toHaveAttribute("data-tcp", initialTCP);
+});
+
+
+test("Panda assets and all sample frames use the seven real joint limits", async ({ request }) => {
+  const manifestResponse = await request.get("/models/panda/panda.json");
+  expect(manifestResponse.ok()).toBe(true);
+  const model = await manifestResponse.json();
+  expect(model.links).toHaveLength(11);
+  const joints = model.links.filter((link) => link.joint?.type === "revolute");
+  expect(joints).toHaveLength(7);
+  const trajectory = await (await request.get("/robot-demos/sample-trajectory.json")).json();
+  expect(trajectory.frames).toHaveLength(361);
+  for (const frame of trajectory.frames) {
+    expect(frame.q).toHaveLength(7);
+    joints.forEach(({ joint }) => {
+      expect(frame.q[joint.index]).toBeGreaterThanOrEqual(joint.limits[0]);
+      expect(frame.q[joint.index]).toBeLessThanOrEqual(joint.limits[1]);
+    });
+  }
+  const source = await (await request.get("/models/panda/source.json")).json();
+  expect(source.links.reduce((sum, link) => sum + link.triangles, 0)).toBeGreaterThan(100000);
 });

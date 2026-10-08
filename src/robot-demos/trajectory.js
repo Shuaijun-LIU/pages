@@ -14,24 +14,28 @@ const play = document.querySelector("#play");
 const slider = document.querySelector("#timeline");
 let clock;
 const viewer = createViewer(stage, {
-  position: [2.65, 1.9, 3.1],
-  target: [0.45, 0.65, 0],
+  position: [1.2, 0.95, 1.45],
+  exposure: 0.95,
+  lightIntensity: 0.6,
+  target: [0.18, 0.46, 0],
   onFrame: (_, dt) => clock?.tick(dt),
 });
 if (viewer) {
   bindCameraButtons(viewer, {
-    perspective: [2.65, 1.9, 3.1],
-    front: [0.45, 1.05, 4],
-    top: [0.45, 4.5, 0.01],
+    perspective: [1.2, 0.95, 1.45],
+    front: [0.18, 0.55, 2.0],
+    top: [0.18, 2.2, 0.01],
   });
-  const arm = createArm();
-  viewer.scene.add(arm.root);
-  document.querySelector("#joints").innerHTML = Array.from(
-    { length: 6 },
-    (_, i) =>
-      `<div class="joint-row"><span>J${i + 1}</span><span class="joint-bar"><i class="joint-fill" id="bar-${i}"></i></span><span class="joint-value" id="joint-${i}">0.0°</span></div>`,
-  ).join("");
   try {
+    const arm = await createArm(publicAsset("models/panda/panda.json"));
+    viewer.scene.add(arm.root);
+    stage.dataset.robot = "franka-panda";
+    stage.dataset.meshCount = String(arm.meshCount);
+    document.querySelector("#joints").innerHTML = Array.from(
+      { length: 7 },
+      (_, i) =>
+        `<div class="joint-row"><span>J${i + 1}</span><span class="joint-bar"><i class="joint-fill" id="bar-${i}"></i></span><span class="joint-value" id="joint-${i}">0.0°</span></div>`,
+    ).join("");
     const response = await fetch(
       publicAsset("robot-demos/sample-trajectory.json"),
     );
@@ -58,7 +62,7 @@ if (viewer) {
     viewer.scene.add(completeTrace, progressTrace);
     // A small ring on the ground identifies the robot's mounting origin.
     const mountRing = new THREE.Mesh(
-      new THREE.RingGeometry(0.33, 0.337, 64),
+      new THREE.RingGeometry(0.17, 0.173, 64),
       new THREE.MeshBasicMaterial({ color: 0x8ca98a, side: THREE.DoubleSide }),
     );
     mountRing.rotation.x = -Math.PI / 2;
@@ -78,7 +82,7 @@ if (viewer) {
           document.querySelector(`#joint-${i}`).textContent =
             `${THREE.MathUtils.radToDeg(v).toFixed(1)}°`;
           document.querySelector(`#bar-${i}`).style.width =
-            `${(v / Math.PI + 1) * 50}%`;
+            `${((v - arm.limits[i][0]) / (arm.limits[i][1] - arm.limits[i][0])) * 100}%`;
         });
         progressGeometry.setDrawRange(
           0,
@@ -123,7 +127,7 @@ if (viewer) {
   } catch (error) {
     stage.dataset.ready = "error";
     document.querySelector("#load-status").textContent =
-      "The sample trajectory could not load. Reload the page to try again.";
+      "The Panda model or sample trajectory could not load. Reload the page to try again.";
     console.error("Trajectory:", error);
   }
   window.addEventListener("pagehide", (event) => {
