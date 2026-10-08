@@ -143,7 +143,10 @@ function render(language) {
       (example, index) => `
     <article class="example-card" style="--preview-bg:${example.background}" aria-labelledby="example-${example.slug}">
       <a class="example-preview" href="./examples/${example.slug}/" aria-label="${text.enter(example.name)}">
-        <img src="${example.preview}" alt="${text.preview(example.name)}" width="1440" height="1000" loading="${index === 0 ? "eager" : "lazy"}" fetchpriority="${index === 0 ? "high" : "auto"}" />
+        <div class="browser-preview">
+          <div class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span>${example.name}</span><span>↗</span></div>
+          <img src="${example.preview}" alt="${text.preview(example.name)}" width="1440" height="1000" loading="${index === 0 ? "eager" : "lazy"}" fetchpriority="${index === 0 ? "high" : "auto"}" />
+        </div>
       </a>
       <div class="example-info">
         <h3 id="example-${example.slug}">${example.name}</h3>
