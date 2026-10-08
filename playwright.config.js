@@ -3,6 +3,7 @@ export default defineConfig({
   testDir: "./tests",
   timeout: 30000,
   workers: 1,
+  reporter: process.env.CI ? [["list"], ["github"]] : "list",
   use: {
     baseURL: process.env.TEST_BASE_URL || "http://127.0.0.1:4174",
     viewport: { width: 1440, height: 1000 },
