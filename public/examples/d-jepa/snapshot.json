@@ -1,0 +1,605 @@
+{
+  "name": "D-JEPA",
+  "repository": "https://github.com/NEBULIS-Lab/D-JEPA",
+  "sourceDirectory": "docs/",
+  "sourceCommit": "9a7654b1a20152b8373889002c6918fa395e7c73",
+  "sourceDocsHaveLocalChanges": true,
+  "importedAt": "2026-10-08T21:36:27.645795+00:00",
+  "changes": [
+    "Added collection return navigation to HTML pages; source files remain unchanged."
+  ],
+  "excluded": [
+    "training code",
+    "checkpoints",
+    "datasets",
+    "local infrastructure notes",
+    "static/paper/ (manuscript drafts)"
+  ],
+  "files": [
+    {
+      "path": "explainer.html",
+      "sha256": "f05fb78cdfbfe31b4a9fa1010503fe189c5c5a0904aeeab22c6045e3fd5d2b46",
+      "bytes": 10908
+    },
+    {
+      "path": "index.html",
+      "sha256": "324bd407afb7ba372b88c6e537814484ef9b9c9ce177dc7d0f8a413e20082497",
+      "bytes": 39723
+    },
+    {
+      "path": "site-content.json",
+      "sha256": "84bb1b2c652753e171ea84fc4ba994a7e4123cba053ba7da531ee1f8b389b490",
+      "bytes": 901
+    },
+    {
+      "path": "static/audio/narration/01_question.mp3",
+      "sha256": "aecddd5c7e931848bbdcadb75e32a0c6dc1b1a6b9ac1ef0b5a2dd317b714e0ae",
+      "bytes": 130608
+    },
+    {
+      "path": "static/audio/narration/02_prediction_gap.mp3",
+      "sha256": "aebab83444db3edf1ae0d95ec5eb359381a388ea57db0fcc4d3709dfb6af9f8e",
+      "bytes": 160992
+    },
+    {
+      "path": "static/audio/narration/03_predictive_evidence.mp3",
+      "sha256": "84d1b66f9e7a8e135a75c1a3a1f0a291ec72576fc6d641ace16c04558b64b1a2",
+      "bytes": 144432
+    },
+    {
+      "path": "static/audio/narration/04_relational_alignment.mp3",
+      "sha256": "97be60921159b36c317f632d2f0cc450e3c5a8bf33e76d05b7f09322805a2808",
+      "bytes": 167616
+    },
+    {
+      "path": "static/audio/narration/05_decision_rule.mp3",
+      "sha256": "eae01c476013b9ee492f6fe9c1191e50b47ecc92ae1e3c819a5bed498f26f535",
+      "bytes": 171504
+    },
+    {
+      "path": "static/audio/narration/06_ordinal_realization.mp3",
+      "sha256": "3e4b18cb836525ff32f9b533ccb8afe9438c8b6ad83910c8c26496304f7220b1",
+      "bytes": 156960
+    },
+    {
+      "path": "static/audio/narration/07_temporal_transport.mp3",
+      "sha256": "0f93fa76605f34261e938c77d8a49f6bf85c4320e619953946e01994a0a94886",
+      "bytes": 125424
+    },
+    {
+      "path": "static/audio/narration/08_validation.mp3",
+      "sha256": "063b3aef3555afdfa8eae9b377864d2b6f66601bc8393d685b05a3d327ba210f",
+      "bytes": 182880
+    },
+    {
+      "path": "static/css/explainer.css",
+      "sha256": "6093847e7388fdba28f82fd2324eeb5dd0dc68fbcb25fbf6bcee12b9057fe8a3",
+      "bytes": 27108
+    },
+    {
+      "path": "static/css/mobile-portrait.css",
+      "sha256": "e1163ac66027cd0588be0978f1d80de70bf436cdefade3e08559dacad6669e79",
+      "bytes": 9864
+    },
+    {
+      "path": "static/css/site-dialogs.css",
+      "sha256": "78da3f7584c1aaaff29297c9e59a5116383b78a0d3a62c99c42597e7b0ee0569",
+      "bytes": 4271
+    },
+    {
+      "path": "static/css/site.css",
+      "sha256": "017312ac3b7c5c9d3d1767dd03d44161aa6065ab2ca6ab1f4fb69a366c913a35",
+      "bytes": 21294
+    },
+    {
+      "path": "static/css/tour-guide.css",
+      "sha256": "a73356781242dae6187053c0030f7b80d366c252d609918967833e1f9d77edfc",
+      "bytes": 2780
+    },
+    {
+      "path": "static/data/decision_local_ranking.json",
+      "sha256": "a0edb533593f3c520557e1b7357d458fcdd227a6bcab5a69f44b6bdfb0b880cb",
+      "bytes": 8142
+    },
+    {
+      "path": "static/data/explainer-narration.json",
+      "sha256": "a247ba90b396961c91edf31f0c2373de11431f1d2601aefb8d273bc508aa5390",
+      "bytes": 16735
+    },
+    {
+      "path": "static/data/explainer-pair.json",
+      "sha256": "fe733499514c500e177b654fb65838ac9f3b10297b0cb5ae923cd4a927ec3418",
+      "bytes": 1547
+    },
+    {
+      "path": "static/data/explainer-pusht.json",
+      "sha256": "c6ba36e5c7b7df49b8031eac04342555e635ea397f0eec820542ac7902b7b621",
+      "bytes": 21690
+    },
+    {
+      "path": "static/images/alignment_ablation.svg",
+      "sha256": "fa61552d9048a6e5250d1685224c2daed2ce6ef6892d3a0882825a7fa367f0a4",
+      "bytes": 8841
+    },
+    {
+      "path": "static/images/appearance-timeline.png",
+      "sha256": "848c694edf5f2a1d51d9921ad66769a5a6fb4e1e9847d509d50df1ec434c60ed",
+      "bytes": 222289
+    },
+    {
+      "path": "static/images/appearance_pairs.svg",
+      "sha256": "e107d1b7191fd5d06afe342797ed78a6b9f0ee7e708151fd472cd224b74efd47",
+      "bytes": 10180
+    },
+    {
+      "path": "static/images/appearance_success.svg",
+      "sha256": "b1e353a5dbe1c42cc7e1f711830d74818437fa15dab1f835e006c0993d8bdc8d",
+      "bytes": 14019
+    },
+    {
+      "path": "static/images/branding/d-jepa-full-logo2-dark.svg",
+      "sha256": "8e46d38463d303db5a624cea15d20a6003b83ac4aa768b2a34d2a05eb4f60399",
+      "bytes": 486531
+    },
+    {
+      "path": "static/images/branding/d-jepa-full-logo2-light.svg",
+      "sha256": "d82887de6ba2012651cdd83fb2f53af63dd6916337630e8f3457eb7637d8c4ae",
+      "bytes": 480682
+    },
+    {
+      "path": "static/images/branding/jepa-full-logo-dark.svg",
+      "sha256": "ee6c202b2d758d8ee83b6b57365b80526c9825bf254d154386c97afeacb9c1f0",
+      "bytes": 480449
+    },
+    {
+      "path": "static/images/branding/jepa-full-logo-light.svg",
+      "sha256": "4608bc41013017414415d1e1e9820d1fb10984d70c1635c3f40b4fe0cee9b01d",
+      "bytes": 470717
+    },
+    {
+      "path": "static/images/branding/jepa-icon-dark.svg",
+      "sha256": "4f53f61156b9b5469afa176444be0bd2641445841419a55ead2a62b0a82bda45",
+      "bytes": 222876
+    },
+    {
+      "path": "static/images/branding/jepa-icon-light.svg",
+      "sha256": "d9ba1e3e0bffdcc43ad7103eac31b985b52111f91e8f056d0f038bcb2030c6e0",
+      "bytes": 222900
+    },
+    {
+      "path": "static/images/candidate_budget.svg",
+      "sha256": "590faef3c08971dca84c2589f0a95af178bb6b5d47f678bffa3f8bc5303bacd4",
+      "bytes": 12138
+    },
+    {
+      "path": "static/images/cube_task_coverage.png",
+      "sha256": "60b634d4cc55281034632321268d0e942ee470b5f033f07821724609339ed7c3",
+      "bytes": 738184
+    },
+    {
+      "path": "static/images/decision_local_ranking.svg",
+      "sha256": "1c53d3b31feb30f3187655dc3d35016ca509544cbd0abaa4b81af672eb782f25",
+      "bytes": 57292
+    },
+    {
+      "path": "static/images/decision_local_ranking_a.svg",
+      "sha256": "0a79d4812f3b42cbf2d49d6b1891cb6ae719a9366294ba53bbb2441b286e8b74",
+      "bytes": 5829
+    },
+    {
+      "path": "static/images/decision_local_ranking_b.svg",
+      "sha256": "81053ca5562969178b0ebeba54056bf2f9425e7caf1ba02d4d0b65b3ae978a09",
+      "bytes": 37169
+    },
+    {
+      "path": "static/images/decision_local_ranking_c.svg",
+      "sha256": "03ccaf0e647c1564073a8495560657af990994012ecddae53d4a2a1f8210e53d",
+      "bytes": 8806
+    },
+    {
+      "path": "static/images/decision_local_ranking_d.svg",
+      "sha256": "15d80273ee295527f30f752d40156b5cceec86ee09a0ad73b6326f33b704773c",
+      "bytes": 8793
+    },
+    {
+      "path": "static/images/deployment_latency.svg",
+      "sha256": "cbbb732074c2d2ad37f0e4e7ba52417f4ac18dba407bc7ef362a6e3f6496a8bc",
+      "bytes": 7059
+    },
+    {
+      "path": "static/images/driving-comfort-timeline.png",
+      "sha256": "9c97c13698efc4401d9a7927846d1820ebd673d9973671c8beface9e016ab634",
+      "bytes": 2037372
+    },
+    {
+      "path": "static/images/driving-progress-timeline.png",
+      "sha256": "a661873528e9f741d7f87c90ae44ebe1c3a929c3b505357532170def7f236339",
+      "bytes": 1502409
+    },
+    {
+      "path": "static/images/expansion1_pushobj_unseen_success.svg",
+      "sha256": "922c7112947e9ad6d39ac791d48fd73b8611a8f86f8dcf7be2a686c04521e372",
+      "bytes": 11731
+    },
+    {
+      "path": "static/images/foundation_driving.png",
+      "sha256": "65f5cd3944d075a1d47283da965757e250447e3c0e583330abbe5acd6952aec5",
+      "bytes": 3724447
+    },
+    {
+      "path": "static/images/foundation_robotwin.png",
+      "sha256": "ab7a83ee2a8492e3256f25fecf4ddc0951b79c8b32ea5c015082b31770ebe206",
+      "bytes": 1628856
+    },
+    {
+      "path": "static/images/granular-timeline.png",
+      "sha256": "27f9430549046590a88d5e0f7591ab797652b7aa491a11994e86f5a2d1513ec3",
+      "bytes": 1202025
+    },
+    {
+      "path": "static/images/granular_paired_cost.svg",
+      "sha256": "3ec5bf05fbb041f503335eb785e4a673e2c8e0280589b5d955a87c9502a7481a",
+      "bytes": 16757
+    },
+    {
+      "path": "static/images/granular_threshold_success.svg",
+      "sha256": "e7fc00fa972453b7447f934f0d7ee6779bf0844f8358364112f2dfd6e281161a",
+      "bytes": 9208
+    },
+    {
+      "path": "static/images/held_out_shape_pairs.svg",
+      "sha256": "f0214a898ae3980d999b12a632599c4976dff355d0501d4ec79bf2b5bc946d7c",
+      "bytes": 8968
+    },
+    {
+      "path": "static/images/held_out_shape_success.svg",
+      "sha256": "3db123c798fc145c17f64e5f7c184132433458c3c668bb58bfba431164042868",
+      "bytes": 10353
+    },
+    {
+      "path": "static/images/icons/arxiv.svg",
+      "sha256": "bc9f818b1cb351b7b9ec63aa4bee3620d7bf15a23c86cea0ff2cac218eba2fd3",
+      "bytes": 1088
+    },
+    {
+      "path": "static/images/icons/github.svg",
+      "sha256": "4a6b3318b5e73d259e32696463dd7fd2039250b067201866324ed95f4a04775d",
+      "bytes": 823
+    },
+    {
+      "path": "static/images/icons/huggingface.svg",
+      "sha256": "6d81ddf0b8f0f23853a62dbe9465afc8f9eb1a368ba83a4d16ebcf047a271d5f",
+      "bytes": 5258
+    },
+    {
+      "path": "static/images/latent_geometry.svg",
+      "sha256": "899e9f9e3ca9ac490ce3adc50666a446f0ecca005c56a1969b6ca4d6fbc5eeb4",
+      "bytes": 28344
+    },
+    {
+      "path": "static/images/multiple_predictive_geometries.svg",
+      "sha256": "e7830b4c344025d0f1c77390a424968c856087ebfab3081831a6fa2b46d0b084",
+      "bytes": 8970
+    },
+    {
+      "path": "static/images/ordinal_recovery.svg",
+      "sha256": "5602e120f6cb3c876788fe09386fcb9b2307bb4aad052237fd047fac0551721b",
+      "bytes": 12467
+    },
+    {
+      "path": "static/images/paper-artwork/alignment.pdf",
+      "sha256": "86e0be2efd67bd67cd052311b6c8e4d036d60c6cde5e6c1d450bc28c6b1eb5ed",
+      "bytes": 561307
+    },
+    {
+      "path": "static/images/paper-artwork/alignment.webp",
+      "sha256": "ffc6bb13f694ab90bc323e6ab95e973d708595f652171b478a7b7613fcf9c546",
+      "bytes": 510310
+    },
+    {
+      "path": "static/images/paper-artwork/composition.pdf",
+      "sha256": "d27e1460cb6a3cc924ed7d597055d5f46fd81cd7a4a6e6714042bc324e0b99eb",
+      "bytes": 110028
+    },
+    {
+      "path": "static/images/paper-artwork/composition.webp",
+      "sha256": "cda563a1f0b5c2d4092bebeb01b900cce9ca2b5a506c7ec38ddd8c6e01e6c07e",
+      "bytes": 246552
+    },
+    {
+      "path": "static/images/paper-artwork/overview.pdf",
+      "sha256": "728e22cb0c576107cb42290357d25daae5166fc959b5397fe6a0a122e1b26c95",
+      "bytes": 920318
+    },
+    {
+      "path": "static/images/paper-artwork/overview.webp",
+      "sha256": "e5e2f30f8393ef31247e4dd907a5df816ba905186848dc4340003410a00cde09",
+      "bytes": 1317944
+    },
+    {
+      "path": "static/images/paper-artwork/representation.pdf",
+      "sha256": "e9f3496e7750cf679bd2a318373647fbc6f78a43b8e6fedf0cb6257f2c3a7f23",
+      "bytes": 63397
+    },
+    {
+      "path": "static/images/paper-artwork/representation.webp",
+      "sha256": "e72ba2e279a4dc849509b755c6e1ea7312f32b9fdad5a2c1ff47a660f6b86887",
+      "bytes": 115224
+    },
+    {
+      "path": "static/images/poster-appearance.jpg",
+      "sha256": "9a8df20867259363c16de742baf0591d680663b000df486a00fd1438dc304f50",
+      "bytes": 33278
+    },
+    {
+      "path": "static/images/poster-cube.jpg",
+      "sha256": "6a35934d2c14397af5bb8d16b49ddc68c16de3789b5bbe19599d012d51368a7f",
+      "bytes": 43988
+    },
+    {
+      "path": "static/images/poster-driving-comfort.jpg",
+      "sha256": "454fba8fcac734bbdb06632d94cee8aa98caa307ba97f96e0b7fe97d2bf2a280",
+      "bytes": 47913
+    },
+    {
+      "path": "static/images/poster-driving-progress.jpg",
+      "sha256": "28d0d00db7ef95713972576997b83c01b49c1f3f621bfac35f70a34e1ab52f5a",
+      "bytes": 46203
+    },
+    {
+      "path": "static/images/poster-driving.jpg",
+      "sha256": "7e267e37fca2dcf13929d84fb4f790384448d421a5874f93f6128feeca28f39e",
+      "bytes": 79698
+    },
+    {
+      "path": "static/images/poster-granular.jpg",
+      "sha256": "910fa2de34e6ee0591d290eabbea3219b0eec8dae1b932425c7602fabd2f15c5",
+      "bytes": 51108
+    },
+    {
+      "path": "static/images/poster-pusht.jpg",
+      "sha256": "f9720f86d1f25758a98dee2d95cf4420fbd6b10d8aabc9510001b44900eb8158",
+      "bytes": 30038
+    },
+    {
+      "path": "static/images/poster-reacher.jpg",
+      "sha256": "e7d5cc72f34f2c9101b517337ccd9702ba44229085a85380978ffc191d8424d8",
+      "bytes": 38320
+    },
+    {
+      "path": "static/images/poster-robotwin.jpg",
+      "sha256": "0b52d2ebe97d2d09f2dbe92e13fbe0425ad0341e2e6f163e4cb50e50599fe3aa",
+      "bytes": 39709
+    },
+    {
+      "path": "static/images/poster-shape.jpg",
+      "sha256": "43ae1f73c3fa64c59864766d18b8c822d785a625c043ebb8cf8df23444dedfdb",
+      "bytes": 27191
+    },
+    {
+      "path": "static/images/predictive_source_ablation.svg",
+      "sha256": "92b27fa72a4839ddf35d35e2e0fad62a23a153ab2a76e74e9a636f89be5732dd",
+      "bytes": 7644
+    },
+    {
+      "path": "static/images/pushobj_unseen_shape_success.svg",
+      "sha256": "922c7112947e9ad6d39ac791d48fd73b8611a8f86f8dcf7be2a686c04521e372",
+      "bytes": 11731
+    },
+    {
+      "path": "static/images/pusht-timeline.png",
+      "sha256": "28988a8e6c2a01619dae339e423e998373c32040d1792861436fa4e1da310920",
+      "bytes": 141053
+    },
+    {
+      "path": "static/images/pusht_independent_success.svg",
+      "sha256": "1a689845d31990274962e6fc7d032c75f847b9b392d8db8c5c66ab6be4f83cd7",
+      "bytes": 7853
+    },
+    {
+      "path": "static/images/reacher-timeline.png",
+      "sha256": "92a28524ee87d8a2196a0be1cb672d9655215e0fe663c47d5efd76b2d7a9b408",
+      "bytes": 481250
+    },
+    {
+      "path": "static/images/reacher_formal_success.svg",
+      "sha256": "63b824ad7a5fe91cace0a686de69bb5949df687162f468b3dbd551b7cfc93788",
+      "bytes": 7849
+    },
+    {
+      "path": "static/images/seven_visual_conditions.png",
+      "sha256": "271ca0a9dd05ffb6717cc629d8eba5cfa1ebd17adb9d99bb0c3f2be18eedb8ab",
+      "bytes": 121399
+    },
+    {
+      "path": "static/images/shape-timeline.png",
+      "sha256": "67a222b10d36276eb21a1b707332d70481be06ba77678512e905d256e2627f52",
+      "bytes": 278863
+    },
+    {
+      "path": "static/images/temporal_transport.svg",
+      "sha256": "97c8db14930e90782102a4f86d43081658239351bdacf42ed05aa3bcf7a8f6cd",
+      "bytes": 23609
+    },
+    {
+      "path": "static/js/explainer-evidence.mjs",
+      "sha256": "26af040b86d9bea8c3f6aaca904c07864b705871294a779e3d0c43a973be1639",
+      "bytes": 912
+    },
+    {
+      "path": "static/js/explainer-model-map.mjs",
+      "sha256": "e4f83e8a5091c67c7d2a7f6f4192a6b1e305ee0bb4e7b01dbcf7ce7f1d60f6a6",
+      "bytes": 8700
+    },
+    {
+      "path": "static/js/explainer-model.mjs",
+      "sha256": "2f57878ba96c5825dad74d88a794445c0680e48e6a3540179eadbd3a2d71b4ff",
+      "bytes": 3420
+    },
+    {
+      "path": "static/js/explainer-motion.mjs",
+      "sha256": "02810e5d0873990ba22d509e73bb53d855789c6f0a4553fbebff4d1c74437594",
+      "bytes": 2707
+    },
+    {
+      "path": "static/js/explainer-narration-model.mjs",
+      "sha256": "afac9e9feec736fa9b6ba6cbc4340ac1588b90c26fbc3c5d58d58a3da6a425f6",
+      "bytes": 1303
+    },
+    {
+      "path": "static/js/explainer-narration.mjs",
+      "sha256": "97f084ea35c8d3345c526c326ff9cb73732b7afc5f1bd9f7e508a9776590855b",
+      "bytes": 7721
+    },
+    {
+      "path": "static/js/explainer-pair.mjs",
+      "sha256": "f0dc36bbb05275b8ee287ad8e5a9260ffe33faf87c753a8caba30189b2f5f02c",
+      "bytes": 10270
+    },
+    {
+      "path": "static/js/explainer-problem.mjs",
+      "sha256": "fba373ced8692f0b41780920304c61ec907e94a8c5a23366311d76640f19fe8e",
+      "bytes": 712
+    },
+    {
+      "path": "static/js/explainer-relations.mjs",
+      "sha256": "e1fd09400b46f574b26876399b725cb662c3b133ba2397d7c982bbe1948f68d1",
+      "bytes": 925
+    },
+    {
+      "path": "static/js/explainer-scenes.mjs",
+      "sha256": "007ddb5c0757d158a515072a6c3b6d306ea12ac89903a35661ca78e8df77d037",
+      "bytes": 2719
+    },
+    {
+      "path": "static/js/explainer-validation.mjs",
+      "sha256": "c6c1fbd9bed6e5d4f1f536df224b1c8f0ef91ca49d58ad2c117f411ed1e355bd",
+      "bytes": 4577
+    },
+    {
+      "path": "static/js/explainer.js",
+      "sha256": "d13419a99c966493b3d1d632c04017d1851ee7479dc0f143de3f207841203485",
+      "bytes": 93183
+    },
+    {
+      "path": "static/js/site-dialogs.js",
+      "sha256": "ce519240467f11a4cbee0c39848b3d5e740d99950632d3c4f1af09209337a95b",
+      "bytes": 5814
+    },
+    {
+      "path": "static/js/site.js",
+      "sha256": "294d0c3018e4cbd9880947519060d1ead4a8e9981f60b601c78039db9012ce94",
+      "bytes": 5459
+    },
+    {
+      "path": "static/js/tour-guide.js",
+      "sha256": "eef01458985915f221855d212623dc594f8332c35bb57deb515d30425fcd6fc3",
+      "bytes": 1377
+    },
+    {
+      "path": "static/videos/appearance.mp4",
+      "sha256": "2c49800aa176518d08bf933859e4f314bd241a5d400e2af0197d94b57b100d09",
+      "bytes": 587772
+    },
+    {
+      "path": "static/videos/cube.mp4",
+      "sha256": "5020fac96894d30af33d50e7608432ba503a7ca3bf31c6244c5b960b9effc6a8",
+      "bytes": 608254
+    },
+    {
+      "path": "static/videos/driving-comfort.mp4",
+      "sha256": "3ad16dc294d6047e81a912e61112e262a311cdeddb694e12de7adc81cfa6c4e7",
+      "bytes": 645118
+    },
+    {
+      "path": "static/videos/driving-progress.mp4",
+      "sha256": "de4b07f2f02f4d367b6b582c68be01637ee8bd2e5e44be6c6ea934e838134e94",
+      "bytes": 536844
+    },
+    {
+      "path": "static/videos/driving.mp4",
+      "sha256": "f5f2e893f66948eb11a9b77f08c1c399ee7484ff5b6abf4914accc1fd5597e2e",
+      "bytes": 1218431
+    },
+    {
+      "path": "static/videos/explainer-wall/driving.jpg",
+      "sha256": "b1590b0a53df2599af17be373a775cd4c7721aa66cbe5a32bfee481b04b10bb3",
+      "bytes": 30158
+    },
+    {
+      "path": "static/videos/explainer-wall/driving.mp4",
+      "sha256": "5db2b2a60f1763e9a31bb60516d5c43900ca7a317a2332b851e4d962fa8f314c",
+      "bytes": 155637
+    },
+    {
+      "path": "static/videos/explainer-wall/granular.jpg",
+      "sha256": "9902521f7177bcc879d45844c7fbfaee72fbd7cd1a6542706718f2d0dce113f2",
+      "bytes": 21789
+    },
+    {
+      "path": "static/videos/explainer-wall/granular.mp4",
+      "sha256": "475e941673c06190412b6b4e828ef1ceb5ed085a944555e3c21f4f772485fb12",
+      "bytes": 424601
+    },
+    {
+      "path": "static/videos/explainer-wall/manifest.json",
+      "sha256": "b6ed82a1d162366e2a9c5708dbb21d565a1fd71c4b6b94709d7df381b55c8fd4",
+      "bytes": 2726
+    },
+    {
+      "path": "static/videos/explainer-wall/reacher.jpg",
+      "sha256": "f0dfb68555eac6470343450a49d524ad1d3c4b9e459863887eae0d5dd5da35c6",
+      "bytes": 9520
+    },
+    {
+      "path": "static/videos/explainer-wall/reacher.mp4",
+      "sha256": "12b32a5421359784f30f7abf0ffed52c1d7919877462b9dec81a9fadb3351690",
+      "bytes": 23703
+    },
+    {
+      "path": "static/videos/explainer-wall/robotwin.jpg",
+      "sha256": "565df0f97cb548b041379c53243f987dafdc63429fd0d5b8b76f48ba875db542",
+      "bytes": 14214
+    },
+    {
+      "path": "static/videos/explainer-wall/robotwin.mp4",
+      "sha256": "7e0bc4e5f7b723d89165f4b33bc1efae9a060202d0907fbbd1c27c40bd5ba02c",
+      "bytes": 149661
+    },
+    {
+      "path": "static/videos/explainer-wall/shape.jpg",
+      "sha256": "d1cdecdb90d16226543db6db96fa3dbd6510a738d1944ee0b6c904d1f86ac1b8",
+      "bytes": 7404
+    },
+    {
+      "path": "static/videos/explainer-wall/shape.mp4",
+      "sha256": "9abfa46286090020ad9e26cd98fe0809a806c58f5d9092618eb547ecb713bef5",
+      "bytes": 36512
+    },
+    {
+      "path": "static/videos/granular.mp4",
+      "sha256": "14d2329174b030012f096bf2089523238a98bfd195e718a6eb22c107552074b5",
+      "bytes": 7191648
+    },
+    {
+      "path": "static/videos/pusht.mp4",
+      "sha256": "4cf45dbc0d40ae3b59b6d9b5433e17d21c8c09800c3a9774be6dff5be6c4e128",
+      "bytes": 441246
+    },
+    {
+      "path": "static/videos/reacher.mp4",
+      "sha256": "dd5978a577dff4bb610ccfaa4a6266067acbff2e4b51d742e9212637ac72fb3d",
+      "bytes": 366925
+    },
+    {
+      "path": "static/videos/robotwin.mp4",
+      "sha256": "0327eebe5f0c3fb0deb9df69a6c6bf533563f055baa0aacc4965cb132bc4d0da",
+      "bytes": 1537652
+    },
+    {
+      "path": "static/videos/shape.mp4",
+      "sha256": "6064d1249ac7d10989156ac7be425d475c45cff59160ffe6ce119b1c346468bd",
+      "bytes": 493144
+    }
+  ]
+}

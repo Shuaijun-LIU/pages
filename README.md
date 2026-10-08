@@ -9,6 +9,9 @@
 | 示例 | 在线体验 | 参考与特点 |
 | --- | --- | --- |
 | 001 · FIELDWORK | [进入动画示例](https://shuaijun-liu.github.io/pages/examples/fieldwork/) | 参考 xdof.ai 的动效表现，包含人形采摘、双夹爪持杯、折衣、奔跑四场景，以及方块字符、关节拖尾、视角交互、渐隐轮播和明暗主题 |
+| 002 · BRACE | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/brace/) | 论文项目页、蓝色视觉、独立交互动画与多平台展示 |
+| 003 · D-JEPA | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/d-jepa/) | 紫色主题、交互式模型讲解、步骤演示与实验视频 |
+| 004 · MimicX | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/mimicx/) | 全屏动作主视觉、画廊、图片浏览器与同步视频对比 |
 
 ![集锦首页](docs/preview-collection.png)
 
@@ -37,6 +40,22 @@ npm test
 
 测试覆盖首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
 
+## 已有项目网站的收录
+
+BRACE、D-JEPA、MimicX 使用对应代码仓库 `docs/` 网站的静态快照，放在 `public/examples/`。保留原设计、脚本、图片、视频、讲解子页面和许可；仅为 HTML 增加返回集锦导航。原项目工作区不会被修改，训练代码、检查点和数据集未收录。D-JEPA 的本地稿件 PDF 不包含在快照中，论文按钮继续链接原站指定的 arXiv。
+
+每个快照的 `snapshot.json` 保存来源仓库、提交、文件校验和与本地变更标记。导入时 D-JEPA 的 `docs/` 存在本地改动，因此以实际文件哈希为准。
+
+更新快照时运行：
+
+```sh
+python3 scripts/import-project-sites.py /path/to/BRACE-code /path/to/D-JEPA-code-repo /path/to/MimicX-code-repo
+npm run build
+npm test
+```
+
+导入工具只替换这三个已登记的快照目录；预览截图与目录卡片在网站检查后另行更新。
+
 ## 新增一个例子
 
 1. 新建 `examples/<slug>/index.html`，为该例子添加独立的脚本与样式入口。
@@ -57,9 +76,11 @@ src/main.js                   FIELDWORK 文案、主题、曲线与弹窗
 src/scenes.js                 四种主体、关节动作、道具与模型加载
 src/motion.js                 字符渲染、轨迹、轮播与视角控制
 src/style.css                 FIELDWORK 样式
+public/examples/              三个已有项目网站的静态快照
+public/collection-navigation.css  导入页面的返回集锦导航
 public/models/                优化人形模型及来源记录
 public/licenses/              字体与模型许可证
-scripts/                      模型转换与简化工具
+scripts/                      模型转换和项目网站导入工具
 tests/                        集锦导航及示例行为测试
 .github/workflows/deploy.yml   GitHub Pages 构建、测试与部署
 ```
@@ -76,4 +97,4 @@ GitHub Pages 的 Source 使用 **GitHub Actions**。推送 `main` 后自动构�
 
 ## 来源与许可
 
-FIELDWORK 的交互表现参考 [xdof.ai](https://www.xdof.ai/)，代码独立实现，品牌与文案替换。人形采用 BSD-3-Clause 授权的 Unitree G1，双臂道具和动作自行构建；本仓库不包含参考站的脚本或模型，不代表与该公司有关联。详细来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+FIELDWORK 的交互表现参考 [xdof.ai](https://www.xdof.ai/)，代码独立实现，品牌与文案替换。人形采用 BSD-3-Clause 授权的 Unitree G1，双臂道具和动作自行构建；本仓库不包含参考站的脚本或模型，不代表与该公司有关联。BRACE、D-JEPA、MimicX 的原有作者、资源链接和许可证随各自快照保留。详细来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。

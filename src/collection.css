@@ -240,7 +240,7 @@ h1 > span {
   border-radius: 4px;
 }
 .example-preview {
-  background: #e7e6f0;
+  background: var(--preview-bg, #e7e6f0);
   padding: 23px 27px 20px;
   display: flex;
   flex-direction: column;
@@ -621,4 +621,9 @@ h1 > span {
   .browser-preview {
     transform: none;
   }
+}
+
+#example-list {
+  display: grid;
+  gap: 26px;
 }

@@ -15,3 +15,15 @@ Font license texts are distributed with the deployed site under `licenses/`. No 
 **Unitree G1**, from [Google DeepMind MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie/tree/b846dd12bc459d776cccb3dee0b1d02acbf7a9c7/unitree_g1), is distributed under **BSD-3-Clause**. Copyright (c) 2016-2023 HangZhou YuShu TECHNOLOGY CO.,LTD. ("Unitree Robotics").
 
 The adapted model is `public/models/humanoid.glb`. Changes include mesh simplification, a web coordinate frame, preserved joint metadata, and omission of collision and logo geometry. Animation choreography is authored for this project. The full license is in [public/licenses/Unitree-G1-BSD.txt](public/licenses/Unitree-G1-BSD.txt); detailed source provenance and checksums are in [public/models/humanoid-source.json](public/models/humanoid-source.json). The conversion tool is [scripts/build-robot-asset.mjs](scripts/build-robot-asset.mjs).
+
+## Imported project websites
+
+The collection includes website snapshots from the user's project repositories. Their content and original attribution remain intact; HTML pages add a collection return link.
+
+| Snapshot | Upstream | Repository license |
+| --- | --- | --- |
+| `public/examples/brace/` | [NEBULIS-Lab/BRACE](https://github.com/NEBULIS-Lab/BRACE) | MIT; copied as `SOURCE-LICENSE.txt` |
+| `public/examples/d-jepa/` | [NEBULIS-Lab/D-JEPA](https://github.com/NEBULIS-Lab/D-JEPA) | Apache-2.0; copied as `SOURCE-LICENSE.txt` |
+| `public/examples/mimicx/` | [NEBULIS-Lab/MimicX](https://github.com/NEBULIS-Lab/MimicX) | Apache-2.0; copied as `SOURCE-LICENSE.txt` |
+
+Each snapshot includes `snapshot.json` with source revision and original file hashes. Bundled vendor/font/icon license files and notices are retained. These project-level licenses do not replace individual media or dependency terms. Original code, paper, and resource links remain in the imported pages.

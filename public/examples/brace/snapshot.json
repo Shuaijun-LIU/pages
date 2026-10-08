@@ -1,0 +1,389 @@
+{
+  "name": "BRACE",
+  "repository": "https://github.com/NEBULIS-Lab/BRACE",
+  "sourceDirectory": "docs/",
+  "sourceCommit": "92e91e6e69aa2f5d16cec9ff24ec1b02827a862e",
+  "sourceDocsHaveLocalChanges": false,
+  "importedAt": "2026-10-08T21:36:27.158707+00:00",
+  "changes": [
+    "Added collection return navigation to HTML pages; source files remain unchanged."
+  ],
+  "excluded": [
+    "training code",
+    "checkpoints",
+    "datasets",
+    "local infrastructure notes"
+  ],
+  "files": [
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "21d0a0a7da6fa0f20ce8b7297783cf7dabbdffd78c53304a11b64e1ea8a8394d",
+      "bytes": 2947
+    },
+    {
+      "path": "animation/assets/index-8ZqXq3ZF.js",
+      "sha256": "1c29ca491f3b5a86f06807aed209a1322416c9b53585bff1d5963a624356166e",
+      "bytes": 221086
+    },
+    {
+      "path": "animation/assets/index-DgfIp6wS.css",
+      "sha256": "439b2d29c39d0586ec77ee201d5e0e8bd7ba278433cee1379ca1ea6e500ddb4f",
+      "bytes": 31233
+    },
+    {
+      "path": "animation/images/logo_dark_mini.svg",
+      "sha256": "35391b2f2ecfa96ff11629c443c5c2da03ef11d0f1713c5869513eb5deb2a4e6",
+      "bytes": 797
+    },
+    {
+      "path": "animation/index.html",
+      "sha256": "31801a1225e80d099f62985ef4505b9ab9406e3ec687a10592863d93132d007f",
+      "bytes": 639
+    },
+    {
+      "path": "animation/preview.png",
+      "sha256": "f5a900d61b5e190093db229976c4a2bf4d9e39041d67ac62e950f8b601640ea2",
+      "bytes": 48990
+    },
+    {
+      "path": "index.html",
+      "sha256": "4df4d0e7311ddd61c3225f2f566b9afecf624a0c51d173cf0933355c3e40181a",
+      "bytes": 30999
+    },
+    {
+      "path": "static/css/bulma-carousel.min.css",
+      "sha256": "9d586b0d953f9dedc8ff3e8b5d611bc943849afefdb0f18a11bb0fed258b9072",
+      "bytes": 3645
+    },
+    {
+      "path": "static/css/bulma-slider.min.css",
+      "sha256": "9bd5f05ad71360d0e87f21dd3d07d94c080486342f335ff041f5394c6aa6dac9",
+      "bytes": 13782
+    },
+    {
+      "path": "static/css/bulma.min.css",
+      "sha256": "58b28659220961ead137cb5b346b5759562750ce703094d70fc786e0db467033",
+      "bytes": 204030
+    },
+    {
+      "path": "static/css/fontawesome.all.min.css",
+      "sha256": "f6237427fc6c2d6b154f306e20edf93636c7e38cc59022d9a69a176d49c2315e",
+      "bytes": 59190
+    },
+    {
+      "path": "static/css/index.css",
+      "sha256": "375104ae4c3a23379030dcff67b048fc41869a0fda3f46cc45be985ae372190e",
+      "bytes": 22187
+    },
+    {
+      "path": "static/images/airsim_compare.gif",
+      "sha256": "aeac5066707c6db775b56fd7c8913a022ea20b661880edb8401f641eb21b76dd",
+      "bytes": 8738241
+    },
+    {
+      "path": "static/images/airsim_demo_panel.png",
+      "sha256": "75f16178fad47fe0c0a7252484ca969feaec7bdc4614a699945bd3eaaa0973a5",
+      "bytes": 2332739
+    },
+    {
+      "path": "static/images/habitat_compare.gif",
+      "sha256": "572fc626b51e1c0574ff7b6c3166d7bd56afa11c217392ad87faecf4b12f56c9",
+      "bytes": 8628675
+    },
+    {
+      "path": "static/images/habitat_demo_frame.png",
+      "sha256": "fd8a9b8954350d1993e0b1d11d6f415f38871f2435dc9f4dc1b521694ce3bcdb",
+      "bytes": 945737
+    },
+    {
+      "path": "static/images/logo.png",
+      "sha256": "a74804937eeab32e876cf76d43e47be50915219577230fc4a6c87d273fba3899",
+      "bytes": 361368
+    },
+    {
+      "path": "static/images/logo_dark.png",
+      "sha256": "1e082d2f86ed0303ff8f560a7c32e4fa16bbc63d35e6cfcdf3a0d964e3e55996",
+      "bytes": 259516
+    },
+    {
+      "path": "static/images/logo_dark_mini.svg",
+      "sha256": "cce00247539a62a10c5cb00e3b379b7a43e4649694f02feb18167dd277343cde",
+      "bytes": 798
+    },
+    {
+      "path": "static/images/logo_mini.svg",
+      "sha256": "a1a55b417b23e89a86fbfb4a13e2a5c62fe6ee20478c76bc75dc1aaecf18b066",
+      "bytes": 798
+    },
+    {
+      "path": "static/images/paper/airsimnh_retained_collage_main.jpg",
+      "sha256": "f3c2d7c817e8b3cb5ceedefc5c7438abfe0d3caf242e4c683211af69aa033f98",
+      "bytes": 515694
+    },
+    {
+      "path": "static/images/paper/airsimnh_retained_collage_main_paper.png",
+      "sha256": "dbb3e9bc1e2545677c9bf9f3f0351de79a309e3e98c79cabf95cb5de5c96d604",
+      "bytes": 1143918
+    },
+    {
+      "path": "static/images/paper/brace_workflow_clean.png",
+      "sha256": "ceb3bb2b0defd2b3fe7023074a0167fb0666e3d5aa5a57c8fcd438d42955bd76",
+      "bytes": 368322
+    },
+    {
+      "path": "static/images/paper/diagnostics_coordination_wait_robofactory.png",
+      "sha256": "bbc0e33a74fd11023e7d242bd8e06e009589a51d97957bb7db8f1662c0fdb481",
+      "bytes": 96566
+    },
+    {
+      "path": "static/images/paper/diagnostics_coordination_wait_robofactory_paper.png",
+      "sha256": "628f8a9fa1bb3874a2cd55e924b091f4d55a7339e200b05bbe7a9b756f54b549",
+      "bytes": 24648
+    },
+    {
+      "path": "static/images/paper/diagnostics_slo_violation_meta_habitat.png",
+      "sha256": "15e4ceca87e70366c5781e6bfd16ecb27e6da728587e83a41b7f6488312031b7",
+      "bytes": 106851
+    },
+    {
+      "path": "static/images/paper/diagnostics_slo_violation_meta_habitat_paper.png",
+      "sha256": "fcea573527fb3712dde25f5ba87bc70f2e1e6814e8c07999ff767464a3f615d9",
+      "bytes": 28890
+    },
+    {
+      "path": "static/images/paper/diagnostics_token_latency_meta_habitat.png",
+      "sha256": "4a4b6fe69ac2c080c5891009b91e78dc6c4bf74ef5ca1731926a096720f05c35",
+      "bytes": 153436
+    },
+    {
+      "path": "static/images/paper/diagnostics_token_latency_meta_habitat_paper.png",
+      "sha256": "ed0fd7f4f987232b4b596101b356f7bdc06a039d9beaa904eef13d98f1d0efac",
+      "bytes": 43829
+    },
+    {
+      "path": "static/images/paper/diagnostics_token_latency_robofactory.png",
+      "sha256": "52367beb46c3ae3d16a3c22fca4277a2f44af6c2b15852a089be1c4c8894b268",
+      "bytes": 149782
+    },
+    {
+      "path": "static/images/paper/diagnostics_token_latency_robofactory_paper.png",
+      "sha256": "a1250e33082e10232a240b13a67fde0168329ebe2d747dba0cc5d921873aa2f4",
+      "bytes": 43648
+    },
+    {
+      "path": "static/images/paper/erecap_method_architecture.png",
+      "sha256": "89e7eaea09bcefc19e291c7a210c88f4d75be29310b8423a48688eaa67266721",
+      "bytes": 498873
+    },
+    {
+      "path": "static/images/paper/erecap_method_architecture_paper.png",
+      "sha256": "45a219a75970b47af33407080a4e9e7dcda82de143e58104c240215c8d972e60",
+      "bytes": 464137
+    },
+    {
+      "path": "static/images/paper/habitat_spnoise_nobrace_contact.png",
+      "sha256": "170a37863f431a68246feec0e706dbf07d5fe74ed691050f2dfea9a2a4615d05",
+      "bytes": 1821420
+    },
+    {
+      "path": "static/images/paper/habitat_spnoise_nobrace_contact_paper.png",
+      "sha256": "5082bba5081f51872103aea30b835c6199fe2ab454e25111408cc1f93e942f3b",
+      "bytes": 2713619
+    },
+    {
+      "path": "static/images/paper/latency_cdf_meta_habitat.png",
+      "sha256": "a3b7fa9e7b8e578c9e65318cce3136ba38af3ec2bff520aa7d567004fe6e482b",
+      "bytes": 40500
+    },
+    {
+      "path": "static/images/paper/latency_cdf_meta_habitat_paper.png",
+      "sha256": "41811bf8b887b7404e09ac8efd86c6979321b0182706468df12407466b4599b1",
+      "bytes": 42251
+    },
+    {
+      "path": "static/images/paper/meta_habitat_motivation_t2.png",
+      "sha256": "3556f330cea099b32d4b887df8735d4384db6ea096a5d749f9742387148728b4",
+      "bytes": 973498
+    },
+    {
+      "path": "static/images/paper/microsoft_airsim_example_compare_frame.png",
+      "sha256": "462d3a1e54580e535c0d3e42a21c421efa231183f8e49d09dfc73919b40be738",
+      "bytes": 4466209
+    },
+    {
+      "path": "static/images/paper/overview.png",
+      "sha256": "4567b0b5ceedfe1f93ed549f8e2c1c75b8c01d3920f6d8eb9a3ab4db2095dfab",
+      "bytes": 775231
+    },
+    {
+      "path": "static/images/paper/overview_paper.png",
+      "sha256": "f811b7101be5ce8aa2d50b71a9899af2f1fbbe6f1723a1133f58e534f2c14007",
+      "bytes": 769002
+    },
+    {
+      "path": "static/images/paper/quantitative_summary_paper.png",
+      "sha256": "a5eeb15e1716e5679e64ab72c4bffef92ed3131c46b7cdf9a8c0aece8dceb470",
+      "bytes": 326692
+    },
+    {
+      "path": "static/images/paper/robofactory_example_baseline.jpg",
+      "sha256": "9d947698475183ac049610765ed234712318094f9b2be7889bf848ed6ace73b3",
+      "bytes": 104941
+    },
+    {
+      "path": "static/images/paper/robofactory_example_baseline.png",
+      "sha256": "4bca96a5be700b0fa9e7c792b01b58c2c1bad01d80b732d887dbe21fa953cd7d",
+      "bytes": 523951
+    },
+    {
+      "path": "static/images/paper/robofactory_example_baseline_paper.jpg",
+      "sha256": "9d947698475183ac049610765ed234712318094f9b2be7889bf848ed6ace73b3",
+      "bytes": 104941
+    },
+    {
+      "path": "static/images/paper/robofactory_example_method.jpg",
+      "sha256": "74760f0570cf08210818a48705c3b6bb012e8ab863a9331c08be986d2497eddb",
+      "bytes": 103169
+    },
+    {
+      "path": "static/images/paper/robofactory_example_method.png",
+      "sha256": "b2735f20175b97ffb4311db24316a451217501d6802694232fb61d75ea3881c1",
+      "bytes": 504451
+    },
+    {
+      "path": "static/images/paper/robofactory_example_method_paper.jpg",
+      "sha256": "74760f0570cf08210818a48705c3b6bb012e8ab863a9331c08be986d2497eddb",
+      "bytes": 103169
+    },
+    {
+      "path": "static/images/paper/slo_violation_bar.png",
+      "sha256": "0d8477bda4d77d6b03b13a1aacaf9e383135220cd0b959730ce9f0078e4567ca",
+      "bytes": 25806
+    },
+    {
+      "path": "static/images/paper/slo_violation_bar_paper.png",
+      "sha256": "ca66c88ba88963852a3fb6187a272e398033528b873990047df31c27d3378697",
+      "bytes": 45930
+    },
+    {
+      "path": "static/images/paper/take_fruit_real.png",
+      "sha256": "2902ae1e1cbbddce57e3daedc50d647f0a0beb61dbacc521aec053681fb84b2f",
+      "bytes": 723752
+    },
+    {
+      "path": "static/images/paper/take_fruit_real_paper.png",
+      "sha256": "a9dafb9ac58c8ca479f4462448310207885a2f168c559cde11753e2a080605a2",
+      "bytes": 851531
+    },
+    {
+      "path": "static/images/robofactory_compare.gif",
+      "sha256": "834a2c9de41027ea5bca8f922366121a6df240548ec71255b13ae36f18760c6f",
+      "bytes": 9569039
+    },
+    {
+      "path": "static/images/robofactory_demo_frame.png",
+      "sha256": "54a5b7a34a68ed8ba54083484a91b63ab4eaeface573b81d059890ee7fc210d5",
+      "bytes": 1042487
+    },
+    {
+      "path": "static/js/bulma-carousel.min.js",
+      "sha256": "a8a47bef2cd50640d82aea128360690086ccb6617c6858ee4c71559c88e4a732",
+      "bytes": 40723
+    },
+    {
+      "path": "static/js/bulma-slider.min.js",
+      "sha256": "e520e9ef6e3223ecfbb50b4649d238af5a85af9161800ad1d003dac80d748f24",
+      "bytes": 6926
+    },
+    {
+      "path": "static/js/fontawesome.all.min.js",
+      "sha256": "20a3ef6979bbe5e4de1afaecc703e1d34cbc5e3ceab36d378539506327692d72",
+      "bytes": 1194960
+    },
+    {
+      "path": "static/js/index.js",
+      "sha256": "bbc85d42a17f86c8ca5d294d1797a94895c9f28c16c2ac4b21abc2e2d42dbe84",
+      "bytes": 4938
+    },
+    {
+      "path": "static/main.pdf",
+      "sha256": "54a4e9f1352182510f0d5173a3a95521b3502af668a3e668b4f19828838ead59",
+      "bytes": 10067868
+    },
+    {
+      "path": "static/videos/airsim_compare.mp4",
+      "sha256": "9942345bf1b8b2ec91fefb24c16d53b0d210c3e7654bce78e5f2efb58640a1a0",
+      "bytes": 22623767
+    },
+    {
+      "path": "static/videos/habitat_compare.mp4",
+      "sha256": "7c48fe02d497903d6c810124710b3d0083b092534ace718de3c3eba9a80d1c8b",
+      "bytes": 2123426
+    },
+    {
+      "path": "static/videos/robofactory_compare.mp4",
+      "sha256": "5ebbac6ff27719cc79679fd89a4a186f8528b2344b507a8d20c6ef39ec9f7184",
+      "bytes": 805293
+    },
+    {
+      "path": "static/webfonts/fa-brands-400.eot",
+      "sha256": "6128dd44fed3a046ff8d835d677e0a837c70c64dc1c944b7edfde04eb8d8b879",
+      "bytes": 136822
+    },
+    {
+      "path": "static/webfonts/fa-brands-400.svg",
+      "sha256": "e2749cb24a77208abdd9fda35f0d14f091948c44d21f977c8048a3b13e4beccb",
+      "bytes": 747545
+    },
+    {
+      "path": "static/webfonts/fa-brands-400.ttf",
+      "sha256": "404d6083193e569bc5c28c7b1bc0e13ece80c6e0f5a50ad8e9633f48f3c09155",
+      "bytes": 136516
+    },
+    {
+      "path": "static/webfonts/fa-brands-400.woff",
+      "sha256": "a0375c054a0041bd58e2a0bf7fa3df7c3904bfc4f790fd24e32ff3ee70fd0eef",
+      "bytes": 92136
+    },
+    {
+      "path": "static/webfonts/fa-brands-400.woff2",
+      "sha256": "71b3ce72680f4183d28db86b184542051fd533bb1146933233e4f6a20cf98cba",
+      "bytes": 78460
+    },
+    {
+      "path": "static/webfonts/fa-regular-400.eot",
+      "sha256": "f9853ad337d523c0b35fe7ac306268a7035ce0ff7624710ed8b39c2b88b20a33",
+      "bytes": 34350
+    },
+    {
+      "path": "static/webfonts/fa-regular-400.svg",
+      "sha256": "d42a64dc349a98075e8be12587943f2bd52065a8bb18960d7dc7390b535117e0",
+      "bytes": 144714
+    },
+    {
+      "path": "static/webfonts/fa-regular-400.ttf",
+      "sha256": "5e811f0b32d488b9a183b77cfc7ac1ef44b3ea7aaed014e83975dfe597d221f6",
+      "bytes": 34052
+    },
+    {
+      "path": "static/webfonts/fa-regular-400.woff",
+      "sha256": "6799c999e422710f40f70a60a6138fc38106226c44d7bd1b1023f5bb65befef9",
+      "bytes": 16772
+    },
+    {
+      "path": "static/webfonts/fa-regular-400.woff2",
+      "sha256": "ce20ed8a323117c8a718ff1ddc6dabb997373b575a8e896f2bf02b846c082c9d",
+      "bytes": 13548
+    },
+    {
+      "path": "static/webfonts/fa-solid-900.eot",
+      "sha256": "e0e3c4af28348d721f8af603595c15d273a56f2b03392f9a413255fe5635f536",
+      "bytes": 204814
+    },
+    {
+      "path": "static/webfonts/fa-solid-900.svg",
+      "sha256": "1a46e780ce5beb6507d62af8b20a92b33c8f042e87c612f4bbf8330bfc353419",
+      "bytes": 917575
+    }
+  ]
+}

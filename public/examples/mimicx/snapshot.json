@@ -1,0 +1,999 @@
+{
+  "name": "MimicX",
+  "repository": "https://github.com/NEBULIS-Lab/MimicX",
+  "sourceDirectory": "docs/",
+  "sourceCommit": "e5c09034dc1f1dbf842d09c26fa11a89e9dd2d3f",
+  "sourceDocsHaveLocalChanges": false,
+  "importedAt": "2026-10-08T21:36:28.085372+00:00",
+  "changes": [
+    "Added collection return navigation to HTML pages; source files remain unchanged."
+  ],
+  "excluded": [
+    "training code",
+    "checkpoints",
+    "datasets",
+    "local infrastructure notes"
+  ],
+  "files": [
+    {
+      "path": "HLOOP.md",
+      "sha256": "055e7c5364e327043709d7d7b8b2c0ebe075f09867129122887fa00dc5e757f7",
+      "bytes": 2690
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "sha256": "c9cd556a930d4ead0e42d1c01a6c0f5dde6791a4d7f4c25d8a06236d2b426c21",
+      "bytes": 6011
+    },
+    {
+      "path": "assets/branding/README.md",
+      "sha256": "9166228f4c97e4003b6230b835eaa2820ca261162d8385326f142eb6b45bd481",
+      "bytes": 1124
+    },
+    {
+      "path": "assets/branding/apple-touch-icon.png",
+      "sha256": "8d97f304bf78851ebcbc493e60872d93f9cf54f5d5798b70bcade98ea4cee466",
+      "bytes": 27124
+    },
+    {
+      "path": "assets/branding/favicon-192.png",
+      "sha256": "5ad0068267542a66fdf0acefe96b7cdf9aa48a9cd90fe46a0b4a86453b241450",
+      "bytes": 30005
+    },
+    {
+      "path": "assets/branding/favicon-32.png",
+      "sha256": "19903dd118338de5126bafd49c6e49e1d43d1eba2a20130b2c2c8004f234a735",
+      "bytes": 1891
+    },
+    {
+      "path": "assets/branding/logo-x.png",
+      "sha256": "a14c01d1b869b9b326346d53a648aaabf7441da6696d9431007f79cdc946c870",
+      "bytes": 705786
+    },
+    {
+      "path": "assets/branding/logo-x.svg",
+      "sha256": "491f61166b1d2c79eaa58abe945d011705aa44f00c2333ab3f51d5e600fdb8ca",
+      "bytes": 1015284
+    },
+    {
+      "path": "assets/branding/manifest.json",
+      "sha256": "4a257083d4ceb0d9f8bf31e74df6f215ce6081c7f98fc021afc5f98ea21e06c9",
+      "bytes": 798
+    },
+    {
+      "path": "assets/branding/mimicx-full-logo.svg",
+      "sha256": "3facedeea2d814082d5fa42672dc7cdefea67f94ec02ef03af6e4a45f8abb824",
+      "bytes": 1018296
+    },
+    {
+      "path": "assets/css/brand.css",
+      "sha256": "e347870dc332c62a67608f049100c50aae94a2450f509095e877b7b4e337138f",
+      "bytes": 5578
+    },
+    {
+      "path": "assets/css/bulma.min.css",
+      "sha256": "7ea0c3fa3d1e8acaa68623c2285ff82bc35bc1d8ed506db88786423959bb3d72",
+      "bytes": 204030
+    },
+    {
+      "path": "assets/css/experience.css",
+      "sha256": "b913da7cebe77fade447fa7cb84f86c8ba38da951a7d76de99d63f817ffe2de5",
+      "bytes": 12428
+    },
+    {
+      "path": "assets/css/mimicx.css",
+      "sha256": "21e1b4a2c2a08737e23eab1ceda87ad7ed32f34dcb10c61e63239c57236edc76",
+      "bytes": 11612
+    },
+    {
+      "path": "assets/css/research.css",
+      "sha256": "36b9d41cd5741539e14349a48bedaba8be482480c8b53c4e1be8bcfe11c420af",
+      "bytes": 22391
+    },
+    {
+      "path": "assets/fonts/Montserrat-OFL.txt",
+      "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+      "bytes": 4400
+    },
+    {
+      "path": "assets/fonts/Montserrat-Variable.ttf",
+      "sha256": "0f7b311b2f3279e4eef9b2f968bcdbab6e28f4daeb1f049f4f278a902bcd82f7",
+      "bytes": 744936
+    },
+    {
+      "path": "assets/fonts/README.md",
+      "sha256": "a92beb42ef7f3c412e8361273282b5837a153d6949fa64bc158770f01aa273cd",
+      "bytes": 491
+    },
+    {
+      "path": "assets/icons/LICENSE",
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+      "bytes": 880
+    },
+    {
+      "path": "assets/icons/README.md",
+      "sha256": "8a46e5a6ce66801ec91911510eae02eb40cc73410ddbd62b7ba8eee99126a417",
+      "bytes": 711
+    },
+    {
+      "path": "assets/icons/SIMPLE_ICONS_LICENSE.md",
+      "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5",
+      "bytes": 6569
+    },
+    {
+      "path": "assets/icons/book-open.svg",
+      "sha256": "510affae1044e8637c7a85972bd192df3c762f69a38c8c7dd2097387d7fe91d2",
+      "bytes": 459
+    },
+    {
+      "path": "assets/icons/brain-circuit.svg",
+      "sha256": "5c275e9427615dfb6fd8a3d975e5e7badace221e63adfacfb47a7b2dc3dbb289",
+      "bytes": 837
+    },
+    {
+      "path": "assets/icons/brands/arxiv.svg",
+      "sha256": "aa77f09ae01641d66e8f7f6e36bb307b61bab124d59abe60297959f4f6058031",
+      "bytes": 1102
+    },
+    {
+      "path": "assets/icons/brands/github.svg",
+      "sha256": "141e413b3eaa71a9fdc848fe87f04e22b3ad83a0a20bc4bb9c0df310878e1a6c",
+      "bytes": 837
+    },
+    {
+      "path": "assets/icons/brands/huggingface.svg",
+      "sha256": "3ccea95ff87cb53c0c1a9014648643435e2415dd7639511d050c052ac18f60d0",
+      "bytes": 3042
+    },
+    {
+      "path": "assets/icons/brands/readthedocs.svg",
+      "sha256": "574c65bdf749ee4576d59675be762d4e2252c0947fb1e7131988cedf1110903b",
+      "bytes": 1733
+    },
+    {
+      "path": "assets/icons/database.svg",
+      "sha256": "275e46d23e67d43698afaecd8ddf347ffbf477cbb7d25aec73e6996dc4fc6774",
+      "bytes": 409
+    },
+    {
+      "path": "assets/icons/file-text.svg",
+      "sha256": "512f414d72aabc5218b94a9da571df70d8e0b014cfb32ec366b559ec868952d6",
+      "bytes": 473
+    },
+    {
+      "path": "assets/icons/github.svg",
+      "sha256": "0c6154c0fc886f5e405df748665659c519cb9bdeb55f24fdf65bd319b412613c",
+      "bytes": 587
+    },
+    {
+      "path": "assets/icons/lucide/LICENSE",
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+      "bytes": 880
+    },
+    {
+      "path": "assets/icons/lucide/arrow-up-right.svg",
+      "sha256": "7a58fb69deddd385b9bd47b406d3e9f3ccfbe11b319efcd5071cbd5b19c1bd4f",
+      "bytes": 346
+    },
+    {
+      "path": "assets/icons/lucide/chevron-left.svg",
+      "sha256": "a185985349089649d06747570c72f47fe1f5eb293a9a0f11278f6442b0b9d25c",
+      "bytes": 322
+    },
+    {
+      "path": "assets/icons/lucide/chevron-right.svg",
+      "sha256": "fea488a3b60fd7738bbbf8ca98826ef5c0381347c5fd1048d45ee70a75a51cfe",
+      "bytes": 322
+    },
+    {
+      "path": "assets/icons/lucide/locate-fixed.svg",
+      "sha256": "54c3cd9c12748cf53db6c9947805a6e2ea395bc4bb9662b92b74f2c3356b6a33",
+      "bytes": 530
+    },
+    {
+      "path": "assets/icons/lucide/maximize.svg",
+      "sha256": "0864b30f3a6b95b49375c93ad874db47474a56bd2d6276c51e938f0b5e4ade9e",
+      "bytes": 446
+    },
+    {
+      "path": "assets/icons/lucide/moon.svg",
+      "sha256": "5e5c866dd82fbea5c03e00c778fa283c6efc8c37db3b7937824fe0b8ad5382f7",
+      "bytes": 334
+    },
+    {
+      "path": "assets/icons/lucide/pause.svg",
+      "sha256": "7babb01e85dae42b66c9b1e399cd1c50380d3d9a586ff025685bcc45e726fea9",
+      "bytes": 390
+    },
+    {
+      "path": "assets/icons/lucide/play.svg",
+      "sha256": "f0cab5b458fdf5e5d5d1a8aeb3d368ccab337cc578b1f8081807b8e39f68f1a1",
+      "bytes": 326
+    },
+    {
+      "path": "assets/icons/lucide/rotate-ccw.svg",
+      "sha256": "33c3670d65cad6b5f21d042e1629988c0cedd1ab8f8aba2fefe036a464e0246b",
+      "bytes": 379
+    },
+    {
+      "path": "assets/icons/lucide/shield-check.svg",
+      "sha256": "0e9116845c6053cd3bfa09a3e4c232f5fb28c3abab75792287d2aed31c24ebe7",
+      "bytes": 499
+    },
+    {
+      "path": "assets/icons/lucide/sliders-horizontal.svg",
+      "sha256": "995507595c7c24deffef382bacc452a24b40a2efc4aa54908563a0f09b6a75aa",
+      "bytes": 673
+    },
+    {
+      "path": "assets/icons/lucide/sun.svg",
+      "sha256": "f067e7494a29d825168ef4285d1eb66ef3cd57c33778fd67528247e377a5ff89",
+      "bytes": 560
+    },
+    {
+      "path": "assets/icons/lucide/x.svg",
+      "sha256": "0f38855d9d5775c10960ae53e46b745f77914b43f78c43bf8abc39f4d5e06de1",
+      "bytes": 333
+    },
+    {
+      "path": "assets/icons/lucide/zoom-in.svg",
+      "sha256": "65813791afc5163534b46f2c06404bff7ab0cc2aaecd40908855c690ff480a5d",
+      "bytes": 455
+    },
+    {
+      "path": "assets/icons/lucide/zoom-out.svg",
+      "sha256": "62b79a749404222a0553c43c3bf98235e96102ab437063588b0b1b86bcfffd21",
+      "bytes": 414
+    },
+    {
+      "path": "assets/js/media-viewer.js",
+      "sha256": "472e302f81bac9d6e96d78098080aa07cfa591b067730b3db06a8565eb757bfc",
+      "bytes": 10479
+    },
+    {
+      "path": "assets/js/mimicx.js",
+      "sha256": "f0ba0350331e730e0e0df080398aa9a52c3e1b652361726f28c758b1aa6d8da1",
+      "bytes": 13347
+    },
+    {
+      "path": "assets/js/showcase.js",
+      "sha256": "c242248f1a2c7136e36cc174322492c9efd81d971105da0fcdf97b2dbd41a018",
+      "bytes": 10993
+    },
+    {
+      "path": "assets/media/cases/comparison.json",
+      "sha256": "375f09be33d9778bd7df97d9bff5e6f1eb5e1d57c961c1ccb3f3161e8023e3e1",
+      "bytes": 1665
+    },
+    {
+      "path": "assets/media/cases/direct-football-beyond.mp4",
+      "sha256": "084fedc8b6e174e568dbcf76973a31c4616e4dd234308fac9bffe5674e016e00",
+      "bytes": 906889
+    },
+    {
+      "path": "assets/media/cases/direct-football-beyond.webp",
+      "sha256": "cd4d9473a3ce8b8c3413c9a0a406c80aba0e756e63f9cc1860e4b475eec7b977",
+      "bytes": 40972
+    },
+    {
+      "path": "assets/media/cases/direct-football-fixed.mp4",
+      "sha256": "905d9dea094c331d22285bffd3705cda6116565cb362ae64522bde0c2bf3127c",
+      "bytes": 1219801
+    },
+    {
+      "path": "assets/media/cases/direct-football-fixed.webp",
+      "sha256": "27f636e2d9eb1fd6b9c071f9c0b3cdeaad51e1f395217dc2625ec066c5feeccd",
+      "bytes": 45642
+    },
+    {
+      "path": "assets/media/cases/direct-football-ours.mp4",
+      "sha256": "b21190df5fd4b862f70a2eaf98690c354bba02bd9025f7517d933bcd094cb74f",
+      "bytes": 1185362
+    },
+    {
+      "path": "assets/media/cases/direct-football-ours.webp",
+      "sha256": "d753a57154d0bd33a68c707146159d972135a803ca46be5ec035d9784a5f0957",
+      "bytes": 57542
+    },
+    {
+      "path": "assets/media/cases/direct-football-sonic.mp4",
+      "sha256": "08694ce644eca89233d340aab387d24cfdfad2ffb2d1924735b5ba51dadca5c9",
+      "bytes": 2379547
+    },
+    {
+      "path": "assets/media/cases/direct-football-sonic.webp",
+      "sha256": "919f9f9ff93f81a8b170e9ea01dd18949876e6f7474f5354415cc2bcf6a5db88",
+      "bytes": 95844
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-beyond.mp4",
+      "sha256": "8af422e973137b5c4816f4b97830c792d2c859a98214c2950b157e45b2e1a99e",
+      "bytes": 1309677
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-beyond.webp",
+      "sha256": "b5ab445233e99d65ac24a5109d2970c792ccb109ed1f01aaac44f43600d99aff",
+      "bytes": 43918
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-fixed.mp4",
+      "sha256": "e479012db6e1af218cc70b990630fd354d3358f5e909c29a5428b056b52a605a",
+      "bytes": 1263960
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-fixed.webp",
+      "sha256": "a2a9e3c20f75ab83513774cc3b0f9a141017dea649408d2e5dcc0062d354070e",
+      "bytes": 46252
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-ours.mp4",
+      "sha256": "d866c6621177e211852ad9021da7bdc2a1d2f39e37bd568ec817062c3f60de47",
+      "bytes": 1286291
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-ours.webp",
+      "sha256": "e9598de9b7ac68852aaf927d7e4322fb07c9e3fe0e7888d7413ea6b4e8b20ef8",
+      "bytes": 56930
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-sonic.mp4",
+      "sha256": "b1376ea99fe9b1f650bb3f1c6d9b0611ddda06a6572e6f5872dd3163d94744c4",
+      "bytes": 2594902
+    },
+    {
+      "path": "assets/media/cases/direct-tennis-sonic.webp",
+      "sha256": "828be8291f67b9c42a58e40de351aa57e2dcad65dd94d34fdb59a809ca803151",
+      "bytes": 95758
+    },
+    {
+      "path": "assets/media/cases/forest-stage-human.webp",
+      "sha256": "807831e7400c78a36dc091e01cd58a70db9d3b077abaa7dec23576fd13561299",
+      "bytes": 308452
+    },
+    {
+      "path": "assets/media/cases/forest-stage-input.webp",
+      "sha256": "29ccc3cdc836730a76bc877974863d41f9d9a6112c2cfd66f04a8c253053b98e",
+      "bytes": 309478
+    },
+    {
+      "path": "assets/media/cases/forest-stage-policy.webp",
+      "sha256": "037abf2d138c65584ba1d7ef511fb1d0e9fa1445fe588036a9720c19be973a30",
+      "bytes": 10308
+    },
+    {
+      "path": "assets/media/cases/forest-stage-reference.webp",
+      "sha256": "9abeedd3bac7ef735bee358efbb4106f775b331548adface6b9acb69d277fbb6",
+      "bytes": 303014
+    },
+    {
+      "path": "assets/media/cases/manifest.json",
+      "sha256": "4106d41046fa196cb5bef9cab4ebea896c16493e790c65c87f27edca765c18e9",
+      "bytes": 5833
+    },
+    {
+      "path": "assets/media/dance-fixed.mp4",
+      "sha256": "c00e436abea372ac644428963c59e2afeb853d0ad75aa6065a02162db0e3388f",
+      "bytes": 7733952
+    },
+    {
+      "path": "assets/media/dance-ours.mp4",
+      "sha256": "a360af2afed14d417fd049e94d95446a1051fbcc81ce335f62a4392b90d718a4",
+      "bytes": 6816124
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-dark.png",
+      "sha256": "f813472ca5f75a3f51d79003bdd221c918f5781b181b5d1fe91a30a66e8ed607",
+      "bytes": 65879
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-dark.svg",
+      "sha256": "3a3d6775928b026a1eba9010338a82e4851f9177265a3773fe1dea75582fffb9",
+      "bytes": 16074
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-light.png",
+      "sha256": "3cbea0902962a52dc50fd62dc7c22b32a5c857745b37dffa40808a9e97ba8db0",
+      "bytes": 66325
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-light.svg",
+      "sha256": "f1daab6b9ca82cad54382014080d753b28b9d8452187d25f95507eaa91f8a6f2",
+      "bytes": 16074
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-mobile-dark.png",
+      "sha256": "955fcc35b8bfcfb6d9dc71d20c7f1ad7cd852fbc3ec5f1ec27dd39b0e4e86014",
+      "bytes": 59040
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-mobile-dark.svg",
+      "sha256": "d1b622795740c5c0bff696a49428ac147d444d6164e3b488659874a661f6cce3",
+      "bytes": 14303
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-mobile-light.png",
+      "sha256": "80864be58afa1bb785192607cde8c501020b18c4882211738dc8fe8e514cf2bc",
+      "bytes": 59555
+    },
+    {
+      "path": "assets/media/evidence/direct-tennis-mobile-light.svg",
+      "sha256": "4226dcafbd47e766a4c33ea9836d22dff379cb94402d2bab078a4e191c28fc1c",
+      "bytes": 14303
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-dark.png",
+      "sha256": "5a757ad85daa17b4b16eb5b4a06d2969446380ec5b4353f0d1dd187f93576a71",
+      "bytes": 52690
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-dark.svg",
+      "sha256": "4af9f22b14a028e2daa7a10d324b8117039f7fb765443de4e1742af519da8407",
+      "bytes": 13769
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-light.png",
+      "sha256": "8d4b39a37dc6a6de415f5d3696ef8d38eb69db0cced2fe0d14fb0531fd999e01",
+      "bytes": 53014
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-light.svg",
+      "sha256": "e0d73fdb2ab220fd587402dc459e8b11e0b28f6c82559c226a60adaac2aca065",
+      "bytes": 13769
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-mobile-dark.png",
+      "sha256": "cd16153387edceaa461e8dbb59a51e89faf5f22ab01a000c2b8b7ecc763f73a6",
+      "bytes": 46538
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-mobile-dark.svg",
+      "sha256": "2e38503fd141e4e3c7e210461e1cffe4836b7ec42fe5a19aaf3c2c4dc647f7de",
+      "bytes": 13757
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-mobile-light.png",
+      "sha256": "f0b66220ccce8247c0eedfa00cf8520faa04ec4920bc58af52e4d8b5199c1cdb",
+      "bytes": 46680
+    },
+    {
+      "path": "assets/media/evidence/execution-horizon-mobile-light.svg",
+      "sha256": "253138d155a95f4534c7ef54c8bd8c649988140d50904000c36c5e40b95d2380",
+      "bytes": 13757
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-dark.png",
+      "sha256": "69ce30ded46ff3af27abb519c53a1dc196a134b372ca359b42621052c711edac",
+      "bytes": 62284
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-dark.svg",
+      "sha256": "cf200556177949f04cc8b1e7fc644bf47e38b0f3b805de8e30cdb71f1e14cadb",
+      "bytes": 10484
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-light.png",
+      "sha256": "65b93dfe6c30d90543ec2ce6e1709b7c5293c0639995385b2ea9a0e7ade1f39c",
+      "bytes": 62466
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-light.svg",
+      "sha256": "1774db6505873816728c561006f918b0a3655f20639157a20a5e38c032de18d5",
+      "bytes": 10484
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-mobile-dark.png",
+      "sha256": "329ca316264461b7b413875d15f7877fac1845cd7ea1a1aa8ff37adfae4a9660",
+      "bytes": 54436
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-mobile-dark.svg",
+      "sha256": "cf014785585dfc173cc0bbea56ec39795402790b15c58666d67c7704d6812bd9",
+      "bytes": 10454
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-mobile-light.png",
+      "sha256": "6228dc22c143efa43aa0ab4448ecdedf68fdded9e9fdeb5c8d1043b43404cb8c",
+      "bytes": 54753
+    },
+    {
+      "path": "assets/media/evidence/feedback-time-mobile-light.svg",
+      "sha256": "0eeaed96e71b9518faac42bf88a0a66e623b1c87f0629b0fac08d8ea75ff96b9",
+      "bytes": 10454
+    },
+    {
+      "path": "assets/media/evidence/learning-dark.png",
+      "sha256": "36733f48c9129ee548c47441e945be59586b994d28c074a06e10fb9a8e61e79f",
+      "bytes": 425937
+    },
+    {
+      "path": "assets/media/evidence/learning-dark.svg",
+      "sha256": "fd23ed688b6c2a2f3d84ed38560bacad0ca983b2a994ce901dc3da04b4947de3",
+      "bytes": 110152
+    },
+    {
+      "path": "assets/media/evidence/learning-light.png",
+      "sha256": "0c7d935dbbb05704d02b85b74b5a68996504db8792dd22795d5aedccdaf84ebd",
+      "bytes": 425029
+    },
+    {
+      "path": "assets/media/evidence/learning-light.svg",
+      "sha256": "fb1cc1598b37231723b96d97de36aa4186b3e5745c426db4f9d93cef45455f05",
+      "bytes": 110152
+    },
+    {
+      "path": "assets/media/evidence/learning-mobile-dark.png",
+      "sha256": "6b53a2d3e941e59adf686bf42fce396fa83a08e7a152d5717d30fd42f1ddbdbc",
+      "bytes": 185426
+    },
+    {
+      "path": "assets/media/evidence/learning-mobile-dark.svg",
+      "sha256": "c72c21ac530edbdb66acafbe3d42e595dd3871d597b4301f429b90b162c1068e",
+      "bytes": 108642
+    },
+    {
+      "path": "assets/media/evidence/learning-mobile-light.png",
+      "sha256": "6adc6ceeea07c364a54801de793ef6ad183903d0125b7b29ae1e89f6622eaa53",
+      "bytes": 185223
+    },
+    {
+      "path": "assets/media/evidence/learning-mobile-light.svg",
+      "sha256": "3e661bcb881fda180e8fa895a15e5031ae993e3a50211fdc8ad291bbf64b2cd7",
+      "bytes": 108642
+    },
+    {
+      "path": "assets/media/evidence/manifest.json",
+      "sha256": "d8638061ff615a3461d16c4972cfa8633587eac636d9ccdc5b0b1428e0feb1a6",
+      "bytes": 6013
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-dark.png",
+      "sha256": "31592a82929e62d5401cde575ab81b4a58a5ef09742597c1d2f421aa5a647ff8",
+      "bytes": 50250
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-dark.svg",
+      "sha256": "39c47636dcc1d8345495738c1a2ccc4b628b2b91d3c839dd56476dfb4b9c8cfb",
+      "bytes": 9734
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-light.png",
+      "sha256": "19ca52f4d50bddb6d885e3cfed8168e91a7d6c36f4cdeea24a1b593fefcc39ae",
+      "bytes": 50465
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-light.svg",
+      "sha256": "90a2f68ec346ea5d212204145e67aa571e53789491d3eb22b5741749c8d05a11",
+      "bytes": 9734
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-mobile-dark.png",
+      "sha256": "488e010a590dab08ea31affe197e15f4ae178353cdca8a99111f951bef629027",
+      "bytes": 46152
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-mobile-dark.svg",
+      "sha256": "da13c993fd3e0579d9343ad72de04dd43311ee864125e2af6f58d07969fd2623",
+      "bytes": 9814
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-mobile-light.png",
+      "sha256": "6bc69c6038d86de2ce28e79d04108c3f90038f26ebef9794abc964cd451cf4c9",
+      "bytes": 46444
+    },
+    {
+      "path": "assets/media/evidence/scene-gains-mobile-light.svg",
+      "sha256": "7bb79933f3c613c12693db0697ec1b507d9e3c7ab279fb42fa92a5cc617b6d20",
+      "bytes": 9814
+    },
+    {
+      "path": "assets/media/execution-horizon.svg",
+      "sha256": "63f42243ce419e592cc1e2096411c670466c406820450adca3ad07eae8770d8a",
+      "bytes": 25427
+    },
+    {
+      "path": "assets/media/football-fixed.mp4",
+      "sha256": "674a7125af0f4b95966b2bfb46270884ede7d17520c34f5d06efea9eaf733b35",
+      "bytes": 4687945
+    },
+    {
+      "path": "assets/media/football-ours.mp4",
+      "sha256": "07884ea4e6e114e4d7298e03676f0b001ffd1c30628ce502097f69229d92efcc",
+      "bytes": 3675589
+    },
+    {
+      "path": "assets/media/gallery/bench-evolution.webp",
+      "sha256": "6b4572a17db6af1af8bb4ecd52eee388428971dd7de9da1238c2b4086c08d8ea",
+      "bytes": 453048
+    },
+    {
+      "path": "assets/media/gallery/forest-evolution.webp",
+      "sha256": "6b88b7a7e0564b4ade8682a435b836d59711d7a2beb48fa9b3f0af76e97e93b1",
+      "bytes": 573608
+    },
+    {
+      "path": "assets/media/gallery/manifest.json",
+      "sha256": "e7b42f0e3f121dd7f54342e0911e48a3b1fa1346136ff03888bda6191af96e83",
+      "bytes": 2338
+    },
+    {
+      "path": "assets/media/gallery/parkour-policy.mp4",
+      "sha256": "60d33404ef2dce7b028f7470269b82b1e4f7925de9d0ed4776000cb84f795efb",
+      "bytes": 202008
+    },
+    {
+      "path": "assets/media/gallery/parkour-policy.webp",
+      "sha256": "c6b4573d36d00b429eb3ee3fc5339435f7d92a7e44864f53889d72fe1750b944",
+      "bytes": 8296
+    },
+    {
+      "path": "assets/media/gallery/stairs-evolution.webp",
+      "sha256": "208ae8e58b6c214b789f7c0c6f4dc4949961c29946e1238c922037b36fabe7e9",
+      "bytes": 190584
+    },
+    {
+      "path": "assets/media/gallery/track-evolution.webp",
+      "sha256": "3912e5ea0181e254a31e25a705664b75ff31ac69daa9470e80ecdda6d839a529",
+      "bytes": 509842
+    },
+    {
+      "path": "assets/media/hero-tennis-mobile.png",
+      "sha256": "22dd8cef4baca756196edac23b184c6892738693a0943c1d3207fc659888c5b4",
+      "bytes": 2054057
+    },
+    {
+      "path": "assets/media/hero-tennis.png",
+      "sha256": "e791b0f9a1be12dd1747ff82395480025563ace95cb47761c977f8574f4669c3",
+      "bytes": 6447511
+    },
+    {
+      "path": "assets/media/hloop-wall-time.svg",
+      "sha256": "f16e21ff9fb0e6d272c69677b7cd70e50e24b0f903d7e81e4d56c2d4d4c3541f",
+      "bytes": 14673
+    },
+    {
+      "path": "assets/media/kungfu-fixed.mp4",
+      "sha256": "3944c5bdc9f9104e16eb683a874bdd109b4eae892477f4c49c85cdda75f83fb1",
+      "bytes": 7607158
+    },
+    {
+      "path": "assets/media/kungfu-ours.mp4",
+      "sha256": "77247687a04559969177246016a5a62bfc14833abf78aebb0a5198f86668e55d",
+      "bytes": 5916269
+    },
+    {
+      "path": "assets/media/manifest.json",
+      "sha256": "4b93297739be0aa7b361389f6d327a93f72e1527c02d50a973259381569ea986",
+      "bytes": 5708
+    },
+    {
+      "path": "assets/media/readme-tennis-motion.png",
+      "sha256": "8b9746d77e66ab8485241795a20370562ab96d9ce9f41031a6965edfaea3031c",
+      "bytes": 4597559
+    },
+    {
+      "path": "assets/media/research/dance-fixed.jpg",
+      "sha256": "79d42e66c2957b1ec07f5410b5ef38fdf753e234d0bdabbe2b128086d9266231",
+      "bytes": 41707
+    },
+    {
+      "path": "assets/media/research/dance-ours.jpg",
+      "sha256": "e1e4ce723766e99c2b8eec193206ffb1d79a32d6cd74f7219580da52da1c19a6",
+      "bytes": 42525
+    },
+    {
+      "path": "assets/media/research/football-fixed.jpg",
+      "sha256": "d4ff3395b067efd05e91cd840a1fbe4d5e5892707d348114e841e80e23d1dd2e",
+      "bytes": 42206
+    },
+    {
+      "path": "assets/media/research/football-ours.jpg",
+      "sha256": "d8de9f328637ae8b32f4cbf445562fecc88f83187cda5956ee62ade1696e5f12",
+      "bytes": 42573
+    },
+    {
+      "path": "assets/media/research/kungfu-fixed.jpg",
+      "sha256": "b606b31394f6f3fc873eba37ea391b5d3ede7110c3996acb3bdcb8efb1564b8e",
+      "bytes": 41029
+    },
+    {
+      "path": "assets/media/research/kungfu-ours.jpg",
+      "sha256": "9b5ba169e0174310cd71a9837ad3b976aa0861fae3b9158bea41e0bb9293590f",
+      "bytes": 41396
+    },
+    {
+      "path": "assets/media/research/manifest.json",
+      "sha256": "0c013238ef3de49e1a508fd06121e3e32082a5b788501f95f77e0232491709a0",
+      "bytes": 2467
+    },
+    {
+      "path": "assets/media/research/refinement.webp",
+      "sha256": "1d00ae884983dfe2dde89b434d1088ae6bfd16a7335293c4101f00f613435d3c",
+      "bytes": 305884
+    },
+    {
+      "path": "assets/media/research/tennis-fixed.jpg",
+      "sha256": "f23c74e8257f0cc49e4e4d869ca2c102bd2dd34d2c38b2738a4f8ecb756e8a23",
+      "bytes": 41929
+    },
+    {
+      "path": "assets/media/research/tennis-ours.jpg",
+      "sha256": "218c1f9c1c0ecb78266fd5327007257da90a5aa99e7bc02a865c8c89333def94",
+      "bytes": 42594
+    },
+    {
+      "path": "assets/media/research/verification.webp",
+      "sha256": "3dc1572b72567b0878f7faffc5a6bb8e79d5a78c9c1df053c71d1af3169775e9",
+      "bytes": 308780
+    },
+    {
+      "path": "assets/media/showcase/football-scene.mp4",
+      "sha256": "5d883b2ae0af204758c6ae3943d7efa84f257a149ae6f287b444589fc3c9258b",
+      "bytes": 684047
+    },
+    {
+      "path": "assets/media/showcase/football-scene.webp",
+      "sha256": "b1ee784b3e3475070eb6a12e4c01762434b1be3407c7f8570cf1d881285c3015",
+      "bytes": 51300
+    },
+    {
+      "path": "assets/media/showcase/forest.mp4",
+      "sha256": "1f0c14bb6f55eabcddf17510fe29bc36650c54894258718c5ad804536d3c9b21",
+      "bytes": 255654
+    },
+    {
+      "path": "assets/media/showcase/forest.webp",
+      "sha256": "d7a4d0cd2512e5e1d1e51473ee978b6b0d01ab5ed3e1d9838fe1dcba2d1665f3",
+      "bytes": 7266
+    },
+    {
+      "path": "assets/media/showcase/manifest.json",
+      "sha256": "81162de64558faef7e9bb6e7a3d9f8368937e337c4a6d41b8e3179327c479e62",
+      "bytes": 6864
+    },
+    {
+      "path": "assets/media/showcase/parkour-reference.webp",
+      "sha256": "9ca117511936c79dcacccb91185f9d70a2a32b344c3ea27b85e70822f3b207a6",
+      "bytes": 19878
+    },
+    {
+      "path": "assets/media/showcase/parkour-sequence.webp",
+      "sha256": "1a1a565eae7f784f58bce8fc6667037fcb839cc06792219ee31de246cfbe2c46",
+      "bytes": 401788
+    },
+    {
+      "path": "assets/media/showcase/platform.mp4",
+      "sha256": "2b070640040f2218606b246768fe9145f5cf7e031cdc2e5f87460460d3dde2c3",
+      "bytes": 70273
+    },
+    {
+      "path": "assets/media/showcase/platform.webp",
+      "sha256": "ff727ffce4aa0125f534e97a4ab5c77fc3308e61b878cd4c89f18f2775faea9b",
+      "bytes": 10818
+    },
+    {
+      "path": "assets/media/showcase/stairs.mp4",
+      "sha256": "3055ea04dc6447d1fb6e223ebabb121a96e789db656bff3da50ee450e5d4f078",
+      "bytes": 253430
+    },
+    {
+      "path": "assets/media/showcase/stairs.webp",
+      "sha256": "629c817511b77a75feb6483aa27d0183e9e9eded432e8f6434be7eccbe0ad35e",
+      "bytes": 8000
+    },
+    {
+      "path": "assets/media/showcase/tennis-scene.mp4",
+      "sha256": "71b8732fdce5fd3efd12d528e947e99fbb08da0f37ee8823121f318007484c03",
+      "bytes": 491522
+    },
+    {
+      "path": "assets/media/showcase/tennis-scene.webp",
+      "sha256": "9dfca696ca4cf440c324a878d91a212aee9018dde175828e98569085b3931d8f",
+      "bytes": 13682
+    },
+    {
+      "path": "assets/media/showcase/tennis-stage-human.webp",
+      "sha256": "6224f90e17739c1a47bcd353b297c1a209659427f955c252c20059462991b65d",
+      "bytes": 181674
+    },
+    {
+      "path": "assets/media/showcase/tennis-stage-input.webp",
+      "sha256": "2f46714819b82143ec0332c7a1da8173a9a5c1eeb10afda51458b45cce201f37",
+      "bytes": 186296
+    },
+    {
+      "path": "assets/media/showcase/tennis-stage-scene.webp",
+      "sha256": "fb791b590ee30ddbf36df6093ad00cbb9e40ff3595c709aba4d97c98a624cd86",
+      "bytes": 144168
+    },
+    {
+      "path": "assets/media/showcase/tennis-stage-simulation.webp",
+      "sha256": "03d11c809071c863654ef475038fc67c97d4cacdf72d85064808ed1f2ffab2f0",
+      "bytes": 42938
+    },
+    {
+      "path": "assets/media/showcase/track.mp4",
+      "sha256": "8276caf747a4aba84781d62e7802d6176d66292b0106dbb222b3ceeb60955d6a",
+      "bytes": 87879
+    },
+    {
+      "path": "assets/media/showcase/track.webp",
+      "sha256": "dc27067b045ca4908d425441ec945107ae0abbf0234118076ee639179f62e326",
+      "bytes": 8672
+    },
+    {
+      "path": "assets/media/stage-fixed.png",
+      "sha256": "ddfbfeee9f0e33222dac97b3874366fa62bdef27ed47c6762e8067047f81c96b",
+      "bytes": 3192987
+    },
+    {
+      "path": "assets/media/stage-human.png",
+      "sha256": "62ecb5ddb87ea0fbee37779d5c9206b7eec82c657c22e0d52a078087dba74e4e",
+      "bytes": 162963
+    },
+    {
+      "path": "assets/media/stage-ours.png",
+      "sha256": "f35cfaedb2e48e70e3b5b7b03d450f3a6c67ff0ace9759dab5f5aedda4c8e3d2",
+      "bytes": 3086156
+    },
+    {
+      "path": "assets/media/stage-reference.png",
+      "sha256": "dd59a99a1fdcaf8a922bb6a4a273bbcb22ae9e7f90be9a15f4e9de3b9e0135f8",
+      "bytes": 206207
+    },
+    {
+      "path": "assets/media/stage-video.png",
+      "sha256": "b0920f9be6d111a16f33a8c526ce2f159a8c5f1523f806366d230109f555dd54",
+      "bytes": 1000320
+    },
+    {
+      "path": "assets/media/stage-world.png",
+      "sha256": "c246b127aa0f2ca2357a2052f470280e3ed7c4731bcf95547893d8140808df82",
+      "bytes": 164507
+    },
+    {
+      "path": "assets/media/tennis-court-poster.jpg",
+      "sha256": "0d58a862fe47c0965b53a96e0692f62ab5d94f6049d26ca2273dacc815d635df",
+      "bytes": 78718
+    },
+    {
+      "path": "assets/media/tennis-court.mp4",
+      "sha256": "e99f754e9e7f604882d56f27ef699e8c8bf724b0ab8838143340f8f033cdaa70",
+      "bytes": 1088806
+    },
+    {
+      "path": "assets/media/tennis-fixed.mp4",
+      "sha256": "9c870aee4d55e80c7469c57eb286e6ab63402557fa8d6f3941bcc04d10859ed1",
+      "bytes": 6083425
+    },
+    {
+      "path": "assets/media/tennis-ours.mp4",
+      "sha256": "7cdd01f2989d652eb9d24ed70176abefbcff21df9bf8377ae92aa5d859d89cdc",
+      "bytes": 6224796
+    },
+    {
+      "path": "assets/media/tracking-channels.png",
+      "sha256": "aafb69398a45455b618959877c9a051d55715da385eb28608fe6966d6c6616ad",
+      "bytes": 368167
+    },
+    {
+      "path": "assets/media/tracking-channels.svg",
+      "sha256": "c4aad455860288427f2617ffeb7efe9885d8c89846373eba2e341d90472e5775",
+      "bytes": 36094
+    },
+    {
+      "path": "assets/media/training-body-error.svg",
+      "sha256": "a8f65dab86583b0782c53adaa65e7ddeb68783156e99644b194e72365f614f0d",
+      "bytes": 167530
+    },
+    {
+      "path": "assets/results/PROTOCOL.md",
+      "sha256": "7dfa66f862d857090a468b09c619fb3614b79307d8f3206b265b6aa75e119e2f",
+      "bytes": 5977
+    },
+    {
+      "path": "assets/results/README.md",
+      "sha256": "2f12488a2f8d0e6e54a8e6aed9b3dd7c9f6d7e3269a6591af8e67153ded2cd66",
+      "bytes": 1381
+    },
+    {
+      "path": "assets/results/accept_protect_decisions.csv",
+      "sha256": "4c84bef1ea350d359d5791ecad5199cea86bbdc2ab253fa4111c606a4df93527",
+      "bytes": 527
+    },
+    {
+      "path": "assets/results/additional_video_tasks.csv",
+      "sha256": "07d0e851154eccaa7960c9b80b20870d4c40944d662efc644ec5c7487bdde91d",
+      "bytes": 401
+    },
+    {
+      "path": "assets/results/archive/README.md",
+      "sha256": "c83cae54796cf8f4e3e5bc26b60bf1283c4957743de7e13d618162dd3bf2c1e6",
+      "bytes": 282
+    },
+    {
+      "path": "assets/results/archive/sonic_comparison.csv",
+      "sha256": "55e50938c253ec29d71bf82d9e625dd38a6dfc8e86ef2dbe4fa684078bd38a19",
+      "bytes": 152
+    },
+    {
+      "path": "assets/results/collision_scene_results.csv",
+      "sha256": "feac289d0abf1048c0cd39dc99c848895780b65cefefbca915412d1474908180",
+      "bytes": 949
+    },
+    {
+      "path": "assets/results/core_method_task_summary.csv",
+      "sha256": "293120790f1a34d5cf17187c97c847ac50be0e761337303696880f6031661d47",
+      "bytes": 2918
+    },
+    {
+      "path": "assets/results/core_trial_results.csv",
+      "sha256": "57039f9425a46f7113ba03d153130a4aaf021c27396f9276599e10b509ee35e7",
+      "bytes": 19086
+    },
+    {
+      "path": "assets/results/direct_policy_comparison.csv",
+      "sha256": "a536329e8a5336dfafdc8a0231fa9865285a7e35577f02067b535347079459b7",
+      "bytes": 12082
+    },
+    {
+      "path": "assets/results/hloop_timings.csv",
+      "sha256": "0208398571f6e244ae034b03a32786371f33771dcd4d1543eff78f37eb0ee11b",
+      "bytes": 353
+    },
+    {
+      "path": "assets/results/motion_breadth.csv",
+      "sha256": "15f6ff9a284b34bb4afbdbd00eb01ccbab379945e755f2e6a387db8aaea74dc1",
+      "bytes": 1478
+    },
+    {
+      "path": "assets/results/paper_evidence_sources.json",
+      "sha256": "9e65bac0231a41ed56d3a537ae51b9f9350f5da9c03522657de0a7070226eb69",
+      "bytes": 189
+    },
+    {
+      "path": "assets/results/provenance.json",
+      "sha256": "b0fc4304df43678bac7958ecc534ecf256cb5490638ba30125b68fd9dfe0c2ea",
+      "bytes": 2543
+    },
+    {
+      "path": "assets/results/reward_higher_regression_rejection.csv",
+      "sha256": "7780224b68d1f1e951dd920a64dd8dc3ce426697f99db6e46dd144cb924a1fee",
+      "bytes": 122
+    },
+    {
+      "path": "assets/results/tennis_training_dynamics_3000_points.csv",
+      "sha256": "f3f787c956a7fe63acb4ae3c9470585323c30f09a42243f743ed8b09a3b13fe3",
+      "bytes": 278292
+    },
+    {
+      "path": "assets/vendor/README.md",
+      "sha256": "b45ea2790814d76394522fbab389b0ac44a1e77a5627aaeba27ba8e946ecc6af",
+      "bytes": 733
+    },
+    {
+      "path": "assets/vendor/embla-LICENSE.txt",
+      "sha256": "992490064b90ec94c302fe5f29dcc14cb44145857064e46f9ffe6c8f511c1093",
+      "bytes": 1066
+    },
+    {
+      "path": "assets/vendor/embla-carousel.umd.js",
+      "sha256": "f05b5dbfe37d79b636b9db74ad04ed5e99b4bce369d781b0fb38b0b2ac619e66",
+      "bytes": 17946
+    },
+    {
+      "path": "assets/vendor/panzoom-LICENSE.txt",
+      "sha256": "db74524b3ab3853bcfc7300dade1f5e0176e59ed3c0cff43848a2c300091a22c",
+      "bytes": 1059
+    },
+    {
+      "path": "assets/vendor/panzoom.min.js",
+      "sha256": "3ce354ef7b493efb62a4d4acaaf86fa2d6027eb629857a4e144041de1a112c1e",
+      "bytes": 10125
+    },
+    {
+      "path": "index.html",
+      "sha256": "87632c14aa55c3085b02a43da481586d615ff7144ab2d2f073d56533330dc2e0",
+      "bytes": 32282
+    }
+  ]
+}

@@ -9,14 +9,17 @@ test("collection opens its first example and provides a return route", async ({
   await expect(
     page.getByRole("heading", { name: /项目网站\s*参考集锦/ }),
   ).toBeVisible();
-  await expect(page.locator("[data-example-count]").first()).toHaveText("01");
+  await expect(page.locator("[data-example-count]").first()).toHaveText("04");
   const preview = page.getByRole("img", { name: /FIELDWORK/ });
   await expect(preview).toBeVisible();
   expect(
     await preview.evaluate((image) => image.complete && image.naturalWidth > 0),
   ).toBe(true);
   expect(requests.some((url) => url.endsWith(".glb"))).toBe(false);
-  await page.getByRole("link", { name: "进入示例" }).click();
+  await page
+    .getByRole("link", { name: "进入示例", exact: true })
+    .first()
+    .click();
   await expect(page).toHaveURL(/\/examples\/fieldwork\/$/);
   await expect(page.locator("#motion-canvas")).toHaveAttribute(
     "data-assets",
@@ -57,7 +60,9 @@ test("collection remains usable on narrow screens and with reduced motion", asyn
   for (const width of [360, 768]) {
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/");
-    await expect(page.getByRole("link", { name: "进入示例" })).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "进入示例", exact: true }).first(),
+    ).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
