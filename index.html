@@ -1,58 +1,65 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f3ee" />
     <meta
       name="description"
-      content="Shuaijun 的项目网站参考集锦。收藏、拆解与实现值得参考的网页设计，让灵感成为可以亲自体验的例子。"
+      content="A collection of research websites and interactive demos by Shuaijun."
     />
-    <title>项目网站参考集锦 — Shuaijun</title>
+    <title>Website collection — Shuaijun</title>
     <link rel="icon" type="image/svg+xml" href="./collection.svg" />
     <script type="module" src="/src/collection.js"></script>
   </head>
   <body>
-    <a class="skip" href="#examples">跳至示例</a>
+    <a class="skip" href="#examples" data-i18n="skip">Skip to projects</a>
     <div class="collection-shell">
       <header class="collection-header">
-        <a class="collection-brand" href="./" aria-label="参考集锦首页"
-          ><span class="collection-mark" aria-hidden="true"
-            ><i></i><i></i><i></i></span
-          ><span
-            >SHUAIJUN<span class="brand-caption">WEB COLLECTION</span></span
-          ></a
-        >
-        <nav aria-label="主导航">
-          <a href="#examples">浏览示例 <span data-example-count>04</span></a
-          ><a
-            href="https://github.com/Shuaijun-LIU/pages"
-            target="_blank"
-            rel="noreferrer"
-            >GitHub <span aria-hidden="true">↗</span></a
+        <a class="collection-brand" href="./" aria-label="Collection home">
+          <span class="collection-mark" aria-hidden="true"
+            ><i></i><i></i><i></i
+          ></span>
+          <span>Shuaijun</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a class="projects-link" href="#examples" data-i18n="projects"
+            >Projects</a
           >
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-label="English"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              data-language="zh"
+              lang="zh-CN"
+              aria-label="中文"
+              aria-pressed="false"
+            >
+              中文
+            </button>
+          </div>
         </nav>
       </header>
       <main>
         <section class="collection-intro" aria-labelledby="collection-title">
-          <div class="intro-main">
-            <p class="eyebrow">
-              <span class="red-dot"></span>A PERSONAL WEB DESIGN ARCHIVE
-            </p>
-            <h1 id="collection-title">
-              项目网站<span>参考集锦<span class="title-dot">.</span></span>
-            </h1>
-          </div>
-          <div class="intro-note">
-            <span class="note-rule" aria-hidden="true"></span>
-            <p>收藏好的设计，<br />把灵感变成可体验的例子。</p>
-            <p class="intro-description">
-              这里记录为自己的项目网站探索过的视觉、动效与交互。每个例子都有独立页面，可以进入、体验，也可以继续演变。
-            </p>
-            <a class="browse-link" href="#examples"
-              >从第一个例子开始 <span aria-hidden="true">↙</span></a
+          <h1 id="collection-title">
+            <span data-i18n="titleFirst">Website</span
+            ><span class="title-second"
+              ><span data-i18n="titleSecond">collection</span
+              ><span class="title-dot" aria-hidden="true">.</span></span
             >
-          </div>
+          </h1>
+          <p class="intro-description" data-i18n="intro">
+            Research pages and interactive demos, collected in one place.
+          </p>
         </section>
         <section
           id="examples"
@@ -60,36 +67,20 @@
           aria-labelledby="examples-title"
         >
           <div class="section-heading">
-            <h2 id="examples-title">
-              设计与交互实例 <span class="mono">/ SELECTED STUDIES</span>
-            </h2>
-            <span class="collection-total"
-              ><span data-example-count>04</span> 个示例</span
-            >
+            <h2 id="examples-title" data-i18n="projects">Projects</h2>
+            <span data-example-count>04</span>
           </div>
           <div id="example-list"></div>
           <noscript
-            ><a class="enter-link" href="./examples/fieldwork/"
-              >进入示例：FIELDWORK · 机器人字符动画 ↗</a
-            ><a href="./examples/brace/">BRACE</a> ·
+            ><a href="./examples/fieldwork/">FIELDWORK</a> ·
+            <a href="./examples/brace/">BRACE</a> ·
             <a href="./examples/d-jepa/">D-JEPA</a> ·
             <a href="./examples/mimicx/">MimicX</a></noscript
           >
         </section>
-        <aside class="collection-note">
-          <span class="mono">AN OPEN COLLECTION</span>
-          <p>
-            从一个开始，持续积累。<span
-              >新的设计和交互，会继续收录在这里。</span
-            >
-          </p>
-          <span class="note-plus" aria-hidden="true">+</span>
-        </aside>
       </main>
       <footer class="collection-footer">
-        <span>SHUAIJUN / 项目网站参考集锦</span
-        ><span>Collected with curiosity. Built to explore.</span
-        ><a href="#">回到顶部 ↑</a>
+        <span>Shuaijun</span><a href="#" data-i18n="backTop">Back to top ↑</a>
       </footer>
     </div>
   </body>

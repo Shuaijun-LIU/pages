@@ -27,7 +27,7 @@ for (const [slug, name, title] of [
           .evaluate((image) => image.complete && image.naturalWidth > 0),
       )
       .toBe(true);
-    await card.getByRole("link", { name: "进入示例", exact: true }).click();
+    await card.getByRole("link", { name: "Open website", exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`/examples/${slug}/$`));
     await expect(page).toHaveTitle(title);
     await expect(page.getByRole("link", { name: "返回集锦" })).toBeVisible();

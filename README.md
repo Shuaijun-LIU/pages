@@ -1,6 +1,6 @@
 # 项目网站参考集锦
 
-为自己的项目网站建立一个可持续扩展的设计参考库。首页提供实际预览、特点说明、参考来源和独立示例入口；每个例子保留自己的视觉与交互，并可返回集锦。
+为自己的项目网站建立一个可持续扩展的设计参考库。首页提供实际预览、简短说明、特点标签和独立示例入口；每个例子保留自己的视觉与交互，并可返回集锦。
 
 **集锦首页：** https://shuaijun-liu.github.io/pages/
 
@@ -13,7 +13,11 @@
 | 003 · D-JEPA | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/d-jepa/) | 紫色主题、交互式模型讲解、步骤演示与实验视频 |
 | 004 · MimicX | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/mimicx/) | 全屏动作主视觉、画廊、图片浏览器与同步视频对比 |
 
+首页默认英文，页头提供 EN / 中文切换并记住选择。正文、标签与导航统一字号，配合项目名和首页大标题，共三个字号层级。语言切换仅作用于集锦首页，各示例保留原有内容。
+
 ![集锦首页](docs/preview-collection.png)
+
+[中文首页预览](docs/preview-collection-zh.png)
 
 [动画桌面预览](docs/preview-desktop.png) · [双臂持杯](docs/preview-transfer.png) · [折衣](docs/preview-fold.png) · [奔跑](docs/preview-run.png) · [深色模式](docs/preview-dark.png)
 
@@ -38,7 +42,7 @@ npx playwright install chromium
 npm test
 ```
 
-测试覆盖首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
+测试覆盖英文默认、中英文切换与偏好保存、存储不可用时的切换、首页与示例往返导航、嵌套地址直接访问与刷新、模型和许可加载、移动端布局，以及原有四场景、轮播、暂停、视角、主题、弹窗、低动态偏好和备用渲染。测试浏览器采用软件渲染。
 
 ## 已有项目网站的收录
 
@@ -59,7 +63,7 @@ npm test
 ## 新增一个例子
 
 1. 新建 `examples/<slug>/index.html`，为该例子添加独立的脚本与样式入口。
-2. 在 `src/collection.js` 的 `examples` 数组中添加名称、描述、标签、预览图、参考来源与 `./examples/<slug>/` 地址。预览图通过 ES module 导入，让构建自动处理资源路径。
+2. 在 `src/collection.js` 的 `examples` 数组中添加 `name`、`slug`、`preview`、`background`，以及中英文描述 `description.en/zh` 和标签 `tags.en/zh`。入口由 `slug` 生成 `./examples/<slug>/` 地址。预览图通过 ES module 导入，让构建自动处理资源路径。
 3. 示例页面添加 `href="../../"` 的“返回集锦”入口。示例的自托管公共资源应相对站点根目录解析，避免误指向当前子目录。
 4. 构建会自动发现 `examples/` 下一层目录中的 `index.html`，无需手动新增 Vite 入口。补充示例测试后推送部署。
 
@@ -69,7 +73,7 @@ npm test
 
 ```text
 index.html                    集锦首页、介绍与目录容器
-src/collection.js             示例登记、预览与入口
+src/collection.js             示例登记、语言切换、预览与入口
 src/collection.css            集锦首页样式
 examples/fieldwork/index.html 第一个独立示例
 src/main.js                   FIELDWORK 文案、主题、曲线与弹窗
