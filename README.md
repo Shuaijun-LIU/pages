@@ -13,7 +13,7 @@
 | 003 · D-JEPA | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/d-jepa/) | 紫色主题、交互式模型讲解、步骤演示与实验视频 |
 | 004 · MimicX | [进入项目示例](https://shuaijun-liu.github.io/pages/examples/mimicx/) | 全屏动作主视觉、画廊、图片浏览器与同步视频对比 |
 
-另有 [Robot Studio](https://shuaijun-liu.github.io/pages/examples/robot-studio/)、[WARP-RM](https://shuaijun-liu.github.io/pages/examples/warp-rm/)、[EgoMI / Real2Render2Real](https://shuaijun-liu.github.io/pages/examples/egomi-r2r/) 和 [CaP-X](https://shuaijun-liu.github.io/pages/examples/cap-x/)，以及 [Josephine’s World](https://shuaijun-liu.github.io/pages/examples/josephines-world/)、[Synesthesia](https://shuaijun-liu.github.io/pages/examples/synesthesia/)、[Pocket Grove](https://shuaijun-liu.github.io/pages/examples/pocket-grove/)，合计 **11 个入口**。
+另有 [Robot Studio](https://shuaijun-liu.github.io/pages/examples/robot-studio/)、[WARP-RM](https://shuaijun-liu.github.io/pages/examples/warp-rm/)、[EgoMI / Real2Render2Real](https://shuaijun-liu.github.io/pages/examples/egomi-r2r/) 和 [CaP-X](https://shuaijun-liu.github.io/pages/examples/cap-x/)，以及 [Josephine’s World](https://shuaijun-liu.github.io/pages/examples/josephines-world/)、[Synesthesia](https://shuaijun-liu.github.io/pages/examples/synesthesia/)、[Pocket Grove](https://shuaijun-liu.github.io/pages/examples/pocket-grove/)，以及 [Crater](https://shuaijun-liu.github.io/pages/examples/crater/)、[Inner Space](https://shuaijun-liu.github.io/pages/examples/inner-space/)、[Glance](https://shuaijun-liu.github.io/pages/examples/glance/)，合计 **14 个入口**。
 
 Robot Studio 将 G1 Hero、Franka Panda 关节轨迹、Panda Viser 回放合并到同一页，通过页头标签切换。G1 与 Panda 均加载真实机器人网格；Panda 的两种渲染方式共享模型关节定义和演示轨迹。只加载当前视图，切换后停止上一场景。EgoMI 与 Real2Render2Real 也通过一个入口切换原站视图。
 
@@ -21,7 +21,9 @@ SARM2、SARM、LEGS、Justin Yu、POGS 已从公开集锦移除，对应入口�
 
 来源、技术栈、核心文件、启动方法、许可证与复用方法见 [机器人网站复用库](docs/reuse/README.md) 与 [历史来源目录 JSON](catalog/justin-sources.json)。
 
-新增的三个设计参考分别展示无限画布、声音驱动视觉和森林手势场景；采用原站交互视图。[筛选与实现线索](docs/reuse/josephine-designs.md)记录技术栈、公开部署快照与复用边界。
+最初的三个 Josephine 设计参考分别展示无限画布、声音驱动视觉和森林手势场景；采用原站交互视图。[筛选与实现线索](docs/reuse/josephine-designs.md)记录技术栈、公开部署快照与复用边界。
+
+后续项目 agent **优先用 Viser 发布实验结果与相机视锥**，仅在定制首屏和滚动动画时选用直接 Three.js。两条路线的区别与接入步骤见 [选型说明](docs/reuse/robot-viewer-choice.md)，仓库 `AGENTS.md` 已记录此偏好。新增 Crater、Inner Space、Glance 分别补充产品落地页、科学项目网站和浅色成果展示页；原有三个交互参考保留。
 
 首页默认英文，页头提供 EN / 中文切换并记住选择。正文、标签与导航统一字号，配合项目名和首页大标题，共三个字号层级。语言切换仅作用于集锦首页，各示例保留原有内容。
 

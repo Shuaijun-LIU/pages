@@ -40,7 +40,7 @@ for (const [slug, name, title] of [
       ),
     ).toBe(true);
     await page.getByRole("link", { name: "返回集锦" }).click();
-    await expect(page.locator("#example-list article")).toHaveCount(11);
+    await expect(page.locator("#example-list article")).toHaveCount(14);
     expect(errors).toEqual([]);
   });
 }
@@ -56,7 +56,7 @@ test("BRACE keeps its nested interactive explainer", async ({ page }) => {
     page.getByRole("button", { name: "Go to Budget", exact: true }),
   ).toHaveClass(/active/);
   await page.getByRole("link", { name: "返回集锦" }).click();
-  await expect(page.locator("#example-list article")).toHaveCount(11);
+  await expect(page.locator("#example-list article")).toHaveCount(14);
 });
 
 test("D-JEPA keeps its dynamic method diagram and narration assets", async ({

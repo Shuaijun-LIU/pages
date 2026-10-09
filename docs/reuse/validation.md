@@ -41,3 +41,12 @@
 - 本地源码档案固定了仓库提交、文件 SHA-256 和共享录像依赖；原始 checkout 保持未修改。派生模板的缺失元素保护与许可剔除另记于各自 `REUSE.md`。
 
 预览保存在 `docs/previews/`。浏览器检查使用软件渲染。视频推理、训练或真实机器人控制不属于这组网站交互验证。
+
+## 2026-10-09 — Viser preference and three project-page references
+
+- Build passed; all **43 Playwright tests** and **4 Python tests** passed. The suite verifies all 14 gallery entries, reference URLs and return paths, loaded previews, EN/中文 switching and persistence, and existing robot / Viser interactions.
+- Actual external pages checked separately from the mocked CI reference shells: Crater rendered its cinematic hero and opened About; its 390px layout fit. Glance played its video, scrolled through media and fit at 390px. Inner Space rendered its landing page and opened the cell map; its scale view also loaded independently.
+- Homepage checked at 360 / 390 / 768px in both languages: no overflow or browser errors; desktop text retains the 16 / 32 / 80px size set.
+- Browsers use CPU software rendering. Crater's first normal-motion scroll probe stalled; the reduced-motion desktop navigation and separate mobile run passed. This is not a claim of hardware-GPU performance validation.
+- Source/implementation archive contains deployed HTML/CSS/JS, file checksums and inspection evidence. These references require their original sites and network; they are not offline source templates.
+- Viser-first guidance is recorded in `AGENTS.md`, `docs/reuse/robot-viewer-choice.md`, the reuse index and decision log. No robot model, sample trajectory or recording was changed in this update.

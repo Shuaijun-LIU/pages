@@ -1,5 +1,7 @@
 # Viser: a native Franka Panda recording
 
+项目默认选型：**优先用 Viser 发布实验结果和相机视锥**；定制 Hero / 滚动动画再考虑直接 Three.js。见 [两条路线的区别与接入步骤](robot-viewer-choice.md)。
+
 **Demo:** [Spatial Replay](../../examples/viser-replay/index.html)
 
 **Upstream:** [Viser](https://github.com/nerfstudio-project/viser) · [official documentation](https://viser.studio/main/) · [embedding guide](https://viser.studio/main/embedded_visualizations/)

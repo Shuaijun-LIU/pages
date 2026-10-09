@@ -45,3 +45,5 @@ Pinned commit: `0059d4335f8156206f63a35662313385f7ad6d74`. The original visual O
 ## Josephine 系列设计参考
 
 Josephine’s World、Synesthesia、Pocket Grove 通过原站 iframe 展示。预览截图用于识别参考项目；作者代码、字体与媒体未作为可复用开源资产重新托管。公开部署快照仅保存于本地研究档案，未确认原站复用许可证。技术证据与边界见 [研究说明](docs/reuse/josephine-designs.md) 和 [目录](catalog/josephine-sources.json)。
+
+Crater、Inner Space、Glance 也通过原站 iframe 展示，卡片截图用于识别参考页面。Crater / Inner Space 是从作者站点外链发现的独立项目，未据此认定整站代码归她一人所有。公开部署快照仅用于本地研究，未确认网站源码复用许可证；详细来源链、技术栈与前端源码可用情况见同一研究说明和目录。

@@ -125,5 +125,71 @@ export const referenceSites = [
       "en": "Gesture controls use your camera after you choose Begin Journey and allow access. Open original if your browser restricts camera access in embedded pages.",
       "zh": "点击 Begin Journey 并允许摄像头后可使用手势控制。若浏览器限制嵌入页摄像头，请打开原站。"
     }
+  },
+  {
+    "slug": "crater",
+    "name": "Crater",
+    "url": "https://crater.so/",
+    "background": "#d6d4cd",
+    "description": {
+      "en": "A cinematic product landing page with a luminous hero and a clear, staged introduction.",
+      "zh": "电影感光影首屏与分段叙事，把项目主张、演示和介绍连成一体。"
+    },
+    "tags": {
+      "en": [
+        "Product landing",
+        "Cinematic hero",
+        "Scroll narrative"
+      ],
+      "zh": [
+        "项目落地页",
+        "光影首屏",
+        "滚动叙事"
+      ]
+    }
+  },
+  {
+    "slug": "inner-space",
+    "name": "Inner Space",
+    "url": "https://exploreinnerspace.org/",
+    "background": "#d9dde0",
+    "description": {
+      "en": "A research website connecting a full-screen visual, scientific context and an explorable cell map.",
+      "zh": "全屏影像、研究背景与可探索的细胞地图，组成完整的科学项目网站。"
+    },
+    "tags": {
+      "en": [
+        "Research website",
+        "Visual storytelling",
+        "Interactive map"
+      ],
+      "zh": [
+        "研究项目网站",
+        "视觉叙事",
+        "交互地图"
+      ]
+    }
+  },
+  {
+    "slug": "glance",
+    "name": "Glance",
+    "url": "https://www.josephines.world/project/glance",
+    "background": "#e5e7e5",
+    "description": {
+      "en": "A restrained project showcase with a short introduction, video and large interface panels.",
+      "zh": "简短介绍配合演示视频与大幅界面图，适合展示项目成果与使用过程。"
+    },
+    "tags": {
+      "en": [
+        "Project showcase",
+        "Video & gallery",
+        "Minimal layout"
+      ],
+      "zh": [
+        "项目成果页",
+        "视频与画廊",
+        "简洁排版"
+      ]
+    }
   }
 ];

@@ -1,5 +1,7 @@
 # Three.js 机器人交互示例复用
 
+项目默认选型：**优先用 Viser 发布实验结果和相机视锥**；定制 Hero / 滚动动画再考虑直接 Three.js。见 [两条路线的区别与接入步骤](robot-viewer-choice.md)。
+
 两个可独立打开的 Vite 入口，使用同一组渲染、相机和时间轴组件：
 
 - `examples/robot-hero/index.html`：G1 模型、拖动/缩放、视角预设、相机巡航、关节展示动画、暂停和重置。

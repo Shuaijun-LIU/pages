@@ -98,6 +98,111 @@
       "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
       "localArchive": "local-library/josephine-site-study",
       "run": "npm run dev; open entry. Network needed for original iframe."
+    },
+    {
+      "slug": "crater",
+      "name": "Crater",
+      "url": "https://crater.so/",
+      "stack": [
+        "React 18 UMD",
+        "Three.js 0.160.1",
+        "GSAP 3.12.5 / ScrollTrigger",
+        "Lenis 1.1.14"
+      ],
+      "evidence": [
+        "HTML inline scene code",
+        "support.js",
+        "assets/onboarding-captures/onboarding-captures.js"
+      ],
+      "coreFiles": [
+        "HTML inline scene code",
+        "support.js",
+        "assets/onboarding-captures/onboarding-captures.js"
+      ],
+      "candidateModules": [
+        "cinematic hero",
+        "scroll narrative",
+        "product introduction"
+      ],
+      "discoveredAt": "https://www.josephines.world/project/crater",
+      "purpose": "Project-page layout reference",
+      "permissions": [],
+      "entry": "/examples/crater/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original website source not confirmed. Crater linked GitHub repository contained only README.md at review.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-project-pages",
+      "run": "npm run dev; open entry. Network needed for original iframe."
+    },
+    {
+      "slug": "inner-space",
+      "name": "Inner Space",
+      "url": "https://exploreinnerspace.org/",
+      "stack": [
+        "Svelte / Sapper",
+        "HTML video",
+        "SVG cell map"
+      ],
+      "evidence": [
+        "HTML __SAPPER__ and svelte-* classes",
+        "client/client.77ffe08e.js",
+        "world-in-a-cell/cell",
+        "world-in-a-cell/scale"
+      ],
+      "coreFiles": [
+        "HTML __SAPPER__ and svelte-* classes",
+        "client/client.77ffe08e.js",
+        "world-in-a-cell/cell",
+        "world-in-a-cell/scale"
+      ],
+      "candidateModules": [
+        "research landing page",
+        "clickable scientific map",
+        "scale comparison"
+      ],
+      "discoveredAt": "https://www.josephines.world/index",
+      "purpose": "Project-page layout reference",
+      "permissions": [],
+      "entry": "/examples/inner-space/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original website source not confirmed.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-project-pages",
+      "run": "npm run dev; open entry. Network needed for original iframe."
+    },
+    {
+      "slug": "glance",
+      "name": "Glance",
+      "url": "https://www.josephines.world/project/glance",
+      "stack": [
+        "Next.js",
+        "React",
+        "HTML video"
+      ],
+      "evidence": [
+        "project/glance",
+        "/_next/static/chunks/",
+        "project media and navigation DOM"
+      ],
+      "coreFiles": [
+        "project/glance",
+        "/_next/static/chunks/",
+        "project media and navigation DOM"
+      ],
+      "candidateModules": [
+        "project introduction",
+        "video and image sequence",
+        "persistent project navigation"
+      ],
+      "discoveredAt": "https://www.josephines.world/index",
+      "purpose": "Project-page layout reference",
+      "permissions": [],
+      "entry": "/examples/glance/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original website source not confirmed.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-project-pages",
+      "run": "npm run dev; open entry. Network needed for original iframe."
     }
   ]
 }

@@ -53,3 +53,9 @@
 ## 2026-10-09 · 三种 Josephine 交互风格
 
 新增 Josephine’s World（无限画布）、Synesthesia（拟物声音可视化）、Pocket Grove（暗色森林和手势）三个原站交互入口，总数11。维持现有卡片、标签和英文默认。ASCII Generator与既有方向重复且当前公开页主要为作品说明，暂不收录。公开部署包仅保留本地分析快照，明确区分部署产物与有许可证的原始源码。
+
+## 2026-10-09 · Viser 优先与完整项目页参考
+
+用户明确推荐后续项目 agent 用 Viser 快速把实验结果放到网站，并保留相机视锥。该偏好写入根目录 AGENTS.md、复用库入口及 robot-viewer-choice.md；区分共享 Panda 数据、浏览器实时 FK 与 Python 导出录制，说明静态发布和实时服务的边界。
+
+保留 Josephine’s World、Synesthesia、Pocket Grove。新增 Crater、Inner Space 和 Glance，分别用于产品首屏与分段叙事、科学项目及交互地图、浅色项目介绍与媒体画廊。共14入口。筛选以能承载项目介绍和成果为依据，不再单凭交互新奇收录；共享详情布局的 Orbit、Mecha、Data Journal 不重复增加。

@@ -3,9 +3,9 @@ import { test, expect } from "@playwright/test";
 test("collection keeps the curated entries with requested removals and merges", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator(".example-card h3")).toHaveText([
-    "FIELDWORK", "BRACE", "D-JEPA", "MimicX", "Robot Studio", "WARP-RM", "EgoMI / Real2Render2Real", "CaP-X", "Josephine’s World", "Synesthesia", "Pocket Grove",
+    "FIELDWORK", "BRACE", "D-JEPA", "MimicX", "Robot Studio", "WARP-RM", "EgoMI / Real2Render2Real", "CaP-X", "Josephine’s World", "Synesthesia", "Pocket Grove", "Crater", "Inner Space", "Glance",
   ]);
-  await expect(page.locator("[data-example-count]")).toHaveText("11");
+  await expect(page.locator("[data-example-count]")).toHaveText("14");
   await page.getByRole("link", { name:"Open Robot Studio", exact:true }).click();
   await expect(page.getByRole("tab", { name:"G1", exact:true })).toHaveAttribute("aria-selected", "true");
   await expect(page.frameLocator("#example-frame").locator("#hero-stage")).toHaveAttribute("data-ready", "true");
