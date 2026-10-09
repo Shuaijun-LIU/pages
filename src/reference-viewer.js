@@ -24,7 +24,12 @@ document.querySelector("#back-link").textContent = zh
 document.querySelector("#reference-note").textContent = zh
   ? "此处展示作者原站，需要网络连接。若嵌入页面无法加载，可点击“打开原站”。"
   : "This view loads the author’s original website and needs a network connection. If it cannot load, use Open original.";
+if (site.note) {
+  document.querySelector("#reference-note").textContent += ` ${site.note[zh ? "zh" : "en"]}`;
+}
 const frame = document.querySelector("#reference-frame");
+// Capability delegation keeps the browser's permission prompt; it never grants consent.
+frame.allow = ["fullscreen", ...(site.permissions || [])].join("; ");
 frame.title = `${site.name} original website`;
 // Only trusted, fixed catalog URLs are embedded; no user-supplied URL parameters.
 frame.src = site.url;

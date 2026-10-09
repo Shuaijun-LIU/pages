@@ -49,3 +49,7 @@
 ## 2026-10-09 · 精简集锦与真实机器人模型
 
 按用户要求移除 SARM2、SARM、LEGS、Justin Yu、POGS 的公开入口；源码历史档案保留。Robot Hero、Robot Trajectory、Viser Replay 合并为 Robot Studio，默认 G1。后两者必须采用真实 Franka Panda 网格、完整关节链和一致的运动数据，弃用原来的几何体占位机械臂。EgoMI 与 Real2Render2Real 合并为一个可切换入口。主页共 8 张卡片，继续保留既有卡片样式、标签及英文默认。
+
+## 2026-10-09 · 三种 Josephine 交互风格
+
+新增 Josephine’s World（无限画布）、Synesthesia（拟物声音可视化）、Pocket Grove（暗色森林和手势）三个原站交互入口，总数11。维持现有卡片、标签和英文默认。ASCII Generator与既有方向重复且当前公开页主要为作品说明，暂不收录。公开部署包仅保留本地分析快照，明确区分部署产物与有许可证的原始源码。

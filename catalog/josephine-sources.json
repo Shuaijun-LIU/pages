@@ -1,0 +1,103 @@
+{
+  "reviewedAt": "2026-10-09",
+  "sources": [
+    {
+      "slug": "josephines-world",
+      "name": "Josephine’s World",
+      "url": "https://www.josephines.world/",
+      "stack": [
+        "Next.js",
+        "React",
+        "Turbopack",
+        "CSS transforms"
+      ],
+      "evidence": [
+        "data-persistent-canvas",
+        "data-canvas-layer",
+        "PortfolioCanvasHost",
+        "MotionNavigationProvider"
+      ],
+      "candidateModules": [
+        "inertial canvas navigation",
+        "return to center",
+        "image-to-detail transition"
+      ],
+      "permissions": [],
+      "entry": "/examples/josephines-world/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original source repository not identified in inspected links.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-site-study",
+      "run": "npm run dev; open entry. Network needed for original iframe."
+    },
+    {
+      "slug": "synesthesia",
+      "name": "Synesthesia",
+      "url": "https://synesthesia.josephines.world/",
+      "stack": [
+        "Next.js",
+        "React",
+        "Web Audio API",
+        "Canvas",
+        "MIDI"
+      ],
+      "evidence": [
+        "/_next/static/chunks/0_r4.t6f85~a0.js",
+        "AudioContext",
+        "createAnalyser",
+        "requestMIDIAccess"
+      ],
+      "candidateModules": [
+        "piano controls",
+        "audio features to visual layers",
+        "visual mixing"
+      ],
+      "permissions": [
+        "microphone",
+        "display-capture",
+        "midi"
+      ],
+      "validation": "On-screen piano and Aura/Pixel/Metalheart/Halftone exercised. Microphone and external MIDI not exercised.",
+      "entry": "/examples/synesthesia/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original source repository not identified in inspected links.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-site-study",
+      "run": "npm run dev; open entry. Network needed for original iframe."
+    },
+    {
+      "slug": "pocket-grove",
+      "name": "Pocket Grove",
+      "url": "https://pocketgrove.josephines.world/",
+      "stack": [
+        "Vite",
+        "React",
+        "Three.js",
+        "React Three Fiber",
+        "Drei",
+        "postprocessing",
+        "MediaPipe Tasks Vision"
+      ],
+      "evidence": [
+        "HTML import map",
+        "/assets/index-mekiWq1n.js",
+        "HandLandmarker external model/WASM"
+      ],
+      "candidateModules": [
+        "atmospheric 3D environment",
+        "gesture-to-light mapping",
+        "weather particles"
+      ],
+      "permissions": [
+        "camera"
+      ],
+      "validation": "3D scene renders and Begin Journey opens scene. No physical camera/hand-tracking validation.",
+      "entry": "/examples/pocket-grove/",
+      "sourceRepository": null,
+      "sourceStatus": "Public deployed HTML/CSS/JS snapshot only; original source repository not identified in inspected links.",
+      "license": "No reusable site license identified. Embed original; do not redistribute as an open-source template.",
+      "localArchive": "local-library/josephine-site-study",
+      "run": "npm run dev; open entry. Network needed for original iframe."
+    }
+  ]
+}

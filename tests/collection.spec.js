@@ -12,7 +12,7 @@ test("collection opens its first example and provides a return route", async ({
   await expect(
     page.getByRole("heading", { name: /Website\s*collection/ }),
   ).toBeVisible();
-  await expect(page.locator("[data-example-count]").first()).toHaveText("08");
+  await expect(page.locator("[data-example-count]").first()).toHaveText("11");
   const preview = page.getByRole("img", { name: /FIELDWORK/ });
   await expect(preview).toBeVisible();
   expect(
@@ -116,7 +116,7 @@ test("language switching translates the collection and preserves the choice", as
   await expect(page.locator(".tags").first()).toContainText("Motion trails");
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
-  await expect(page.locator("#example-list article")).toHaveCount(8);
+  await expect(page.locator("#example-list article")).toHaveCount(11);
   expect(await page.locator('a[href^="https://"]').count()).toBe(0);
 });
 
